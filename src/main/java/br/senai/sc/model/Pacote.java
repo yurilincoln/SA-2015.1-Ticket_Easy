@@ -1,4 +1,4 @@
-package br.senai.sc.Model;
+package br.senai.sc.model;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
