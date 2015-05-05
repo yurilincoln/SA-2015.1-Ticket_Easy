@@ -7,7 +7,7 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import br.senai.sc.dao.PacoteDaoImp;
+import br.senai.sc.dao.PacoteDao;
 import br.senai.sc.model.Pacote;
 
 
@@ -27,7 +27,7 @@ public class Main {
 	}
 	
 	private static void cadastrarPacote(EntityManager entityManager) {
-		PacoteDaoImp pacoteDaoImp = entityManager.getReference(PacoteDaoImp.class, 1L);
+		PacoteDao pacoteDaoImp = entityManager.getReference(PacoteDao.class, 1L);
 		Pacote pacote;
 		pacote = new Pacote();
 		pacote.setNome("Maracanã");
@@ -42,7 +42,7 @@ public class Main {
 		pacote.setHoraFuncionamento("Dás 10:00hrs até ás 19:00");
 		pacote.setValor(120.0);
 		pacote.setObersevacoes("O preço para a visita de moradores locais é de R$80!!");
-		((PacoteDaoImp) entityManager).salvar(pacote);
+		((PacoteDao) entityManager).salvar(pacote);
 		
 	}
 
