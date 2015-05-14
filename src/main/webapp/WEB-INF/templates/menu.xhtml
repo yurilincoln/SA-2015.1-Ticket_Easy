@@ -1,20 +1,26 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
-    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-
-<html xmlns="http://www.w3.org/1999/xhtml"
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
-	xmlns:h="http://java.sun.com/jsf/html"
-	xmlns:f="http://java.sun.com/jsf/core">
+	xmlns:h="http://java.sun.com/jsf/html">
 
-<ui:composition template="">
-	<ui:define name="header">
-	    Add your header here or delete to use the default
-	</ui:define>
-	<ui:define name="content">
-	    Add your content here or delete to use the default
-	</ui:define>
-	<ui:define name="footer">
-	    Add your footer here or delete to use the default
-	</ui:define>
+	<ul id="menu">
+		<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
+			<h:graphicImage library="images" name="logotipoNovo.png" width="100"
+				height="83" />
+		</li>
+		<li><a href="index.html">Home</a></li>
+		<li><a href="sobre.html">Quem Somos</a></li>
+		<li><a href="localizacao.html">Localização</a></li>
+		<li><a href="contato.html">Contato</a></li>
+		<li class='active'><a href="pontos.html">Pontos Turísticos</a>
+			<ul>
+				<li><a href="#">Cristo Redentor</a></li>
+				<li><a href="#">Pão de Açúcar</a></li>
+				<li><a href="#">Maracanã</a></li>
+				<li><a href="#">Santa Teresa</a></li>
+				<li><a href="#">Cidade do Samba</a></li>
+				<li><a href="#">Vista Chinesa</a></li>
+			</ul></li>
+		<li><a href="login.html" class="btn btn-xs btn-primary lateral">Entrar</a></li>
+	</ul>
+
 </ui:composition>
-</html>

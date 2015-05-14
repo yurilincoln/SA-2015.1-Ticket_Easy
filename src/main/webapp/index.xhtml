@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+	<ui:define name="title">
+	    Index
+	</ui:define>
+	<ui:define name="content">
+		<div class="container">
+			<div class="page-header">
+				<h1>
+					TicketEasy <small>Início</small>
+				</h1>
+			</div>
+			<div class="col-md-12">
+
+				<div class="row carousel-holder">
+
+					<div class="col-md-12">
+						<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+							<ol class="carousel-indicators">
+								<li data-target="#carousel-example-generic" data-slide-to="0"
+									class="active"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+								<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+							</ol>
+							<div class="carousel-inner">
+								<div class="item active">
+									<h:graphicImage class="slide-image" library="images"
+										name="cristo1.jpg" width="100%" />
+								</div>
+								<div class="item">
+									<h:graphicImage class="slide-image" library="images"
+										name="paodeacucar1.jpg" width="100%" />
+								</div>
+								<div class="item">
+									<h:graphicImage class="slide-image" library="images"
+										name="maracana.jpg" width="100%" />
+								</div>
+							</div>
+							<a class="left carousel-control" href="#carousel-example-generic"
+								data-slide="prev"> <span
+								class="glyphicon glyphicon-chevron-left"></span>
+							</a> <a class="right carousel-control"
+								href="#carousel-example-generic" data-slide="next"> <span
+								class="glyphicon glyphicon-chevron-right"></span>
+							</a>
+						</div>
+					</div>
+
+				</div>
+
+				<div class="row">
+
+					<div class="col-sm-4 col-lg-4 col-md-4">
+						<p></p>
+						<div class="thumbnail">
+
+							<div class="caption">
+
+
+
+								<h4>Cristo Redentor</h4>
+								<p>
+									<a target="_blank" href="pontos.html">Leia Mais.</a>
+								</p>
+							</div>
+							<div class="ratings">
+								<p class="pull-right">15 reviews</p>
+								<p>
+									<span class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 col-lg-4 col-md-4">
+						<p></p>
+						<div class="thumbnail">
+							<div class="caption">
+
+								<h4>Bondinho</h4>
+								<p>
+									<a target="_blank" href="pontos.html">Leia Mais.</a>
+								</p>
+							</div>
+							<div class="ratings">
+								<p class="pull-right">12 reviews</p>
+								<p>
+									<span class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star-empty"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-sm-4 col-lg-4 col-md-4">
+						<p></p>
+						<div class="thumbnail">
+							<div class="caption">
+
+								<h4>Maracanã</h4>
+								<p>
+									<a target="_blank" href="pontos.html">Leia Mais.</a>
+								</p>
+							</div>
+							<div class="ratings">
+								<p class="pull-right">31 reviews</p>
+								<p>
+									<span class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star"></span> <span
+										class="glyphicon glyphicon-star-empty"></span>
+								</p>
+							</div>
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

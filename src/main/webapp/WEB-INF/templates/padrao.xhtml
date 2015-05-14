@@ -1,40 +1,47 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
           "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:ui="http://java.sun.com/jsf/facelets">
-<head>
-  <title><ui:insert name="title">Default title</ui:insert></title>
-</head>
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>TicketEasy - <ui:insert name="title"></ui:insert></title>
 
-<body>
-<ui:debug hotkey="x" rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}"/>
-
-<div id="header">
-    <ui:insert name="header">
-    	Header area.  See comments below this line in the source.
-    	<!--  include your header file or uncomment the include below and create header.xhtml in this directory -->
-    	<!-- <ui:include src="header.xhtml"/> -->
-    </ui:insert>
-</div>
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.4/css/bootstrap.min.css" />
+	<h:outputStylesheet library="css" name="padrao.css" />
+	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.js" />
+	<h:outputScript library="webjars"
+		name="bootstrap/3.3.4/js/bootstrap.min.js" />
+	<h:outputScript library="js" name="script.js" />
+</h:head>
 
 
-<div id="content">
-  <ui:insert name="content">
-    	Content area.  See comments below this line in the source.
-    	<!--  include your content file or uncomment the include below and create content.xhtml in this directory -->
-	  	<!-- <div> -->
-    	<!-- <ui:include src="content.xhtml"/> -->  
-    	<!-- </div> -->
-  </ui:insert>
-</div>
 
-<div id="footer">
-  <ui:insert name="footer">
-    	Footer area.  See comments below this line in the source.
-    	<!--  include your header file or uncomment the include below and create footer.xhtml in this directory -->
-		<!--<ui:include src="footer.xhtml"/>  -->
-  </ui:insert>
-</div>
+<body background="\resources\images\fundoverde.jpg">
+	<ui:include src="/WEB-INF/templates/menu.xhtml">
+	</ui:include>
+	<div class="container">
+		<ui:debug hotkey="x"
+			rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
+	</div>
+
+	<div id="header">
+		<ui:insert name="header">
+
+		</ui:insert>
+	</div>
+	<div id="content">
+		<ui:insert name="content">
+		</ui:insert>
+	</div>
+	<div id="footer">
+		<ui:insert name="footer">
+			Formas de Pagamento:
+				<h:graphicImage library="images" name="bandeira_master.png" />
+			<h:graphicImage library="images" name="bandeira_visa.png" />
+			<h:graphicImage library="images" name="bandeira_boleto.png" />
+		</ui:insert>
+	</div>
 
 </body>
 

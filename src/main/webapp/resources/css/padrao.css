@@ -1,11 +1,11 @@
 #menu {
     width: 100%;
     margin: 0;
-    padding: 20px 0 0 0;
-    list-style: none;  
+    padding: 20px 0 0 90px;
+    list-style: none;  	
     background-color: #111;
-    background-image: linear-gradient(#444, #111);
-    border-radius: 0px;
+    background-image: linear-gradient(#70DD3A, #509322);
+    border-radius: 0px;s
     box-shadow: 0 2px 1px #9c9c9c;
 }
 
@@ -19,13 +19,13 @@
   float: left;
   height: 25px;
   padding: 0 25px;
-  color: #E5E5E5;
+  color: #EBEFEC;
   text-transform: uppercase;
   font: bold 12px/25px Verdana, Helvetica;
   text-decoration: none;
   text-shadow: 0 1px 0 #1B1A1A;
 }
-
+#1B1A1A
 #menu a:botaoentrar {
     float: right;
     height: 10x;
@@ -38,6 +38,10 @@
 }
 
 #menu li:hover > a {
+	background-color: #444;   
+    background-image: linear-gradient(#444, #111);
+	-moz-border-radius: 5px;
+    border-radius: 5px;
     color: #fafafa;
 }
 
@@ -69,8 +73,8 @@
     margin: 0;
     padding: 0;
     display: block;  
-    box-shadow: 0 1px 0 #111111, 
-                0 2px 0 #777777;
+    box-shadow: 0 1px 0 #1E5C09, 
+                0 2px 0 #1E5C09;
 }
 
 #menu ul li:last-child { 
@@ -98,8 +102,8 @@
 }
 
 #menu ul a:hover {
-    background-color: #0186ba;
-    background-image: linear-gradient(#04acec, #0186ba);
+    background-color: #3AA63F;
+    background-image: linear-gradient(#1E5C09, #3AA63F);
 }
 
 #menu ul li:first-child a {
@@ -126,7 +130,6 @@
     border-radius: 0 0 5px 5px;
 }
 
-/* Clear floated elements */
 #menu:after {
     visibility: hidden;
     display: block;
@@ -141,6 +144,16 @@ kground: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
 
 .btn-primary {
   color: #fff;
-  background-color: #818181;
-  border-color: #222324;
+  background-color: #52C246;
+  border-color: #171717;
+  
 }
+
+.lateral{
+background-color: #52C246;
+  border-color: #171717;
+	float: right !important; 
+  margin-right: -195% !important;
+}
+
+
