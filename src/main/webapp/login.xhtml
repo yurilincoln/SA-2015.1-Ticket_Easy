@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+
+	<ui:define name="content">
+		<div class="container">
+			<div class="page-header">
+				<h1>TicketEasy</h1>
+			</div>
+			<div class="col-md-4">
+				<center>
+					<h3>Login</h3>
+				</center>
+				<form>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Email:</label> <input type="email"
+							class="form-control" id="exampleInputEmail1" placeholder="Email">
+						</input>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputEmail1">Senha:</label> <input
+							type="password" class="form-control" id="exampleInputPassword1"
+							placeholder="Senha"> </input>
+					</div>
+					<label> <input type="checkbox" value="remember-me"> Lembrar</input>
+					</label>
+					<button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
+					<a href="recuperasenha.html">Esqueci minha senha.</a>
+				</form>
+			</div>
+			<div class="col-md-2">
+			</div>
+			<div class="col-md-6">
+			<br></br>
+				<div class="panel panel-default">
+					<div class="panel-heading">Novo Aqui?</div>
+					<div class="panel-body">
+
+						<a href="cadastrousuario.xhtml" class="btn btn-danger btn-large"><i
+							class="icon-white icon-thumbs-down"></i> Faça seu cadastro</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>
+</html>

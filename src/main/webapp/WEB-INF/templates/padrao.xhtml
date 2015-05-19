@@ -8,16 +8,19 @@
 
 	<h:outputStylesheet library="webjars"
 		name="bootstrap/3.3.4/css/bootstrap.min.css" />
+	
 	<h:outputStylesheet library="css" name="padrao.css" />
+	
 	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.js" />
+	
 	<h:outputScript library="webjars"
 		name="bootstrap/3.3.4/js/bootstrap.min.js" />
+	
 	<h:outputScript library="js" name="script.js" />
+
 </h:head>
 
-
-
-<body background="\resources\images\fundoverde.jpg">
+<body>
 	<ui:include src="/WEB-INF/templates/menu.xhtml">
 	</ui:include>
 	<div class="container">
@@ -34,14 +37,17 @@
 		<ui:insert name="content">
 		</ui:insert>
 	</div>
-	<div id="footer">
+	<div id="footer" class="rodape">
 		<ui:insert name="footer">
+		<center>
 			Formas de Pagamento:
 				<h:graphicImage library="images" name="bandeira_master.png" />
 			<h:graphicImage library="images" name="bandeira_visa.png" />
 			<h:graphicImage library="images" name="bandeira_boleto.png" />
+			</center>
 		</ui:insert>
 	</div>
+
 
 </body>
 

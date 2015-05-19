@@ -156,4 +156,18 @@ background-color: #52C246;
   margin-right: -195% !important;
 }
 
+body{
+	background-image: url("#{resource['/images/fundoverde.jpg']}");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
 
+.rodape{
+	background-image: url("#{resource['/images/rodape.png']}");
+	background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: 100%;
+}
