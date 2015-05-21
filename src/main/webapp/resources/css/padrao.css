@@ -159,13 +159,18 @@ background-color: #52C246;
 }
 
 body{
+	color: #333;
 	background-image: url("#{resource['/images/fundoverde.jpg']}");
 	background-repeat: inherit;
     background-attachment: fixed;
     background-position: center;
     background-size: 100%;
-    background-op	
 }
+
+.page-header{
+	color: #EFEFEF;
+	}
+
 
 <!-- rodape{
 	background-image: url("#{resource['/images/rodape.png']}");

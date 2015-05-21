@@ -4,17 +4,18 @@ import java.util.List;
 
 import javax.persistence.Query;
 
+import br.senai.sc.entity.Contato;
 import br.senai.sc.entity.Pacote;
 
-public class PacoteDao extends Dao {
+public class ContatoDao extends Dao {
 
-	public void salvar(Pacote pacote) {
-		getEntityManager().merge(pacote);
+	public void salvar(Contato contato) {
+		getEntityManager().merge(contato);
 	}
-
+	
 	public void excluir(Long id) {
-		Pacote pacote = getEntityManager().getReference(Pacote.class, id);
-		getEntityManager().remove(pacote);
+		Contato contato = getEntityManager().getReference(Contato.class, id);
+		getEntityManager().remove(contato);
 	}
 
 	 public Pacote buscarPorId(Long id) {
@@ -25,15 +26,15 @@ public class PacoteDao extends Dao {
 	
 	 }
 
-	public void atualizar(Pacote pacote) {
+	public void atualizar(Contato contato) {
 		getEntityManager().getTransaction().begin();
-		getEntityManager().merge(pacote);
+		getEntityManager().merge(contato);
 		getEntityManager().getTransaction().commit();
 	}
 
-	public List<Pacote> listar() {
+	public List<Contato> listar() {
 		 getEntityManager().getTransaction().begin();
-		Query query = getEntityManager().createQuery("From Pacote", Pacote.class);
+		Query query = getEntityManager().createQuery("From Contato", Pacote.class);
 		 getEntityManager().getTransaction().commit();
 		return query.getResultList();
 	}
@@ -42,5 +43,4 @@ public class PacoteDao extends Dao {
 		 getEntityManager().close();
 		 getEntityManager().close();
 	}
-
 }

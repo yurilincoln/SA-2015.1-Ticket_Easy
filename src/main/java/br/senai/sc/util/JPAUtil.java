@@ -25,7 +25,7 @@ public class JPAUtil {
 	}
 
 	static void creteEntityManagerFactory() {
-		entityManagerFactory = Persistence.createEntityManagerFactory("gpe_pu");		
+		entityManagerFactory = Persistence.createEntityManagerFactory("ticketeasy_pu");		
 	}
 
 	static void entityManagerFactoryClose() {
