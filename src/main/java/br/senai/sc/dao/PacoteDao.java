@@ -2,34 +2,19 @@ package br.senai.sc.dao;
 
 import java.util.List;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
 import javax.persistence.Query;
 
-import br.senai.sc.model.Pacote;
+import br.senai.sc.entity.Pacote;
 
-public class PacoteDao {
-
-	private EntityManagerFactory entityManagerFactory = Persistence
-			.createEntityManagerFactory("ticketeasy");
-	private EntityManager entityManager;
-
-	public PacoteDao() {
-		entityManager = entityManagerFactory.createEntityManager();
-	}
+public class PacoteDao extends Dao {
 
 	public void salvar(Pacote pacote) {
-		entityManager.getTransaction().begin();
-		entityManager.persist(pacote);
-		entityManager.getTransaction().commit();
+		getEntityManager().merge(pacote);
 	}
 
 	public void excluir(Long id) {
-		entityManager.getTransaction().begin();
-		Pacote pacote = entityManager.getReference(Pacote.class, id);
-		entityManager.remove(pacote);
-		entityManager.getTransaction().commit();
+		Pacote pacote = getEntityManager().getReference(Pacote.class, id);
+		getEntityManager().remove(pacote);
 	}
 
 	// public Pacote buscarPorId(Long id) {
@@ -41,21 +26,21 @@ public class PacoteDao {
 	// }
 
 	public void atualizar(Pacote pacote) {
-		entityManager.getTransaction().begin();
-		entityManager.merge(pacote);
-		entityManager.getTransaction().commit();
+		getEntityManager().getTransaction().begin();
+		getEntityManager().merge(pacote);
+		getEntityManager().getTransaction().commit();
 	}
 
 	public List<Pacote> listar() {
-		entityManager.getTransaction().begin();
-		Query query = entityManager.createQuery("From Pacote", Pacote.class);
-		entityManager.getTransaction().commit();
+		 getEntityManager().getTransaction().begin();
+		Query query = getEntityManager().createQuery("From Pacote", Pacote.class);
+		 getEntityManager().getTransaction().commit();
 		return query.getResultList();
 	}
 
 	public void finalize() {
-		entityManager.close();
-		entityManagerFactory.close();
+		 getEntityManager().close();
+		 getEntityManager().close();
 	}
 
 }

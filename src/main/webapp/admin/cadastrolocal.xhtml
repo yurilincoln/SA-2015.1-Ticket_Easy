@@ -1,0 +1,74 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+
+	<ui:define name="title">
+	    Admin
+	</ui:define>
+	
+	<ui:define name="content">
+	<div class="container">
+	    <div class="page-header">
+				<h1>
+					Cadastro <small>admin</small>
+				</h1>
+			</div>
+			<div class="row">
+			<div class="col-md-6">
+			<h:form>
+				<fieldset>
+				<br></br>
+					<div class="form-group">
+						<h:outputLabel value="Cidade:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.nome}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Estado:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.email}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Bairro:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.nome}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Descriçao do Passeio:" />
+						<br></br>
+						<h:inputTextarea  rows="3" cols="57" value="#{contatoMB.comentario}"/>
+					</div>
+					</fieldset>
+					</h:form>
+					</div>
+					<div class="col-md-6">
+					<br></br>
+					<h:form>
+					<fieldset>
+					<div class="form-group">
+						<h:outputLabel value="Hora de Funcionamento:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.nome}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Valor de Cobrança (R$):" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.email}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Observações:" />
+						<br></br>
+						<h:inputTextarea  rows="3" cols="57" value="#{contatoMB.comentario}"/>
+					</div>
+					<h:commandButton action="#{contatoMB.enviar()}"
+						styleClass="btn btn-success" value="Enviar" />
+						</fieldset>
+				</h:form>
+			</div>
+			</div>
+			</div>
+	</ui:define>
+	
+</ui:composition>
+</html>

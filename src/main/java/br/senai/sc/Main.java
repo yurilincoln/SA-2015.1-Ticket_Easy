@@ -8,7 +8,7 @@ import javax.persistence.Persistence;
 import javax.persistence.Query;
 
 import br.senai.sc.dao.PacoteDao;
-import br.senai.sc.model.Pacote;
+import br.senai.sc.entity.Pacote;
 
 
 public class Main {

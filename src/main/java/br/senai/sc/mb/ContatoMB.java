@@ -2,42 +2,28 @@ package br.senai.sc.mb;
 
 import javax.faces.bean.ManagedBean;
 
+import br.senai.sc.entity.Contato;
+
 @ManagedBean
 public class ContatoMB {
+	
+	private Contato contato;
+	
 
-	private String nome;
-	private String email;
-	private String comentario;
-	
-	public String getNome() {
-		return nome;
+	public Contato getContato() {
+		return contato;
 	}
-	public void setNome(String nome) {
-		this.nome = nome;
+
+	public void setContato(Contato contato) {
+		this.contato = contato;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getComentario() {
-		return comentario;
-	}
-	public void setComentario(String comentario) {
-		this.comentario = comentario;
+
+	public ContatoMB() {
+		contato = new Contato();
 	}
 	
-	public String enviar(){
-		System.out.println("Nome: " + nome);
-		System.out.println("E-Mail: " + email);
-		System.out.println("Comentario: " + comentario);
-		
-		nome = "";
-		email = "";
-		comentario = "";
-		
-		return "";
-	}
+ //	public String enviar(){
+ //		
+ //	}
 	
 }
