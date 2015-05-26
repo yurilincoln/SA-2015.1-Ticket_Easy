@@ -10,6 +10,9 @@ public class ContatoMB {
 	
 	private Contato contato;
 	
+	public ContatoMB() {
+		contato = new Contato();
+	}
 
 	public Contato getContato() {
 		return contato;
@@ -19,15 +22,14 @@ public class ContatoMB {
 		this.contato = contato;
 	}
 
-	public ContatoMB() {
-		contato = new Contato();
-	}
 	
- 	public String enviar(){
+ 	public String salvar(){
  		ContatoDao dao = new ContatoDao();
 		dao.salvar(contato);
 		contato = new Contato();
 		return "";
  	}
+ 	
+ 	
 	
 }

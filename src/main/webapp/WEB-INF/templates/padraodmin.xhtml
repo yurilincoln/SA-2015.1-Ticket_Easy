@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+          "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+<h:head>
+	<title>TicketEasy - <ui:insert name="title"></ui:insert></title>
+
+	<h:outputStylesheet library="webjars"
+		name="bootstrap/3.3.4/css/bootstrap.min.css" />
+	
+	<h:outputStylesheet library="css" name="padrao.css" />
+	
+	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.js" />
+	
+	<h:outputScript library="webjars"
+		name="bootstrap/3.3.4/js/bootstrap.min.js" />
+	
+	<h:outputScript library="js" name="script.js" />
+
+</h:head>
+
+<body>
+	<ui:include src="/webapp/WEB-INF/templates/menuadmin.xhtml">
+	</ui:include>
+	<div class="container">
+		<ui:debug hotkey="x"
+			rendered="#{initParam['javax.faces.FACELETS_DEVELOPMENT']}" />
+	</div>
+
+	<div id="header">
+		<ui:insert name="header">
+
+		</ui:insert>
+	</div>
+	<div id="content">
+		<ui:insert name="content">
+		</ui:insert>
+	</div>
+	<div id="footer">
+		<ui:insert name="footer">
+		</ui:insert>
+	</div>
+
+
+</body>
+
+</html>
