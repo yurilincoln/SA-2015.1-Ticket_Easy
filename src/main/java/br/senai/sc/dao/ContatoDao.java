@@ -1,11 +1,7 @@
 package br.senai.sc.dao;
 
-import java.util.List;
-
-import javax.persistence.Query;
-
 import br.senai.sc.entity.Contato;
-import br.senai.sc.entity.Pacote;
+import br.senai.sc.entity.Destino;
 
 public class ContatoDao extends Dao {
 
@@ -18,26 +14,26 @@ public class ContatoDao extends Dao {
 		getEntityManager().remove(contato);
 	}
 
-	 public Pacote buscarPorId(Long id) {
+	 public Destino buscarPorId(Long id) {
 	 getEntityManager().getTransaction().begin();
-	 Pacote pacote = getEntityManager().getReference(Pacote.class, id);
+	 Destino destino = getEntityManager().getReference(Destino.class, id);
 	 getEntityManager().getTransaction().commit();
-	 return pacote;
+	 return destino;
 	
 	 }
 
-	public void atualizar(Contato contato) {
-		getEntityManager().getTransaction().begin();
-		getEntityManager().merge(contato);
-		getEntityManager().getTransaction().commit();
-	}
+//	public void atualizar(Contato contato) {
+//		getEntityManager().getTransaction().begin();
+//		getEntityManager().merge(contato);
+//		getEntityManager().getTransaction().commit();
+//	}
 
-	public List<Contato> listar() {
-		 getEntityManager().getTransaction().begin();
-		Query query = getEntityManager().createQuery("From Contato", Pacote.class);
-		 getEntityManager().getTransaction().commit();
-		return query.getResultList();
-	}
+//	public List<Contato> listar() {
+//		 getEntityManager().getTransaction().begin();
+//		Query query = getEntityManager().createQuery("From Contato", Destino.class);
+//		 getEntityManager().getTransaction().commit();
+//		return query.getResultList();
+//	}
 
 	public void finalize() {
 		 getEntityManager().close();

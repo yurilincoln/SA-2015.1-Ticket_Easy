@@ -15,76 +15,104 @@
 	<ui:define name="content">
 		<div class="container">
 			<div class="page-header">
+
 				<h1>
-					Cadastro Pontos Turísticos <small><u>admin</u></small>
+					<font face="verdana"> TicketEasy</font> <small><u>admin</u></small>
 				</h1>
 			</div>
-			
-			<div class="row">
-				<div class="col-md-3">
-				<center>
-				<h3>Mais <small>Procurados:</small></h3>
-				</center>
-				<div class="panel panel-default">
-				 <div class="panel-body">
-						<div class="thumbnail">
-							<div class="caption">
-								<h4>Cristo Redentor</h4>
-								<p>
-									<a target="_blank" href="pontos.html">Leia Mais.</a>
-								</p>
-							</div>
-							<div class="ratings">
-								<p class="pull-right">15 reviews</p>
-								<p>
-									<span class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span>
-								</p>
-							</div>
-						</div>
-						<p></p>
-						<div class="thumbnail">
-							<div class="caption">
-								<h4>Bondinho</h4>
-								<p>
-									<a target="_blank" href="pontos.html">Leia Mais.</a>
-								</p>
-							</div>
-							<div class="ratings">
-								<p class="pull-right">12 reviews</p>
-								<p>
-									<span class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star-empty"></span>
-								</p>
-							</div>
-						</div>
-						<div class="thumbnail">
-							<div class="caption">
 
-								<h4>Maracanã</h4>
-								<p>
-									<a target="_blank" href="pontos.html">Leia Mais.</a>
-								</p>
+			<div class="row">
+
+				<div class="col-md-4">
+					<br></br>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<center>
+								<h3>Admin</h3>
+							</center>
+							<ul class="list-group">
+
+								<li class="list-group-item">
+								<h:link
+										outcome="/admin/cadastropontoturistico"
+										value="Cadastrar Ponto Turistico" /> </li>
+										<li class="list-group-item">
+								<h:link
+										outcome="/admin/cadastropacoteturistico"
+										value="Cadastrar Pacote Turistico" /></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4"></div>
+
+				<div class="col-md-4">
+					<center>
+						<h3>
+							Mais <small>Procurados:</small>
+						</h3>
+					</center>
+					<div class="panel panel-default">
+						<div class="panel-body">
+							<div class="thumbnail">
+								<div class="caption">
+									<h4>Cristo Redentor</h4>
+									<p>
+										<a target="_blank" href="pontos.html">Leia Mais.</a>
+									</p>
+								</div>
+								<div class="ratings">
+									<p class="pull-right">15 reviews</p>
+									<p>
+										<span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span>
+									</p>
+								</div>
 							</div>
-							<div class="ratings">
-								<p class="pull-right">31 reviews</p>
-								<p>
-									<span class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star"></span> <span
-										class="glyphicon glyphicon-star-empty"></span>
-								</p>
+							<p></p>
+							<div class="thumbnail">
+								<div class="caption">
+									<h4>Bondinho</h4>
+									<p>
+										<a target="_blank" href="pontos.html">Leia Mais.</a>
+									</p>
+								</div>
+								<div class="ratings">
+									<p class="pull-right">12 reviews</p>
+									<p>
+										<span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span>
+									</p>
+								</div>
+							</div>
+							<div class="thumbnail">
+								<div class="caption">
+
+									<h4>Maracanã</h4>
+									<p>
+										<a target="_blank" href="pontos.html">Leia Mais.</a>
+									</p>
+								</div>
+								<div class="ratings">
+									<p class="pull-right">31 reviews</p>
+									<p>
+										<span class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star"></span> <span
+											class="glyphicon glyphicon-star-empty"></span>
+									</p>
+								</div>
 							</div>
 						</div>
-						</div>
-						</div>
+					</div>
 				</div>
 			</div>
 		</div>

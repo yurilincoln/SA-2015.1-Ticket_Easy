@@ -1,0 +1,16 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<ul id="menu">
+		<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
+			<h:graphicImage library="images" name="logotipoNovo.png" width="100"
+				height="83" />
+		</li>
+		
+		<li><h:link outcome="/admin/indexadmin" value="Home"/></li>
+		<li><h:link outcome="/admin/listapontoturistico" value="Pontos Turísticos"/></li>
+		<li><h:link outcome="/WebContent/index" value="Sair" class="btn btn-xs btn-primary lateral"/></li>
+	</ul>
+
+</ui:composition>

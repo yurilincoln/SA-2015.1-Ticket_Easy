@@ -151,10 +151,17 @@ kground: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
   
 }
 
-.lateral{
+.botaoentrar{
 background-color: #52C246;
   border-color: #171717;
 	float: right !important; 
+  margin-right: -195% !important;
+}
+
+.botaosair{
+background-color: #52C246;
+  border-color: #171717;
+	float: left !important; 
   margin-right: -195% !important;
 }
 
@@ -188,5 +195,7 @@ body{
 }
 
 .rodaperow {
-  background: rgba(255, 255, 255, 0.82);
+  background: rgba(102, 176, 44, 0.82);
 }
+
+

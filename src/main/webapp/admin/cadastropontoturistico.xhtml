@@ -13,7 +13,6 @@
 	</ui:define>
 	
 	
-	
 	<ui:define name="content">
 	<div class="container">
 	    <div class="page-header">
@@ -22,58 +21,63 @@
 				</h1>
 			</div>
 			<div class="row">
-			<div class="col-md-6">
 			<h:form>
-				<fieldset>
+			<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
+			<br></br>
+				<h:outputLabel value="- Número de ID: -" />
+				<h:inputText styleClass="form-control" value="#{destinoMB.destino.id}"
+					readonly="true" />
+			</h:panelGroup>
+			<h:inputHidden value="#{destinoMB.destino.id}" />
+			<div class="col-md-6">
+			<fieldset>
 				<br></br>
 					<div class="form-group">
 						<h:outputLabel value="Nome do Ponto Turístico:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.nome}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.nome}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Cidade:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.cidade}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.cidade}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Estado:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.estado}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.estado}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Bairro:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.bairro}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.bairro}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Descriçao do Passeio:" />
 						<br></br>
-						<h:inputTextarea  rows="3" cols="57" value="#{pacoteMB.pacote.descricao}"/>
-					</div>
-					</fieldset>
-					</h:form>
-					</div>
+						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.descricao}"/>
+						</div>
+						</fieldset>
+						</div>
 					<div class="col-md-6">
-					<br></br>
-					<h:form>
 					<fieldset>
+					<br></br>
 					<div class="form-group">
 						<h:outputLabel value="Hora de Funcionamento:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.horaFuncionamento}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaFuncionamento}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Valor de Cobrança (R$):" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.valor}" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.valor}" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Observações:" />
 						<br></br>
-						<h:inputTextarea  rows="3" cols="57" value="#{pacoteMB.pacote.obersevacoes}"/>
+						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.obersevacoes}"/>
 					</div>
-					<h:commandButton action="#{contatoMB.salvar()}"
+					<h:commandButton action="#{destinoMB.salvar()}"
 						styleClass="btn btn-success" value="Enviar" />
 						</fieldset>
+						</div>
 				</h:form>
-			</div>
-			</div>
-			</div>
+				</div>
+				</div>
 	</ui:define>
 	
 </ui:composition>
