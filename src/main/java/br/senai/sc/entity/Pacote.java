@@ -1,9 +1,12 @@
 package br.senai.sc.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.ManyToOne;
+import javax.persistence.ManyToMany;
+
 
 @Entity
 public class Pacote {
@@ -14,15 +17,14 @@ public class Pacote {
 	private String nome;
 	private String valor;
 	
-	@ManyToOne
-	private QuantidadeDePontoTuristico qntdDePontoTuristico;
+	@ManyToMany
+	private List<Pacote> idPacote;
 	
-	public QuantidadeDePontoTuristico getQntdDePontoTuristico() {
-		return qntdDePontoTuristico;
+	public List<Pacote> getIdPacote() {
+		return idPacote;
 	}
-	public void setQntdDePontoTuristico(
-			QuantidadeDePontoTuristico qntdDePontoTuristico) {
-		this.qntdDePontoTuristico = qntdDePontoTuristico;
+	public void setIdPacote(List<Pacote> idPacote) {
+		this.idPacote = idPacote;
 	}
 	public Long getId() {
 		return id;

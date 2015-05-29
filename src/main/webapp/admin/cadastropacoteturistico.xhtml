@@ -38,10 +38,10 @@
 					<div class="form-group">
 					<h:outputLabel value="Informe os números de ID:" />
 					<br></br>
-					<h:selectManyMenu value="#{pacoteMB.pacote.qntdDePontoTuristico}">
+					<h:selectManyMenu value="#{pacoteMB.pacote.idPacote}">
 					<f:selectItem itemLabel=""/>
 					<f:selectItems value="#{pacoteMB.pacotes}" var="item"
-				 	itemLabel="#{item.id}" itemValue="#{item}" />
+				 	itemLabel="#{item.nome}" itemValue="#{item}" />
 					</h:selectManyMenu>
     				</div>
 					<h:commandButton action="#{destinoMB.salvar()}"
