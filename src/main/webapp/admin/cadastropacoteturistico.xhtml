@@ -1,0 +1,58 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
+
+	<ui:define name="content">
+	    <div class="container">
+	    <div class="page-header">
+				<h1>
+					Cadastro Pacotes Turísticos <small><u>admin</u></small>
+				</h1>
+			</div>
+			<div class="row">
+			<h:form>
+			<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
+			<br></br>
+				<h:outputLabel value="- Número de ID: -" />
+				<h:inputText styleClass="form-control" value="#{destinoMB.destino.id}"
+					readonly="true" />
+			</h:panelGroup>
+			<h:inputHidden value="#{destinoMB.destino.id}" />
+			<div class="col-md-6">
+			<fieldset>
+				<br></br>
+					<div class="form-group">
+						<h:outputLabel value="Nome do Pacote Turístico:" />
+						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.nome}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="Valor Final (R$):" />
+						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.valor}" />
+					</div>
+					<div class="form-group">
+					<h:outputLabel value="Informe os números de ID:" />
+					<br></br>
+					<h:selectManyMenu value="#{pacoteMB.pacote.qntdDePontoTuristico}">
+					<f:selectItem itemLabel=""/>
+					<f:selectItems value="#{pacoteMB.pacotes}" var="item"
+				 	itemLabel="#{item.id}" itemValue="#{item}" />
+					</h:selectManyMenu>
+    				</div>
+					<h:commandButton action="#{destinoMB.salvar()}"
+						styleClass="btn btn-success" value="Enviar" />
+						</fieldset>
+						<br></br>
+						</div>
+				</h:form>
+				</div>
+				</div>
+	</ui:define>
+
+</ui:composition>
+</html>

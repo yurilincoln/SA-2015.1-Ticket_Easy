@@ -15,10 +15,23 @@ public class Destino {
 	private String estado;
 	private String bairro;
 	private String descricao;
-	private String horaFuncionamento;
+	private String horaAbertura;
+	private String horaFechamento;
 	private Double valor;
 	private String obersevacoes;
 	
+	public String getHoraAbertura() {
+		return horaAbertura;
+	}
+	public void setHoraAbertura(String horaAbertura) {
+		this.horaAbertura = horaAbertura;
+	}
+	public String getHoraFechamento() {
+		return horaFechamento;
+	}
+	public void setHoraFechamento(String horaFechamento) {
+		this.horaFechamento = horaFechamento;
+	}
 	public Long getId() {
 		return id;
 	}
@@ -54,12 +67,6 @@ public class Destino {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	}
-	public String getHoraFuncionamento() {
-		return horaFuncionamento;
-	}
-	public void setHoraFuncionamento(String horaFuncionamento) {
-		this.horaFuncionamento = horaFuncionamento;
 	}
 	public Double getValor() {
 		return valor;

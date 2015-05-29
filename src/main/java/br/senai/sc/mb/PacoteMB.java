@@ -7,19 +7,35 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
 import br.senai.sc.dao.PacoteDao;
+import br.senai.sc.dao.QuantidadeDePontoTuristicoDao;
 import br.senai.sc.entity.Pacote;
+import br.senai.sc.entity.QuantidadeDePontoTuristico;
 
 @ManagedBean
 public class PacoteMB {
 
 	private Pacote pacote;
 	private List<Pacote> pacotes;
+	private List<QuantidadeDePontoTuristico> qntdDePontosTuristicos;
 	private PacoteDao pacoteDao;
 	
 	@PostConstruct
 	public void initMB(){
 		this.pacote = new Pacote();
 		pacoteDao = new PacoteDao();
+	}
+
+	public List<QuantidadeDePontoTuristico> getQntdDePontosTuristicos() {
+		if(qntdDePontosTuristicos == null){
+			QuantidadeDePontoTuristicoDao quantidadeDePontoTuristicoDao = new QuantidadeDePontoTuristicoDao();
+			qntdDePontosTuristicos = quantidadeDePontoTuristicoDao.listarTodos();
+		}
+		return qntdDePontosTuristicos;
+	}
+
+	public void setQntdDePontosTuristicos(
+			List<QuantidadeDePontoTuristico> qntdDePontosTuristicos) {
+		this.qntdDePontosTuristicos = qntdDePontosTuristicos;
 	}
 
 	public String salvar(){
