@@ -38,14 +38,13 @@
 					<div class="form-group">
 					<h:outputLabel value="Informe os números de ID:" />
 					<br></br>
-					<h:selectManyMenu value="#{pacoteMB.pacote.idPacote}">
-					<f:selectItem itemLabel=""/>
-					<f:selectItems value="#{pacoteMB.pacotes}" var="item"
+					<h:selectManyListbox value="#{pacoteMB.pacote.destinos}">
+					<f:selectItems value="#{destinoMB.destinos}" var="item"
 				 	itemLabel="#{item.nome}" itemValue="#{item}" />
-					</h:selectManyMenu>
+					</h:selectManyListbox>
     				</div>
 					<h:commandButton action="#{destinoMB.salvar()}"
-						styleClass="btn btn-success" value="Enviar" />
+						styleClass="btn btn-success" value="Salvar" />
 						</fieldset>
 						<br></br>
 						</div>

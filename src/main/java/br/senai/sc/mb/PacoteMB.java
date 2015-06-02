@@ -36,10 +36,11 @@ public class PacoteMB {
 		return "";
 	}
 	
+	
 	public String editar(String idParam){
 		Long id = Long.valueOf(idParam);
 		pacote = pacoteDao.buscarPorId(id);
-		return "formcanal";
+		return "";
 	}
 
 	public List<Pacote> getPacotes() {

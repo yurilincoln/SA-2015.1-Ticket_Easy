@@ -26,7 +26,7 @@ public class DestinoMB {
 		DestinoDao dao = new DestinoDao();
 		dao.salvar(destino);
 		destino = new Destino();
-		return "";
+		return "listapontoturistico?faces-redirect=true";
 	}
 	
 	public String excluir(String idParam){

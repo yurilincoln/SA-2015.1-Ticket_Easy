@@ -16,14 +16,10 @@
 				</h1>
 			</div>
 
-				<div class="col-md-5">
-				
+			<div class="row">
+				<div class="col-md-12">
 				<h:form>
-				
-				<br></br>
-			<h:dataTable styleClass="order-table"
-    			headerClass="order-table-header"
-    			rowClasses="order-table-odd-row,order-table-even-row" value="#{destinoMB.destinos}" var="item">
+			<h:dataTable styleClass="table" value="#{pacoteMB.pacotes}" var="item">
 				<h:column>
 					<f:facet name="header">ID</f:facet>
 					<h:outputText value="#{item.id}" />
@@ -35,32 +31,26 @@
 				</h:column>
 				
 				<h:column>
-					<f:facet name="header">Descricao</f:facet>
-					<h:outputText value="#{item.descricao}" />
-				</h:column>
-				
-				<h:column>
 					<f:facet name="header">Valor (R$):</f:facet>
 					<h:outputText value="#{item.valor}" />
 				</h:column>
 
 				<h:column>
 					<h:commandLink styleClass="btn btn-info"
-						action="#{destinoMB.editar(item.id)}">
+						action="#{pacoteMB.editar(item.id)}">
 						<span class="glyphicon glyphicon-edit"></span>
 					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
 					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
-						action="#{destinoMB.excluir(item.id)}">
+						action="#{pacoteMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-remove"></span>
 					</h:commandLink>
 				</h:column>
 			</h:dataTable>
-			<br></br>
 		</h:form>
 				</div>
 				</div>
-				
+				</div>
 				
 	</ui:define>
 
