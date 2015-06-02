@@ -5,9 +5,9 @@ import javax.persistence.EntityManagerFactory;
 import javax.persistence.NoResultException;
 import javax.persistence.Persistence;
  
-import com.devmedia.model.Usuario;
+import br.senai.sc.entity.Usuario;
  
-public class UsuarioDAO {
+public class UsuarioDao {
  
       private EntityManagerFactory factory = Persistence
                   .createEntityManagerFactory("usuarios");

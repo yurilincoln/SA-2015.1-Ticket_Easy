@@ -4,15 +4,15 @@ import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.context.FacesContext;
+
+import br.senai.sc.dao.UsuarioDao;
+import br.senai.sc.entity.Usuario;
  
-import com.devmedia.db.UsuarioDAO;
-import com.devmedia.model.Usuario;
- 
-@ManagedBean(name = "LoginMB")
+@ManagedBean
 @ViewScoped
-public class LoginManagedBean {
+public class UsuarioMB {
  
-      private UsuarioDAO usuarioDAO = new UsuarioDAO();
+      private UsuarioDao usuarioDAO = new UsuarioDao();
       private Usuario usuario = new Usuario();
       
       public String envia() {
