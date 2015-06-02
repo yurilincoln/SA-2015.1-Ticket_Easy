@@ -36,14 +36,14 @@
 						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.valor}" />
 					</div>
 					<div class="form-group">
-					<h:outputLabel value="Informe os números de ID:" />
+					<h:outputLabel value="Informe os pontos turisticos:" />
 					<br></br>
 					<h:selectManyListbox value="#{pacoteMB.pacote.destinos}">
 					<f:selectItems value="#{destinoMB.destinos}" var="item"
 				 	itemLabel="#{item.nome}" itemValue="#{item}" />
 					</h:selectManyListbox>
     				</div>
-					<h:commandButton action="#{destinoMB.salvar()}"
+					<h:commandButton action="#{pacoteMB.salvar()}"
 						styleClass="btn btn-success" value="Salvar" />
 						</fieldset>
 						<br></br>
