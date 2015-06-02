@@ -5,24 +5,23 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
+import br.senai.sc.dao.DestinoDao;
 import br.senai.sc.entity.Destino;
-import br.senai.sc.ti20132n1.pw.gpe.dao.TipoCanalDao;
-import br.senai.sc.ti20132n1.pw.gpe.entity.TipoCanal;
 
 @FacesConverter(forClass=Destino.class)
 public class AdicionarPacoteConverter implements Converter {
 
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent uiComponent, String value) {
-		TipoCanalDao dao = new TipoCanalDao();
+		DestinoDao dao = new DestinoDao();
 		Long id = Long.valueOf(value);
-		return dao.buscaPorId(id);
+		return dao.buscarPorId(id);
 	}
 
 	@Override
 	public String getAsString(FacesContext context, UIComponent uiComponent, Object value) {
-		TipoCanal tipoCanal = (TipoCanal) value;
-		return tipoCanal.getId().toString();
+		Destino destino = (Destino) value;
+		return destino.getId().toString();
 	}
 
 }
