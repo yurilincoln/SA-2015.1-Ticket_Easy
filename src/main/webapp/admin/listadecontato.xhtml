@@ -19,7 +19,7 @@
 				<div class="col-md-12">
 				
 				<h:form>
-			<h:dataTable styleClass="table" value="#{destinoMB.destinos}" var="item">
+			<h:dataTable styleClass="table" value="#{contatoMB.contatos}" var="item">
 				<h:column>
 					<f:facet name="header">ID:</f:facet>
 					<h:outputText value="#{item.id}" />
@@ -31,23 +31,19 @@
 				</h:column>
 				
 				<h:column>
-					<f:facet name="header">Descricao:</f:facet>
-					<h:outputText value="#{item.descricao}" />
+					<f:facet name="header">Email:</f:facet>
+					<h:outputText value="#{item.email}" />
 				</h:column>
 				
 				<h:column>
-					<f:facet name="header">Valor(R$):</f:facet>
-					<h:outputText value="#{item.valor}" />
+					<f:facet name="header">Comentario:</f:facet>
+					<h:outputText value="#{item.comentario}" />
 				</h:column>
 
 				<h:column>
-					<h:commandLink styleClass="btn btn-info"
-						action="#{destinoMB.editar(item.id)}">
-						<span class="glyphicon glyphicon-edit"></span>
-					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
 					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
-						action="#{destinoMB.excluir(item.id)}">
+						action="#{contatoMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-remove"></span>
 					</h:commandLink>
 				</h:column>

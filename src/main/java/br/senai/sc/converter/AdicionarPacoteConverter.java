@@ -7,8 +7,9 @@ import javax.faces.convert.FacesConverter;
 
 import br.senai.sc.dao.DestinoDao;
 import br.senai.sc.entity.Destino;
+import br.senai.sc.entity.Pacote;
 
-@FacesConverter(forClass=Destino.class)
+@FacesConverter(forClass=Pacote.class)
 public class AdicionarPacoteConverter implements Converter {
 
 	@Override

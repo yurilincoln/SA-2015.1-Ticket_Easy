@@ -155,7 +155,7 @@ kground: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
 background-color: #52C246;
   border-color: #ffffff;
 	float: right !important; 
-  margin-right: -195% !important;
+  margin-right: -40% !important;
 }
 
 .botaoentrar{
@@ -168,37 +168,13 @@ background-color: #52C246;
 background-color: #ff0000;
   border-color: #171717;
 	float: right !important; 
-  margin-right: -530% !important;
+  margin-right: -300% !important;
 }
 
 .botaosair:hover{
 	background-color: #ff0000 !important;
     background-image: linear-gradient(#ff0000, #ff0000) !important;
 } 
-
-.order-table{   
-	border-collapse:collapse;
-}
- 
-.order-table-header{
-	text-align:center;
-	background:none repeat scroll 0 0 #318e35;
-	border-bottom:1px solid #BBBBBB;
-	padding:16px;
-}
- 
-.order-table-odd-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #F9F9F9;
-	border-top:1px solid #BBBBBB;
-}
- 
-.order-table-even-row{
-	text-align:center;
-	background:none repeat scroll 0 0 #F9F9F9;
-	border-top:2px solid #BBBBBB;
-}
-
 
 body{
 	color: #333;
