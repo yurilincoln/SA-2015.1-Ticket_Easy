@@ -7,26 +7,26 @@ import javax.persistence.Query;
 import br.senai.sc.entity.Contato;
 
 
-public class ContatoDao extends Dao {
+public class ContatoDao extends Dao_OLD {
 
-	public void salvar(Contato contato) {
-		getEntityManager().merge(contato);
-	}
-
-	@SuppressWarnings("unchecked")
-	public List<Contato> listarTodos() {
-		Query query = getEntityManager().createQuery("From Contato",Contato.class);
-		return query.getResultList();
-	}
-	
-	public void excluir(Long id) {
-		Contato contato = getEntityManager().getReference(Contato.class, id);
-		getEntityManager().remove(contato);
-	}
-
-	public Contato buscarPorId(Long id) {
-		return getEntityManager().find(Contato.class, id);
-	}
+//	public void salvar(Contato contato) {
+//		getEntityManager().merge(contato);
+//	}
+//
+//	@SuppressWarnings("unchecked")
+//	public List<Contato> listarTodos() {
+//		Query query = getEntityManager().createQuery("From Contato",Contato.class);
+//		return query.getResultList();
+//	}
+//	
+//	public void excluir(Long id) {
+//		Contato contato = getEntityManager().getReference(Contato.class, id);
+//		getEntityManager().remove(contato);
+//	}
+//
+//	public Contato buscarPorId(Long id) {
+//		return getEntityManager().find(Contato.class, id);
+//	}
 
 //	public void atualizar(Contato contato) {
 //		getEntityManager().getTransaction().begin();

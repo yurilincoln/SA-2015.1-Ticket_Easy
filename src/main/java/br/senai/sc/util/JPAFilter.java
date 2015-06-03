@@ -21,7 +21,7 @@ public class JPAFilter implements Filter {
 		logger = Logger.getLogger(this.getClass().getName());
 		
 		logger.info("Criou O EMF");
-		JPAUtil.creteEntityManagerFactory();
+//		JPAUtil.creteEntityManagerFactory();
 	}
 
 	@Override

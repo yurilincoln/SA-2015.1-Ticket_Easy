@@ -155,7 +155,7 @@ kground: linear-gradient(to bottom, #3fa4f0 0%, #0f71ba 100%);
 background-color: #52C246;
   border-color: #ffffff;
 	float: right !important; 
-  margin-right: -40% !important;
+  margin-right: -210% !important;
 }
 
 .botaoentrar{
@@ -168,7 +168,7 @@ background-color: #52C246;
 background-color: #ff0000;
   border-color: #171717;
 	float: right !important; 
-  margin-right: -300% !important;
+  margin-right: -530% !important;
 }
 
 .botaosair:hover{

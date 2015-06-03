@@ -5,7 +5,7 @@ import javax.faces.context.FacesContext;
 import javax.faces.convert.Converter;
 import javax.faces.convert.FacesConverter;
 
-import br.senai.sc.dao.DestinoDao;
+import br.senai.sc.dao.DestinoDao_OLD;
 import br.senai.sc.entity.Destino;
 import br.senai.sc.entity.Pacote;
 
@@ -14,7 +14,7 @@ public class AdicionarPacoteConverter implements Converter {
 
 	@Override
 	public Object getAsObject(FacesContext context, UIComponent uiComponent, String value) {
-		DestinoDao dao = new DestinoDao();
+		DestinoDao_OLD dao = new DestinoDao_OLD();
 		Long id = Long.valueOf(value);
 		return dao.buscarPorId(id);
 	}
