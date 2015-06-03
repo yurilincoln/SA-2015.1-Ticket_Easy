@@ -98,7 +98,7 @@ public class DaoImplements<T> implements Dao<T>{
 	}
 
 	@Override
-	public T findAllById(Integer id) {
+	public T findAllById(Long id) {
 		T result = null;
 		try {
 			checkEntityManager();

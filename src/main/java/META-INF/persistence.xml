@@ -18,7 +18,7 @@
 	
 	<persistence-unit name="ticketEasy_puTest" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>br.senai.sc.entity.Pacote</class>
+		<class>br.senai.sc.entity.Destino</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/testdb"/>
