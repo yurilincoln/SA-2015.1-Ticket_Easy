@@ -2,49 +2,30 @@ package br.senai.sc.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import br.senai.sc.entity.Destino;
 
 
-public class DestinoDao extends DaoImplements<Destino> {
-
-	public DestinoDao(Class<Destino> klass) {
-		super(Destino.class);
-	}
+public class DestinoDao extends Dao {
 
 	public void salvar(Destino destino) {
-		if (destino.getId() == null) {
-			save(destino);
-		} else {
-			update(destino);
-		}
+		getEntityManager().merge(destino);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Destino> listarTodos() {
+		Query query = getEntityManager().createQuery("From Destino",Destino.class);
+		return query.getResultList();
 	}
 	
-	public void excluir(Destino destino) {
-		if (destino.getId() != null) {
-			delete(destino);
+	public void excluir(Long id) {
+		Destino destino = getEntityManager().getReference(Destino.class, id);
+		getEntityManager().remove(destino);
 	}
-	}
-	
-	public List<Destino> listarTodos(Destino destino){
-		return findAll();
-		}
 
-	public Destino buscaPorId(Long id){
-		return findAllById(id);
-	}
-//	
-//	public void excluir(Long id) {
-//		Destino destino = getEntityManager().getReference(Destino.class, id);
-//		getEntityManager().remove(destino);
-//	}
-//
-//	public Destino buscarPorId(Long id) {
-//		return getEntityManager().find(Destino.class, id);
-//	}
-
-	public Object buscarPorId(Long id) {
-		// TODO Auto-generated method stub
-		return null;
+	public Destino buscarPorId(Long id) {
+		return getEntityManager().find(Destino.class, id);
 	}
 
 //	public void atualizar(Destino pacote) {

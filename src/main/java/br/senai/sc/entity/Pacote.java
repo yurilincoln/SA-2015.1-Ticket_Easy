@@ -26,6 +26,15 @@ public class Pacote {
 	public void setDestinos(List<Destino> destinos) {
 		this.destinos = destinos;
 	}
+	public String listaDestino(){
+		String lista = "<ul>";
+		for(Destino d : destinos){
+			lista.concat("<li>"+d.getNome()+"</li>");
+		}
+		lista.concat("</ul>");
+		
+		return lista;
+	}
 	public Long getId() {
 		return id;
 	}

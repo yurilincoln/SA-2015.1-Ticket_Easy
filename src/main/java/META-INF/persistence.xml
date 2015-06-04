@@ -1,5 +1,5 @@
 <persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
-	<persistence-unit name="ticketEasy_pu">
+	<persistence-unit name="ticketeasy_pu">
 	<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 	<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
@@ -18,7 +18,7 @@
 	
 	<persistence-unit name="ticketEasy_puTest" transaction-type="RESOURCE_LOCAL">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
-		<class>br.senai.sc.entity.Destino</class>
+		<class>br.senai.sc.entity.Pacote</class>
 		<properties>
 			<property name="javax.persistence.jdbc.driver" value="org.hsqldb.jdbcDriver"/>
 			<property name="javax.persistence.jdbc.url" value="jdbc:hsqldb:file:target/testdb"/>

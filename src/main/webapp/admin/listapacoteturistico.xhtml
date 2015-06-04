@@ -31,6 +31,11 @@
 				</h:column>
 				
 				<h:column>
+					<f:facet name="header">Destinos:</f:facet>
+					<h:outputText value="#{item.listaDestino()}" />
+				</h:column>
+				
+				<h:column>
 					<f:facet name="header">Valor (R$):</f:facet>
 					<h:outputText value="#{item.valor}" />
 				</h:column>

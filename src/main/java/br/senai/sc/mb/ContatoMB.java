@@ -6,7 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
 import br.senai.sc.dao.ContatoDao;
-import br.senai.sc.dao.DestinoDao_OLD;
+import br.senai.sc.dao.DestinoDao;
 import br.senai.sc.entity.Contato;
 import br.senai.sc.entity.Destino;
 
@@ -36,24 +36,24 @@ public class ContatoMB {
 	}
 
 	
-// 	public String salvar(){
-// 		ContatoDao dao = new ContatoDao();
-//		dao.salvar(contato);
-//		contato = new Contato();
-//		return "";
-// 	}
-// 	
-// 	public List<Contato> getContatos() {
-//		if(contatos == null){
-//			contatos = contatoDao.listarTodos();
-//		}
-//		return contatos;
-//	}
-//	
-// 	public String excluir(String idParam){
-//		Long id = Long.valueOf(idParam);
-//		contatoDao.excluir(id);
-//		contatos = null;
-//		return "";
-//	}
+ 	public String salvar(){
+ 		ContatoDao dao = new ContatoDao();
+		dao.salvar(contato);
+		contato = new Contato();
+		return "";
+ 	}
+ 	
+ 	public List<Contato> getContatos() {
+		if(contatos == null){
+			contatos = contatoDao.listarTodos();
+		}
+		return contatos;
+	}
+	
+ 	public String excluir(String idParam){
+		Long id = Long.valueOf(idParam);
+		contatoDao.excluir(id);
+		contatos = null;
+		return "";
+	}
 }

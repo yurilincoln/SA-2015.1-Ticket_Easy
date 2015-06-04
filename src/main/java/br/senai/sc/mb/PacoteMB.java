@@ -22,33 +22,33 @@ public class PacoteMB {
 		pacoteDao = new PacoteDao();
 	}
 
-//	public String salvar(){
-//		PacoteDao dao = new PacoteDao();
-//		dao.salvar(pacote);
-//		pacote = new Pacote();
-//		return "listapacoteturistico?faces-redirect=true";
-//	}
-//	
-//	public String excluir(String idParam){
-//		Long id = Long.valueOf(idParam);
-//		pacoteDao.excluir(id);
-//		pacotes = null;
-//		return "";
-//	}
-//	
-//	
-//	public String editar(String idParam){
-//		Long id = Long.valueOf(idParam);
-//		pacote = pacoteDao.buscarPorId(id);
-//		return "";
-//	}
-//
-//	public List<Pacote> getPacotes() {
-//		if(pacotes == null){
-//			pacotes = pacoteDao.listarTodos();
-//		}
-//		return pacotes;
-//	}
+	public String salvar(){
+		PacoteDao dao = new PacoteDao();
+		dao.salvar(pacote);
+		pacote = new Pacote();
+		return "listapacoteturistico?faces-redirect=true";
+	}
+	
+	public String excluir(String idParam){
+		Long id = Long.valueOf(idParam);
+		pacoteDao.excluir(id);
+		pacotes = null;
+		return "";
+	}
+	
+	
+	public String editar(String idParam){
+		Long id = Long.valueOf(idParam);
+		pacote = pacoteDao.buscarPorId(id);
+		return "";
+	}
+
+	public List<Pacote> getPacotes() {
+		if(pacotes == null){
+			pacotes = pacoteDao.listarTodos();
+		}
+		return pacotes;
+	}
 
 	public void setPacotes(List<Pacote> pacotes) {
 		this.pacotes = pacotes;
