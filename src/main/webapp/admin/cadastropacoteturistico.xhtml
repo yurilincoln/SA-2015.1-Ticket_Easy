@@ -9,49 +9,50 @@
 <ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
 
 	<ui:define name="content">
-	    <div class="container">
-	    <div class="page-header">
+		<div class="container">
+			<div class="page-header">
 				<h1>
 					Cadastro Pacotes Turísticos <small><u>admin</u></small>
 				</h1>
 			</div>
 			<div class="row">
-			<h:form>
-			<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
-			<br></br>
-				<h:outputLabel value="- Número de ID: -" />
-				<h:inputText styleClass="form-control" value="#{destinoMB.destino.id}"
-					readonly="true" />
-			</h:panelGroup>
-			<h:inputHidden value="#{destinoMB.destino.id}" />
-			<div class="col-md-6">
-			<fieldset>
-				<br></br>
-					<div class="form-group">
-						<h:outputLabel value="Nome do Pacote Turístico:" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.nome}" />
-					</div>
-					<div class="form-group">
-						<h:outputLabel value="Valor Final (R$):" />
-						<h:inputText styleClass="form-control" value="#{pacoteMB.pacote.valor}" />
-					</div>
-					<div class="form-group">
-					<h:outputLabel value="Informe os números de ID:" />
-					<br></br>
-					<h:selectManyMenu value="#{pacoteMB.pacote.idPacote}">
-					<f:selectItem itemLabel=""/>
-					<f:selectItems value="#{pacoteMB.pacotes}" var="item"
-				 	itemLabel="#{item.nome}" itemValue="#{item}" />
-					</h:selectManyMenu>
-    				</div>
-					<h:commandButton action="#{destinoMB.salvar()}"
-						styleClass="btn btn-success" value="Enviar" />
+				<h:form>
+					<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
+						<br></br>
+						<h:outputLabel value="- Número de ID: -" />
+						<h:inputText styleClass="form-control"
+							value="#{destinoMB.destino.id}" readonly="true" />
+					</h:panelGroup>
+					<h:inputHidden value="#{destinoMB.destino.id}" />
+					<div class="col-md-6">
+						<fieldset>
+							<br></br>
+							<div class="form-group">
+								<h:outputLabel value="Nome do Pacote Turístico:" />
+								<h:inputText styleClass="form-control"
+									value="#{pacoteMB.pacote.nome}" />
+							</div>
+							<div class="form-group">
+								<h:outputLabel value="Valor Final (R$):" />
+								<h:inputText styleClass="form-control"
+									value="#{pacoteMB.pacote.valor}" />
+							</div>
+							<div class="form-group">
+								<h:outputLabel value="Informe os pontos turisticos:" />
+								<br></br>
+								<h:selectManyListbox converter="destinoConverter" value="#{pacoteMB.pacote.destinos}">
+									<f:selectItems value="#{destinoMB.destinos}" var="item"
+										itemLabel="#{item.nome}" itemValue="#{item}" />
+								</h:selectManyListbox>
+							</div>
+							<h:commandButton action="#{pacoteMB.salvar()}"
+								styleClass="btn btn-success" value="Salvar" />
 						</fieldset>
 						<br></br>
-						</div>
+					</div>
 				</h:form>
-				</div>
-				</div>
+			</div>
+		</div>
 	</ui:define>
 
 </ui:composition>

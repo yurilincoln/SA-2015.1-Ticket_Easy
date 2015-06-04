@@ -1,12 +1,22 @@
 package br.senai.sc.dao;
 
+import java.util.List;
+
+import javax.persistence.Query;
+
 import br.senai.sc.entity.Contato;
-import br.senai.sc.entity.Destino;
+
 
 public class ContatoDao extends Dao {
 
 	public void salvar(Contato contato) {
 		getEntityManager().merge(contato);
+	}
+
+	@SuppressWarnings("unchecked")
+	public List<Contato> listarTodos() {
+		Query query = getEntityManager().createQuery("From Contato",Contato.class);
+		return query.getResultList();
 	}
 	
 	public void excluir(Long id) {
@@ -14,13 +24,9 @@ public class ContatoDao extends Dao {
 		getEntityManager().remove(contato);
 	}
 
-	 public Destino buscarPorId(Long id) {
-	 getEntityManager().getTransaction().begin();
-	 Destino destino = getEntityManager().getReference(Destino.class, id);
-	 getEntityManager().getTransaction().commit();
-	 return destino;
-	
-	 }
+	public Contato buscarPorId(Long id) {
+		return getEntityManager().find(Contato.class, id);
+	}
 
 //	public void atualizar(Contato contato) {
 //		getEntityManager().getTransaction().begin();
@@ -35,8 +41,8 @@ public class ContatoDao extends Dao {
 //		return query.getResultList();
 //	}
 
-	public void finalize() {
-		 getEntityManager().close();
-		 getEntityManager().close();
-	}
+//	public void finalize() {
+//		 getEntityManager().close();
+//		 getEntityManager().close();
+//	}
 }

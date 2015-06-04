@@ -18,13 +18,24 @@ public class Pacote {
 	private String valor;
 	
 	@ManyToMany
-	private List<Pacote> idPacote;
+	private List<Destino> destinos;
 	
-	public List<Pacote> getIdPacote() {
-		return idPacote;
+	public List<Destino> getDestinos() {
+		return destinos;
 	}
-	public void setIdPacote(List<Pacote> idPacote) {
-		this.idPacote = idPacote;
+	public void setDestinos(List<Destino> destinos) {
+		this.destinos = destinos;
+	}
+	public String listaDestino(){
+		StringBuilder lista = new StringBuilder();
+		for(Destino d : destinos){
+			if(lista.length() > 0){
+				lista.append(", ");
+			}
+			lista.append(d.getNome());
+		}
+		
+		return lista.toString();
 	}
 	public Long getId() {
 		return id;

@@ -26,7 +26,7 @@ public class PacoteMB {
 		PacoteDao dao = new PacoteDao();
 		dao.salvar(pacote);
 		pacote = new Pacote();
-		return "";
+		return "listapacoteturistico?faces-redirect=true";
 	}
 	
 	public String excluir(String idParam){
@@ -36,10 +36,11 @@ public class PacoteMB {
 		return "";
 	}
 	
+	
 	public String editar(String idParam){
 		Long id = Long.valueOf(idParam);
 		pacote = pacoteDao.buscarPorId(id);
-		return "formcanal";
+		return "";
 	}
 
 	public List<Pacote> getPacotes() {
