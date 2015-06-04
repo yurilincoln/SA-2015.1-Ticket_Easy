@@ -6,9 +6,7 @@ import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 
 import br.senai.sc.dao.ContatoDao;
-import br.senai.sc.dao.DestinoDao;
 import br.senai.sc.entity.Contato;
-import br.senai.sc.entity.Destino;
 
 @ManagedBean
 public class ContatoMB {
