@@ -27,13 +27,15 @@ public class Pacote {
 		this.destinos = destinos;
 	}
 	public String listaDestino(){
-		String lista = "<ul>";
+		StringBuilder lista = new StringBuilder();
 		for(Destino d : destinos){
-			lista.concat("<li>"+d.getNome()+"</li>");
+			if(lista.length() > 0){
+				lista.append(", ");
+			}
+			lista.append(d.getNome());
 		}
-		lista.concat("</ul>");
 		
-		return lista;
+		return lista.toString();
 	}
 	public Long getId() {
 		return id;
