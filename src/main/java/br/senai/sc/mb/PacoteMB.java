@@ -40,8 +40,9 @@ public class PacoteMB {
 	public String editar(String idParam){
 		Long id = Long.valueOf(idParam);
 		pacote = pacoteDao.buscarPorId(id);
-		return "";
+		return "cadastropacoteturistico";
 	}
+	
 
 	public List<Pacote> getPacotes() {
 		if(pacotes == null){

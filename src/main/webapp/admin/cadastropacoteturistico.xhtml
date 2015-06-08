@@ -17,13 +17,13 @@
 			</div>
 			<div class="row">
 				<h:form>
-					<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
+					<h:panelGroup rendered="#{not empty pacoteMB.pacote.id}">
 						<br></br>
 						<h:outputLabel value="- Número de ID: -" />
 						<h:inputText styleClass="form-control"
-							value="#{destinoMB.destino.id}" readonly="true" />
+							value="#{pacoteMB.pacote.id}" readonly="true" />
 					</h:panelGroup>
-					<h:inputHidden value="#{destinoMB.destino.id}" />
+					<h:inputHidden value="#{pacoteMB.pacote.id}" />
 					<div class="col-md-6">
 						<fieldset>
 							<br></br>
