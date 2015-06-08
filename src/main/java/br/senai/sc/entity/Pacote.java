@@ -16,6 +16,7 @@ public class Pacote {
 	private Long id;
 	private String nome;
 	private String valor;
+	private String descricao;
 	
 	@ManyToMany
 	private List<Destino> destinos;
@@ -37,6 +38,7 @@ public class Pacote {
 		
 		return lista.toString();
 	}
+	
 	public Long getId() {
 		return id;
 	}
@@ -55,5 +57,10 @@ public class Pacote {
 	public void setValor(String valor) {
 		this.valor = valor;
 	}
-		
+	public String getDescricao() {
+		return descricao;
+	}
+	public void setDescricao(String descricao) {
+		this.descricao = descricao;
+	}	
 }

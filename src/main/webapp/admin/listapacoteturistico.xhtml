@@ -30,10 +30,15 @@
 					<h:outputText value="#{item.nome}" />
 				</h:column>
 				
-				 <h:column>
+				<!-- <h:column>
 					<f:facet name="header">Destinos:</f:facet>
 					<h:outputText value="#{item.listaDestino()}" />
-				</h:column>  
+				</h:column> --> 
+				
+				<h:column>
+					<f:facet name="header">Descrição do Pacote:</f:facet>
+					<h:outputText value="#{item.descricao}" />
+				</h:column>
 				
 				<h:column>
 					<f:facet name="header">Valor (R$):</f:facet>
