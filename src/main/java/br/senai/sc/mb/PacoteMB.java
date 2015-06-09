@@ -4,7 +4,9 @@ package br.senai.sc.mb;
 import java.util.List;
 
 import javax.annotation.PostConstruct;
+import javax.faces.application.FacesMessage;
 import javax.faces.bean.ManagedBean;
+import javax.faces.context.FacesContext;
 
 import br.senai.sc.dao.PacoteDao;
 import br.senai.sc.entity.Pacote;
@@ -23,10 +25,9 @@ public class PacoteMB {
 	}
 
 	public String salvar(){
-		PacoteDao dao = new PacoteDao();
-		dao.salvar(pacote);
-		pacote = new Pacote();
-		return "listapacoteturistico?faces-redirect=true";
+		pacoteDao.salvar(pacote);
+		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Salvo com sucesso!"));
+		return "listapacoteturistico";
 	}
 	
 	public String excluir(String idParam){

@@ -9,9 +9,11 @@
 <ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
 	
 	<ui:define name="content">
+	<h:messages globalOnly="true" />
 	<div class="container">
 	    <div class="page-header">
 				<h1>
+				<br></br>
 					Cadastro Pontos Turísticos <small><u>admin</u></small>
 				</h1>
 			</div>
@@ -29,24 +31,38 @@
 				<br></br>
 					<div class="form-group">
 						<h:outputLabel value="Nome do Ponto Turístico:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.nome}" />
+						<br />
+						<h:message for="idNome" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.nome}" 
+						id="idNome" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Cidade:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.cidade}" />
+						<br />
+						<h:message for="idCidade" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.cidade}"
+						id="idCidade" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Estado:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.estado}" />
+						<br />
+						<h:message for="idEstado" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.estado}"
+						id="idEstado" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Bairro:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.bairro}" />
+						<br />
+						<h:message for="idBairro" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.bairro}" 
+						id="idBairro" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Descriçao do Passeio:" />
 						<br></br>
-						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.descricao}"/>
+						<h:message for="idDescricao" style="color:darkred; font-weight:bold" />
+						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.descricao}"
+						id="idDescricao" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 						</div>
 						</fieldset>
 						</div>
@@ -55,22 +71,33 @@
 					<br></br>
 					<div class="form-group">
 						<h:outputLabel value="Hora de Abertura:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaAbertura}" />
+						<br />
+						<h:message for="idHoraA" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaAbertura}" 
+						id="idHoraA" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Hora de Fechamento:" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaFechamento}" />
+						<br />
+						<h:message for="idHoraF" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaFechamento}"
+						id="idHoraF" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Valor de Cobrança (R$):" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.valor}">
+						<br />
+						<h:message for="idValor" style="color:darkred; font-weight:bold" />
+						<h:inputText styleClass="form-control" value="#{destinoMB.destino.valor}"
+						id="idValor" required="true" requiredMessage="## Preenchimento obrigatório ##">
 							<f:convertNumber locale="pt_BR" />
 						</h:inputText>
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Observações:" />
-						<br></br>
-						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.obersevacoes}"/>
+						<br />
+						<h:message for="idObs" style="color:darkred; font-weight:bold" />
+						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.obersevacoes}"
+						id="idObs" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
 					<h:commandButton action="#{destinoMB.salvar()}"
 						styleClass="btn btn-success" value="Salvar" />
