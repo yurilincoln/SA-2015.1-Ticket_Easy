@@ -218,3 +218,10 @@ body{
 .menu_mluv_retratil a.mostra-esconde-menu {width: 98px; height: 25px; display: block; line-height: 25px; background: rgba(0, 0, 0, 0.75); position: absolute; top: 65px; right: 20px; font-size: 9px; font-family: 'Arial', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; text-align: center; color: #fff; z-index: 100; text-shadow: 1px 1px 1px rgba(0,0,0,0.35); text-decoration: none; -webkit-transition:All 0.5s ease; -moz-transition:All 0.5s ease; -o-transition:All 0.5s ease;}
 .menu_mluv_retratil a.mostra-esconde-menu.acao-menu {margin-top: -65px;}
 
+<!-- .botaotopo {
+display:scroll;
+position:fixed;
+bottom:2px;
+right:2px;
+} -->
+
