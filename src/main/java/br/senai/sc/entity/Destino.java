@@ -19,6 +19,7 @@ public class Destino {
 	private String horaFechamento;
 	private Double valor;
 	private String obersevacoes;
+	private String fotoDestino;
 	
 	public String getHoraAbertura() {
 		return horaAbertura;
@@ -79,6 +80,12 @@ public class Destino {
 	}
 	public void setObersevacoes(String obersevacoes) {
 		this.obersevacoes = obersevacoes;
+	}
+	public String getFotoDestino() {
+		return fotoDestino;
+	}
+	public void setFotoDestino(String fotoDestino) {
+		this.fotoDestino = fotoDestino;
 	}
 		
 }

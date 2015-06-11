@@ -28,6 +28,11 @@
 				</h:column>
 
 				<h:column>
+					<f:facet name="header">Foto do Destino:</f:facet>
+					<h:graphicImage rendered="#{not empty item.fotoDestino}" url="#{destinoMB.caminhoUpload(item.fotoDestino)}" />
+				</h:column>
+				
+				<h:column>
 					<f:facet name="header">Nome:</f:facet>
 					<h:outputText value="#{item.nome}" />
 				</h:column>
