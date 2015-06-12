@@ -33,79 +33,84 @@
 						<h:outputLabel value="Nome do Ponto Turístico:" />
 						<br />
 						<h:message for="idNome" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.nome}" 
+						<h:inputText styleClass="campotiponome" value="#{destinoMB.destino.nome}" 
 						id="idNome" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
-					<div class="form-group">
+					<div class="form-gruop">
 						<h:outputLabel value="Cidade:" />
 						<br />
 						<h:message for="idCidade" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.cidade}"
+						<h:inputText styleClass="campotiponome" value="#{destinoMB.destino.cidade}"
 						id="idCidade" required="true" requiredMessage="## Preenchimento obrigatório ##" />
+						<br></br>
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Estado:" />
 						<br />
 						<h:message for="idEstado" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.estado}"
+						<h:inputText styleClass="campotiponome" value="#{destinoMB.destino.estado}"
 						id="idEstado" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Bairro:" />
 						<br />
 						<h:message for="idBairro" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.bairro}" 
+						<h:inputText styleClass="campotiponome" value="#{destinoMB.destino.bairro}" 
 						id="idBairro" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
 					<div class="form-group">
-						<h:outputLabel value="Descriçao do Passeio:" />
-						<br></br>
-						<h:message for="idDescricao" style="color:darkred; font-weight:bold" />
-						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.descricao}"
-						id="idDescricao" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
-						</div>
+					<h:outputLabel value="Imagem do Destino:" />
+					<h:inputFile styleClass="campofoto" value="#{destinoMB.fotoDestino}" />
+					<h:inputHidden styleClass="form-control" value="#{destinoMB.destino.fotoDestino}" />
+					</div>
 						</fieldset>
 						</div>
-					<div class="col-md-6">
+						<div class="col-md-1">
+							<h:graphicImage library="images" name="fundoverde.jpg" width="100%" height="25"/>
+						</div>
+						
+					<div class="col-md-5">
 					<fieldset>
 					<br></br>
 					<div class="form-group">
 						<h:outputLabel value="Hora de Abertura:" />
 						<br />
 						<h:message for="idHoraA" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaAbertura}" 
+						<h:inputText styleClass="campohora" value="#{destinoMB.destino.horaAbertura}" 
 						id="idHoraA" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
-					<div class="form-group">
+					<div class="form-group" style="margin-left: 140px; margin-top: -70px">
 						<h:outputLabel value="Hora de Fechamento:" />
 						<br />
 						<h:message for="idHoraF" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.horaFechamento}"
+						<h:inputText styleClass="campohora" value="#{destinoMB.destino.horaFechamento}"
 						id="idHoraF" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Valor de Cobrança (R$):" />
 						<br />
 						<h:message for="idValor" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="form-control" value="#{destinoMB.destino.valor}"
+						<h:inputText styleClass="campohora" value="#{destinoMB.destino.valor}"
 						id="idValor" required="true" requiredMessage="## Preenchimento obrigatório ##">
 							<f:convertNumber locale="pt_BR" />
 						</h:inputText>
 					</div>
 					<div class="form-group">
+						<h:outputLabel value="Descriçao do Passeio:" />
+						<br></br>
+						<h:message for="idDescricao" style="color:darkred; font-weight:bold" />
+						<h:inputTextarea  rows="3" cols="50" value="#{destinoMB.destino.descricao}"
+						id="idDescricao" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
+						</div>
+					<div class="form-group">
 						<h:outputLabel value="Observações:" />
 						<br />
 						<h:message for="idObs" style="color:darkred; font-weight:bold" />
-						<h:inputTextarea  rows="3" cols="57" value="#{destinoMB.destino.obersevacoes}"
+						<h:inputTextarea  rows="3" cols="50" value="#{destinoMB.destino.obersevacoes}"
 						id="idObs" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
+						<h:commandButton action="#{destinoMB.salvar()}"
+						styleClass="btn btn-success" style="margin-left: 10px;  margin-top: -28px;" value="Salvar" />
 					</div>
-					<div class="form-group">
-					<h:outputLabel value="Imagem do Destino:" />
-					<h:inputFile styleClass="form-control" value="#{destinoMB.fotoDestino}" />
-					<h:inputHidden styleClass="form-control" value="#{destinoMB.destino.fotoDestino}" />
-					</div>
-					<h:commandButton action="#{destinoMB.salvar()}"
-						styleClass="btn btn-success" value="Salvar" />
 						</fieldset>
 						</div>
 				</h:form>

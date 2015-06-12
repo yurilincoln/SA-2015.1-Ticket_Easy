@@ -210,6 +210,48 @@ body{
   background-attachment: fixed;
 }
 
+.campotiponome{
+  display: block;		
+  width: 59%;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campofoto{
+  display: block;		
+  width: 59%;
+  height: 35px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.campohora{
+  display: block;		
+  width: 60px;
+  height: 30px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #555;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
 .menu_mluv_retratil {width: 100%; height: 65px; display: block; background: #f69797; position: fixed; top: 0; z-index: 100;  -webkit-transition:All 0.5s ease; -moz-transition:All 0.5s ease; -o-transition:All 0.5s ease;}
 .menu_mluv_retratil.esconder {top: -65px; position: fixed;}
 .menu_mluv_retratil nav {margin: 0 20px; padding: 0; list-style: none; float: left;}
@@ -217,11 +259,4 @@ body{
 .menu_mluv_retratil nav a:hover {color: #E26767}
 .menu_mluv_retratil a.mostra-esconde-menu {width: 98px; height: 25px; display: block; line-height: 25px; background: rgba(0, 0, 0, 0.75); position: absolute; top: 65px; right: 20px; font-size: 9px; font-family: 'Arial', sans-serif; font-weight: 500; letter-spacing: 2px; text-transform: uppercase; text-align: center; color: #fff; z-index: 100; text-shadow: 1px 1px 1px rgba(0,0,0,0.35); text-decoration: none; -webkit-transition:All 0.5s ease; -moz-transition:All 0.5s ease; -o-transition:All 0.5s ease;}
 .menu_mluv_retratil a.mostra-esconde-menu.acao-menu {margin-top: -65px;}
-
-<!-- .botaotopo {
-display:scroll;
-position:fixed;
-bottom:2px;
-right:2px;
-} -->
 
