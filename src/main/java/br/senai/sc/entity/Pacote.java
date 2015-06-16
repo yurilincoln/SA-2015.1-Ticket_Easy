@@ -15,7 +15,7 @@ public class Pacote {
 	@GeneratedValue
 	private Long id;
 	private String nome;
-	private String valor;
+	private double valor;
 	private String descricao;
 	
 	@ManyToMany
@@ -51,10 +51,10 @@ public class Pacote {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getValor() {
+	public double getValor() {
 		return valor;
 	}
-	public void setValor(String valor) {
+	public void setValor(double valor) {
 		this.valor = valor;
 	}
 	public String getDescricao() {

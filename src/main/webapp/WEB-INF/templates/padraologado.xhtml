@@ -4,9 +4,9 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
-	<title>TicketEasy - <ui:insert name="title"></ui:insert></title>
+	<title>TicketEasy - Admin<ui:insert name="title"></ui:insert></title>
 
-	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css"  />
+	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css" />
 
 	<h:outputStylesheet library="css" name="padrao.css" />
 
@@ -18,8 +18,8 @@
 
 </h:head>
 
-<body>
-	<ui:include src="/WEB-INF/templates/menu.xhtml">
+<h:body>
+	<ui:include src="/WEB-INF/templates/menulogado.xhtml">
 	</ui:include>
 	<div class="container">
 		<ui:debug hotkey="x"
@@ -58,21 +58,20 @@
 						</div>
 					</div>
 
-
-
-					<!-- <div class="col-md-4">
-						<h3>
-							<font face="verdana" color="white"> Pagamento em:  </font>
-						</h3>
-						<div class="panel panel-default">
-							<div class="panel-body">
-								<h:graphicImage library="images" name="bandeira_master.png" />
-								<h:graphicImage library="images" name="bandeira_visa.png" />
-								<h:graphicImage library="images" name="bandeira_boleto.png" />
-								<h:graphicImage library="images" name="pagseguro.png" width="175" height="50"/>
+					<div class="col-md-3">
+						<br></br> <br></br>
+						<center>
+							<div class="panel panel-default">
+								<div class="panel-body">
+									<h:link outcome="/sobrelogado" value="QUEM SOMOS?" />
+									<br></br>
+									<h:link outcome="/localizacaologado" value="LOCALIZACÃO" />
+									<br></br>
+									<h:link outcome="/contatologado" value="CONTATO" />
+								</div>
 							</div>
-						</div>  
-					</div>  -->
+						</center>
+					</div>
 				</div>
 			</div>
 
@@ -80,6 +79,6 @@
 	</div>
 
 
-</body>
+</h:body>
 
 </html>

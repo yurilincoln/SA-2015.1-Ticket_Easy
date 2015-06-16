@@ -1,0 +1,94 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraologado.xhtml">
+
+	<ui:define name="title">
+	    Contato
+	</ui:define>
+
+	<ui:define name="content">
+		<div class="container">
+			<div class="page-header">
+			<br></br>
+				<h1><font face="verdana">
+					TicketEasy</font> <small><u>Contato</u></small>
+				</h1>
+			</div>
+			 <div class="row">
+			<div class="col-md-5">
+			<h:form>
+				<center>
+					<h3>Deixe seu Recado:</h3>
+				</center>
+				
+				<fieldset>
+					<div class="form-group">
+						<h:outputLabel value="Nome:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.contato.nome}" />
+					</div>
+					<div class="form-group">
+						<h:outputLabel value="E-mail:" />
+						<h:inputText styleClass="form-control" value="#{contatoMB.contato.email}" />
+					</div>
+					<b>Comentário:</b>
+					<p></p>
+					<h:inputTextarea  rows="3" cols="45" value="#{contatoMB.contato.comentario}"/>
+					<br></br>
+					<h:commandButton action="#{contatoMB.salvar()}"
+						styleClass="btn btn-success" value="Enviar" />
+						</fieldset>
+						<br></br>
+				</h:form>
+			</div>
+			
+
+			<div class="col-md-4">
+				<center>
+					<h3>Entre em contato:</h3>
+				</center>
+				<p></p>
+				<p></p>
+				<div class="panel panel-default">
+					<div class="panel-heading">Email:</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-envelope" aria-hidden="true">
+						</span> ticketeasy@contato.com.br
+					</div>
+				</div>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">Telefone:</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-phone-alt" aria-hidden="true">
+						</span> (48)3092-6352
+					</div>
+				</div>
+			</div>
+
+			<div class="col-md-3">
+				<center>
+					<h3>Nos Visite:</h3>
+				</center>
+				<p></p>
+				<p></p>
+				<div class="panel panel-default">
+					<div class="panel-heading">Endereço</div>
+					<div class="panel-body">
+						<span class="glyphicon glyphicon-chevron-right" aria-hidden="true">
+							<a href="contato.html">Localização </a>
+						</span>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</ui:define>
+
+</ui:composition>
+</html>
