@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
+
+	<ui:define name="content">
+		<h:messages globalOnly="true" />
+		<div class="container">
+			<div class="page-header">
+				<h1>
+					<br></br> Cadastro Usuário Administrador <small><u>admin</u></small>
+				</h1>
+			</div>
+			<div class="row">
+				<h:form enctype="multipart/form-data">
+					<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
+						<br></br>
+						<h:outputLabel value="- Número de ID: -" />
+						<h:inputText styleClass="form-control"
+							value="#{destinoMB.destino.id}" readonly="true" />
+					</h:panelGroup>
+					<h:inputHidden value="#{destinoMB.destino.id}" />
+					<div class="col-md-6">
+						<fieldset>
+							<br></br>
+							<div class="form-group">
+								<h:outputLabel value="Nome do Ponto Turístico:" />
+								<br />
+								<h:message for="idNome" style="color:darkred; font-weight:bold" />
+								<h:inputText styleClass="campotiponome"
+									value="#{destinoMB.destino.nome}" id="idNome" required="true"
+									requiredMessage="## Preenchimento obrigatório ##" />
+							</div>
+							<div class="form-group">
+								<h:outputLabel value="Descriçao do Passeio:" />
+								<br></br>
+								<h:message for="idDescricao"
+									style="color:darkred; font-weight:bold" />
+								<h:inputTextarea rows="3" cols="50"
+									value="#{destinoMB.destino.descricao}" id="idDescricao"
+									required="true"
+									requiredMessage="## Preenchimento obrigatório ##" />
+							</div>
+						</fieldset>
+					</div>
+				</h:form>
+			</div>
+		</div>
+	</ui:define>
+
+</ui:composition>
+</html>
