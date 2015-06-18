@@ -6,15 +6,14 @@
 	xmlns:h="http://java.sun.com/jsf/html"
 	xmlns:f="http://java.sun.com/jsf/core">
 
-<ui:composition template="/WEB-INF/templates/padrao.xhtml">
+<ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
 
 	<ui:define name="content">
+		<h:messages globalOnly="true" />
 		<div class="container">
-
 			<div class="page-header">
 				<h1>
-					<br></br> 
-					Ticketeasy
+					<br></br> Cadastro Usuário Administrador <small><u>admin</u></small>
 				</h1>
 			</div>
 			<div class="row">
@@ -121,7 +120,7 @@
 								value="#{usuarioMB.usuario.confirmarsenha}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
-						<h:commandButton action="#{usuarioMB.cadastrar()}"
+						<h:commandButton action="#{usuarioMB.cadastrarAdmin()}"
 						styleClass="btn btn-success" value="Cadastrar" />
 						</fieldset>
 					</div>
