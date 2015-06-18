@@ -25,8 +25,8 @@ public class UsuarioMB {
 	}
 
 	public String cadastrar(){
-		String usuarioComum = null;
-		usuario.setTipodeUsuario(usuarioComum);
+		String u = "usuarioComum";
+		usuario.setTipodeUsuario(u);
 		usuarioDao.cadastrar(usuario);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
 		return "/login";
