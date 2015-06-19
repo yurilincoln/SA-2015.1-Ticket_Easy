@@ -33,8 +33,8 @@ public class UsuarioMB {
 	}
 	
 	public String cadastrarAdmin(){
-		String usuarioAdmin = null;
-		usuario.setTipodeUsuario(usuarioAdmin);
+		String u = "usuarioAdmin";
+		usuario.setTipodeUsuario(u);
 		usuarioDao.cadastrar(usuario);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
 		return "listaadmin";
@@ -51,7 +51,7 @@ public class UsuarioMB {
 	public String editar(String idParam){
 		Long id = Long.valueOf(idParam);
 		usuario = usuarioDao.buscarPorId(id);
-		return "cadastrousuario";
+		return "/cadastrousuario";
 	}
 	
 	public String editarAdmin(String idParam){
