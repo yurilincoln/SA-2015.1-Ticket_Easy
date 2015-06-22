@@ -20,7 +20,7 @@
 				<div class="col-md-12">
 				<h:messages />
 				<h:form>
-			<h:dataTable styleClass="table" value="#{usuarioMB.usuarios}" var="item">
+			<h:dataTable styleClass="table" value="#{administradorMB.administradores}" var="item">
 				<h:column>
 					<f:facet name="header">ID:</f:facet>
 					<h:outputText value="#{item.id}" />
@@ -48,12 +48,12 @@
 
 				<h:column>
 					<h:commandLink styleClass="btn btn-info"
-						action="#{usuarioMB.editarAdmin(item.id)}">
+						action="#{administradorMB.editar(item.id)}">
 						<span class="glyphicon glyphicon-edit"></span>
 					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
 					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
-						action="#{usuarioMB.excluir(item.id)}">
+						action="#{administradorMB.excluir(item.id)}">
 						<span class="glyphicon glyphicon-remove"></span>
 					</h:commandLink>
 				</h:column>

@@ -32,13 +32,6 @@ public class UsuarioMB {
 		return "/login";
 	}
 	
-	public String cadastrarAdmin(){
-		String u = "usuarioAdmin";
-		usuario.setTipodeUsuario(u);
-		usuarioDao.cadastrar(usuario);
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
-		return "listaadmin";
-	}
 	
 	public String excluir(String idParam){
 		Long id = Long.valueOf(idParam);
@@ -52,12 +45,6 @@ public class UsuarioMB {
 		Long id = Long.valueOf(idParam);
 		usuario = usuarioDao.buscarPorId(id);
 		return "/cadastrousuario";
-	}
-	
-	public String editarAdmin(String idParam){
-		Long id = Long.valueOf(idParam);
-		usuario = usuarioDao.buscarPorId(id);
-		return "cadastroadmin";
 	}
 	
 	

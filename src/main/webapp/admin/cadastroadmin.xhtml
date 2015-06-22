@@ -17,13 +17,13 @@
 			</div>
 			<div class="row">
 				<h:form>
-					<h:panelGroup rendered="#{not empty usuarioMB.usuario.id}">
+					<h:panelGroup rendered="#{not empty administradorMB.administrador.id}">
 						<br></br>
 						<h:outputLabel value="- Número de ID: -" />
 						<h:inputText styleClass="form-control"
-							value="#{usuarioMB.usuario.id}" readonly="true" />
+							value="#{administradorMB.administrador.id}" readonly="true" />
 					</h:panelGroup>
-					<h:inputHidden value="#{usuarioMB.usuario.id}" />
+					<h:inputHidden value="#{administradorMB.administrador.id}" />
 					<div class="col-md-6">
 						<fieldset>
 						<br></br>
@@ -35,7 +35,7 @@
 								<br></br>
 								<h:message for="idNome" style="color:darkred; font-weight:bold" />
 								<h:inputText id="idNome" styleClass="form-control"
-									value="#{usuarioMB.usuario.nome}" required="true"
+									value="#{administradorMB.administrador.nome}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
 							<div class="form-group">
@@ -44,16 +44,7 @@
 								<h:message for="idTelefone"
 									style="color:darkred; font-weight:bold" />
 								<h:inputText id="idTelefone" styleClass="form-control"
-									value="#{usuarioMB.usuario.telefone}" required="true"
-									requiredMessage=" ## Preenchimento obrigatório ##" />
-							</div>
-							<div class="form-group">
-								<h:outputLabel value="Data de Nascimento:" />
-								<br></br>
-								<h:message for="idNascimento"
-									style="color:darkred; font-weight:bold" />
-								<h:inputText id="idNascimento" styleClass="form-control"
-									value="#{usuarioMB.usuario.dataNascimento}" required="true"
+									value="#{administradorMB.administrador.telefone}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
 							<div class="form-group">
@@ -62,29 +53,13 @@
 								<h:message for="idSexo" style="color:darkred; font-weight:bold" />
 								<h:selectOneRadio
 									requiredMessage="## Preenchimento obrigatório ##" id="idSexo"
-									value="#{usuarioMB.usuario.sexo}">
+									value="#{administradorMB.administrador.sexo}">
 									<f:selectItem itemLabel="Feminino"
 										itemValue="#{item}" />
 									<f:selectItem itemLabel="Masculino"
 										itemValue="#{item}" />
 								</h:selectOneRadio> 
 							</div>  
-							<div class="form-group">
-								<h:outputLabel value="CEP:" />
-								<br></br>
-								<h:message for="idCep" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idCep" styleClass="form-control"
-									value="#{usuarioMB.usuario.cep}" required="true"
-									requiredMessage=" ## Preenchimento obrigatório ##" />
-							</div>
-							<div class="form-group">
-								<h:outputLabel value="Pais de Origem:" />
-								<br></br>
-								<h:message for="idPais" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idPais" styleClass="form-control"
-									value="#{usuarioMB.usuario.paisOrigem}" required="true"
-									requiredMessage=" ## Preenchimento obrigatório ##" />
-							</div>
 						</fieldset>
 						<br></br>
 					</div>
@@ -99,7 +74,7 @@
 							<br></br>
 							<h:message for="idEmail" style="color:darkred; font-weight:bold" />
 							<h:inputText id="idEmail" styleClass="form-control"
-								value="#{usuarioMB.usuario.email}" required="true"
+								value="#{administradorMB.administrador.email}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
 						<div class="form-group">
@@ -107,7 +82,7 @@
 							<br></br>
 							<h:message for="idSenha" style="color:darkred; font-weight:bold" />
 							<h:inputSecret id="idSenha" styleClass="form-control"
-								value="#{usuarioMB.usuario.senha}" required="true"
+								value="#{administradorMB.administrador.senha}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
 						<div class="form-group">
@@ -116,10 +91,10 @@
 							<h:message for="idConfirmarSenha"
 								style="color:darkred; font-weight:bold" />
 							<h:inputSecret id="idConfirmarSenha" styleClass="form-control"
-								value="#{usuarioMB.usuario.confirmarsenha}" required="true"
+								value="#{administradorMB.administrador.confirmarsenha}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
-						<h:commandButton action="#{usuarioMB.cadastrarAdmin()}"
+						<h:commandButton action="#{administradorMB.cadastrar()}"
 						styleClass="btn btn-success" value="Cadastrar" />
 						</fieldset>
 					</div>

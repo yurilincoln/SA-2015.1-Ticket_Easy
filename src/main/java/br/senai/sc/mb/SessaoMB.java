@@ -43,14 +43,14 @@ public class SessaoMB {
 	
 	private boolean checkLogin(Usuario usuarioEncontrado) {
 		return usuarioEncontrado != null 
-				&& usuarioLogar.getEmail().equalsIgnoreCase(usuarioEncontrado.getEmail()) 
+				&& usuarioLogar.getEmail().equals(usuarioEncontrado.getEmail()) 
 				&& usuarioLogar.getSenha().equals(usuarioEncontrado.getSenha()) 
 				&& usuarioLogar.getConfirmarsenha().equals(usuarioEncontrado.getConfirmarsenha());
 	}
 	
 	public String logout(){
 		usuarioLogado = null;
-		return "/index?face-redirect=true";
+		return "/login?face-redirect=true";
 	}
 
 	public Usuario getUsuarioLogar() {
