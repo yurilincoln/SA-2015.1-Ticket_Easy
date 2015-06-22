@@ -240,7 +240,7 @@ body{
 
 .campohora{
   display: block;		
-  width: 60px;
+  width: 70px;
   height: 30px;
   padding: 6px 12px;
   font-size: 14px;
@@ -251,6 +251,12 @@ body{
   border: 1px solid #ccc;
   border-radius: 4px;
 }
+
+.mensagemsalvar{
+	font-size: 20px;  
+	color: rgb(19, 145, 21);
+}
+
 
 .menu_mluv_retratil {width: 100%; height: 65px; display: block; background: #f69797; position: fixed; top: 0; z-index: 100;  -webkit-transition:All 0.5s ease; -moz-transition:All 0.5s ease; -o-transition:All 0.5s ease;}
 .menu_mluv_retratil.esconder {top: -65px; position: fixed;}
