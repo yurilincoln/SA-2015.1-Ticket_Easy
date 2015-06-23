@@ -1,8 +1,5 @@
 //package br.senai.sc.util;
 //
-//import static org.junit.Assert.assertEquals;
-//import static org.junit.Assert.assertNotNull;
-//
 //import org.junit.Test;
 //import org.junit.runner.RunWith;
 //
@@ -18,7 +15,7 @@
 //	
 //	@Test
 //	public void testLoadEntityManagerFactory() {
-//		assertEquals("SA-2015Test", 
+//		assertEquals("ticketEasy_puTest", 
 //				JPAUtil_Test.entityManagerFactory.getProperties().get(
 //						"hibernate.ejb.persistenceUnitName").toString());
 //	}

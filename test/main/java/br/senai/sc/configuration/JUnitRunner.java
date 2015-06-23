@@ -1,7 +1,5 @@
 //package br.senai.sc.configuration;
 //
-//import org.junit.runners.BlockJUnit4ClassRunner;
-//import org.junit.runners.model.InitializationError;
 //
 //public class JUnitRunner extends BlockJUnit4ClassRunner{
 //
