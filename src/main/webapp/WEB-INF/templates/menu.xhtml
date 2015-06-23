@@ -1,8 +1,17 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
-
-	<div class="menu_mluv_retratil ">
+	
+	<nav class="navbar navbar-default">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">	
+	<!--  <div class="menu_mluv_retratil ">  -->
 		<ul id="menu">
 			<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
 				<h:graphicImage library="images" name="logotipoNovo.png" width="100"
@@ -27,5 +36,6 @@
 			</li>	
 			<li><a href="login.xhtml" class="btn btn-xs btn-primary botaoentrar">Entrar</a></li>
 		</ul>
-	</div>
+		</div>
+	</nav>
 </ui:composition>

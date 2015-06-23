@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraologado.xhtml">
+
+	<ui:define name="content">
+		<div class="container">
+			<div class="page-header">
+			<br></br>
+				<h1>
+					TicketEasy <small><u>Perfil</u></small>
+				</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+				
+				<h:form>
+			<h:dataTable styleClass="table" value="#{usuarioMB.usuarios}" var="item">
+				<h:column>
+					<f:facet name="header">ID:</f:facet>
+					<h:outputText value="#{item.id}" />
+				</h:column>
+
+				<h:column>
+				<h:commandLink styleClass="btn btn-info"
+						action="#{usuarioMB.editar(item.id)}">
+						<span class="glyphicon glyphicon-edit"></span>
+					</h:commandLink>
+					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
+					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
+						action="#{usuarioMB.excluir(item.id)}">
+						<span class="glyphicon glyphicon-remove"></span>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+			<br></br>
+		</h:form>
+				</div>
+				</div>
+				</div>
+				
+	</ui:define>
+
+</ui:composition>
+</html>
