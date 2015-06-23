@@ -1,71 +1,23 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
-	<nav class="navbar navbar-inverse">
-		<h:outputScript library="js" name="menu.js" />
-		<div class="container-fluid">
-			<div class="navbar-header">
-				<button type="button" class="navbar-toggle collapsed"
-					data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-					<span class="sr-only">Toggle navigation</span> <span
-						class="icon-bar"></span> <span class="icon-bar"></span> <span
-						class="icon-bar"></span>
-				</button>
-				<a class="navbar-brand" href="#"> <h:graphicImage
-						style="height: 100px; width: 100px;" library="images"
-						name="logotipoNovo.png" />
-				</a>
-			</div>
-			<div class="collapse navbar-collapse"
-				id="bs-example-navbar-collapse-1">
-				<ul class="nav navbar-nav">
-					<li><h:link outcome="/index" value="Home" /></li>
-					<li><h:link outcome="/contato" value="Contato" /></li>
-
-					<li class="dropdown"><a href="#" class="dropdown-toggle"
-						data-toggle="dropdown" role="button" aria-haspopup="true"
-						aria-expanded="false">Dropdown <span class="caret"></span></a>
-						<ul class="dropdown-menu">
-							<li><a href="#">Action</a></li>
-							<li><a href="#">Another action</a></li>
-							<li><a href="#">Something else here</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">Separated link</a></li>
-							<li role="separator" class="divider"></li>
-							<li><a href="#">One more separated link</a></li>
-						</ul></li>
-				</ul>
-
-				<!-- 				Menu admin -->
-				<div class="container">
-					<!-- <h:panelGroup rendered="#{sessaoMB.logado}">
-						<ul class="nav navbar-nav navbar-right">
-							<li class="dropdown"><a href="#" class="dropdown-toggle"
-								data-toggle="dropdown" role="button" aria-expanded="false">
-									<span class="glyphicon glyphicon-user"></span>Admin <span
-									class="caret"></span>
-							</a>
-								<ul class="dropdown-menu" role="menu">
-									<li><h:link outcome="/admin/listacanal"
-											value="Listar canais" /></li>
-									<li><h:link outcome="/admin/formcanal"
-											value="Cadastrar canal" /></li>
-									<li class="divider"></li>
-									<li><h:form>
-											<h:commandLink value="Sair" action="#{sessaoMB.logout()}" />
-										</h:form></li>
-								</ul></li>
-						</ul>
-					</h:panelGroup>
-					<h:panelGroup rendered="#{not sessaoMB.logado}">
-						<ul class="nav navbar-nav navbar-right" role="menu">
-							<li><h:link styleClass="btn btn-success" outcome="/login"
-									value="Entrar" /></li>
-						</ul>
-					</h:panelGroup> -->
-				</div>
-			</div>
-		</div>
-	</nav>
+	
+	<div id='cssmenu'>
+<ul>
+   <li><a href='#'>Home</a></li>
+   <li class='active'><a href='#'>Products</a>
+      <ul>
+         <li><a href='#'>Product 1</a>
+            <ul>
+               <li><a href='#'>Sub Product</a></li>
+               <li><a href='#'>Sub Product</a></li>
+            </ul>
+         </li>
+      </ul>
+   </li>
+   <li><a href='#'>About</a></li>
+   <li><a href='#'>Contact</a></li>
+</ul>
+</div>
 
 </ui:composition>
