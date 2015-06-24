@@ -1,12 +1,21 @@
-//package br.senai.sc.dao;
-//
-//import javax.persistence.EntityManager;
-//
-//import br.senai.sc.util.JPAUtil;
-//
-//public abstract class Dao {
-//
-//	protected EntityManager getEntityManager() {
-//		return JPAUtil.getEntityManager();
-//	}
-//}
+package br.senai.sc.dao;
+
+import java.util.List;
+
+public interface Dao<T> {
+
+	public void save(T t);
+	
+	public void update(T t);
+	
+	public void delete(T t);
+	
+	public void deleteAll(List<T> t);
+	
+	public T findAllById(Long id);
+	
+	public List<T> findAll();
+
+	public T findAllByEmail(String email);
+	
+}
