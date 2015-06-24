@@ -7,7 +7,7 @@ import javax.persistence.EntityManager;
 
 import br.senai.sc.util.JPAUtil_Test;
 
-public class DaoImplements<T> implements Dao_Test<T>{
+public class DaoImplements<T> implements Dao<T>{
 	
 	private static Logger logger;
 	private Class<T> klass;
@@ -26,7 +26,7 @@ public class DaoImplements<T> implements Dao_Test<T>{
 	
 	private void checkEntityManager() throws Exception {
 		if (em == null || !em.isOpen()) {
-			em = JPAUtil_Test.getEntityManager();
+			em = JPAUtil_Test.createEntityManager();
 		}
 	}
 
@@ -111,6 +111,21 @@ public class DaoImplements<T> implements Dao_Test<T>{
 		}
 		return result;
 	}
+	
+	@Override
+	public T findAllByEmail(String email) {
+		T result = null;
+		try {
+			checkEntityManager();
+			result = this.em.find(klass, email);
+		} catch (Exception e) {
+			logger.severe(e.getMessage());
+		} finally {
+			this.em.close();
+			this.em = null;
+		}
+		return result;
+	}
 
 	@SuppressWarnings("unchecked")
 	@Override
@@ -118,13 +133,7 @@ public class DaoImplements<T> implements Dao_Test<T>{
 		List<T> result = null;
 		try {
 			checkEntityManager();
-//			NamedQuery myAnnotation = null;
-			String namedQuery = klass.getName()+".findAll";
-//			Annotation annotation = klass.getAnnotation(NamedQuery.class);
-//			if(annotation instanceof NamedQuery){
-//				myAnnotation = (NamedQuery) annotation;
-//			}
-//			result = this.em.createNamedQuery(myAnnotation.name()).getResultList();
+			String namedQuery = klass.getSimpleName() + ".findAll";
 			result = this.em.createNamedQuery(namedQuery).getResultList();
 		} catch (Exception e) {
 			logger.severe(e.getMessage());

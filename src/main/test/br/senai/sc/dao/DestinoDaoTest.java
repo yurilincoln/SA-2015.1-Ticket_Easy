@@ -2,7 +2,13 @@
 //
 //import org.junit.After;
 //import org.junit.Before;
+//import org.junit.Test;
+//import org.junit.runner.RunWith;
 //
+//import br.senai.sc.configuration.JUnitRunner;
+//import br.senai.sc.entity.Destino;
+//
+//@RunWith(JUnitRunner.class)
 //public class DestinoDaoTest {
 //
 //private static DestinoDao dao;
@@ -28,7 +34,7 @@
 ////		c.setSenha("123456");
 ////		c.setTelefone("(00) 0000-0000");
 ////		
-////		dao.salvarCliente(c);
+////		dao.save(c);
 ////		
 ////		assertTrue(c.getId() != null);
 ////		
