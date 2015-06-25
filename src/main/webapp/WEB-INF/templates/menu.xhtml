@@ -1,33 +1,46 @@
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
-	
+
 	<div id='cssmenu'>
-<ul>	
-	<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
+		<ul>
+			<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
 				<h:graphicImage library="images" name="logotipoNovo.png" width="100"
 					height="83" />
-					</li>
-   <li><h:link outcome="/index" value="Home"/></li>
-			<li><h:link outcome="/sobre" value="Quem Somos?"/></li>
-			<li><h:link outcome="/localizacao" value="Localização"/></li>
-			<li><h:link outcome="/contato" value="Contato"/></li>
-   <li class='active'><a href='#'>Products</a>
-      <ul>
-         <li><a href='#'>Product 1</a>
+			</li>
+			<li><h:link outcome="/index" value="Home" /></li>
+			<li><h:link outcome="/sobre" value="Quem Somos?" /></li>
+			<li><h:link outcome="/localizacao" value="Localização" /></li>
+			<li><h:link outcome="/contato" value="Contato" /></li>
+			
+			<li class='active'><h:link outcome="/destinoturistico"
+					value="Turismo" />
+				<ul>
+				<li><h:link outcome="/destinoturistico"
+					value="Destinos Turístico" />
             <ul>
-               <li><a href='#'>Sub Product</a></li>
-               <li><a href='#'>Sub Product</a></li>
+               <li><a href="pontos.xhtml#cristoredentor">Cristo Redentor</a></li>
+					<li><a href="pontos.xhtml#paodeacucar">Pão de Açúcar</a></li>
+					<li><a href="pontos.xhtml#maracana">Maracanã</a></li>
+					<li><a href="pontos.xhtml#santateresa">Santa Teresa</a></li>
+					<li><a href="pontos.xhtml#cidadedosamba">Cidade do Samba</a></li>
+					<li><a href="pontos.xhtml#vistachinesa">Vista Chinesa</a></li>
             </ul>
          </li>
-      </ul>
-   </li>
-   <li><a href='#'>About</a></li>
-   <li><a href='#'>Contact</a></li>
-</ul>
-</div>
+         <li><h:link outcome="/login"
+					value="Pacotes Turístico" />
+         	<ul>
+               <li><a href="pontos.xhtml#cristoredentor">Cristo Redentor</a></li>
+					<li><a href="login.xhtml">Pão de Açúcar</a></li>
+					<li><a href="login.xhtml">Maracanã</a></li>
+					<li><a href="login.xhtml">Santa Teresa</a></li>
+            </ul>
+         </li> </ul></li>
+         <li><a href="login.xhtml" class="btn btn-xs btn-primary botaoentrar">Entrar</a></li>
+		</ul>
+	</div>
 
-<!-- 
+	<!-- 
 <div id='cssmenu'>
 <ul>	
 	<li><h:graphicImage library="images" name="logotipoNovo.png" width="100" height="83" /></li>

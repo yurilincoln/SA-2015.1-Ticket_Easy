@@ -1,6 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
 
-#cssmenu,
+/*#cssmenu,
 #cssmenu ul,
 #cssmenu ul li,
 #cssmenu ul li a,
@@ -15,7 +15,7 @@
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-}
+}*/
 #cssmenu:after,
 #cssmenu > ul:after {
   content: ".";
@@ -29,14 +29,7 @@
   display: none;
   margin-left: -85px;
 }
-#cssmenu {
-  width: 100%;
-  font-family: Montserrat, sans-serif;
-  padding: 20px 0 0 90px;
-  background-image: linear-gradient(#70DD3A, #509322);
-  border-radius: 0px;
-  box-shadow: 0 2px 1px #030303;
-}
+
 #cssmenu > ul > li {
   float: left;
 }
@@ -99,6 +92,7 @@
   height: 0;
 }
 #cssmenu ul ul {
+	z-index: 1;
   position: absolute;
   left: -9999px;
 }
@@ -106,6 +100,7 @@
   text-align: right;
 }
 #cssmenu ul ul li {
+	z-index: 1;
   height: 0;
   -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
@@ -121,9 +116,11 @@
   right: 0;
 }
 #cssmenu li:hover > ul > li {
+	  z-index: 100;
   height: 35px;
 }
 #cssmenu ul ul ul {
+	
   margin-left: 100%;
   top: 0;
 }
@@ -346,8 +343,5 @@
   #cssmenu .submenu-button.submenu-opened:before {
     display: none;
   }
-  
-  
-  
   
 }

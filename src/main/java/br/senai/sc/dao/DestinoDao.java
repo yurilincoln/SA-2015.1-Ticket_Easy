@@ -2,30 +2,41 @@ package br.senai.sc.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import br.senai.sc.entity.Destino;
 
 
-public class DestinoDao extends DaoImplements<Destino> {
-
-	public DestinoDao() {
-		super(Destino.class);
-	}
+public class DestinoDao extends Dao {
 
 	public void salvar(Destino destino) {
-		save(destino);
+		getEntityManager().merge(destino);
 	}
 
+	@SuppressWarnings("unchecked")
 	public List<Destino> listarTodos() {
-		return findAll();
+		Query query = getEntityManager().createQuery("From Destino",Destino.class);
+		return query.getResultList();
 	}
-
+	
 	public void excluir(Long id) {
-		Destino destino = findAllById(id);
-		delete(destino);
+		Destino destino = getEntityManager().getReference(Destino.class, id);
+		getEntityManager().remove(destino);
 	}
 
 	public Destino buscarPorId(Long id) {
-		return findAllById(id);
+		return getEntityManager().find(Destino.class, id);
 	}
+
+//	public void atualizar(Destino pacote) {
+//		getEntityManager().getTransaction().begin();
+//		getEntityManager().merge(pacote);
+//		getEntityManager().getTransaction().commit();
+//	}
+//
+//	public void finalize() {
+//		 getEntityManager().close();
+//		 getEntityManager().close();
+//	}
 
 }

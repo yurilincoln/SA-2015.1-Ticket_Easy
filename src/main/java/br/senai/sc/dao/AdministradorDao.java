@@ -2,34 +2,34 @@ package br.senai.sc.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import br.senai.sc.entity.Administrador;
 
-public class AdministradorDao extends DaoImplements<Administrador> {
+public class AdministradorDao extends Dao {
 	
-	public AdministradorDao() {
-		super(Administrador.class);
+	public void cadastrar(Administrador administrador) {
+		getEntityManager().merge(administrador);
 	}
 
-	public void salvar(Administrador administrador) {
-		save(administrador);
-	}
-
+	@SuppressWarnings("unchecked")
 	public List<Administrador> listarTodos() {
-		return findAll();
+		Query query = getEntityManager().createQuery("From Administrador",Administrador.class);
+		return query.getResultList();
 	}
-
+	
 	public void excluir(Long id) {
-		Administrador administrador = findAllById(id);
-		delete(administrador);
+		Administrador administrador = getEntityManager().getReference(Administrador.class, id);
+		getEntityManager().remove(administrador);
 	}
 
 	public Administrador buscarPorId(Long id) {
-		return findAllById(id);
+		return getEntityManager().find(Administrador.class, id);
 	}
 	
-	public Administrador buscaPorEmail(String email) {
-//		Query query = getEntityManager().createQuery("From Usuario u Where u.email = :email", Usuario.class);
-//		query.setParameter("email", nome);
-		return findAllByEmail(email);
+	public Administrador buscaPorEmail(String nome) {
+		Query query = getEntityManager().createQuery("From Administrador u Where u.email = :email", Administrador.class);
+		query.setParameter("email", nome);
+		return (Administrador) query.getSingleResult();
 	}
 }

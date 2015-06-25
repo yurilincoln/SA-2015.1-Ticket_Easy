@@ -27,7 +27,7 @@ public class AdministradorMB {
 	public String cadastrar(){
 		String u = "usuarioAdmin";
 		administrador.setTipodeUsuario(u);
-		administradorDao.salvar(administrador);
+		administradorDao.cadastrar(administrador);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
 		return "listaadmin";
 	}

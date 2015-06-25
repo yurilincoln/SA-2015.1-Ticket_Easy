@@ -1,0 +1,55 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html">
+
+	<div id='cssmenu'>
+		<ul> <!-- style="margin: 20px; margin-top: -30px; margin-bottom: -30px;" -->
+			
+			
+			<li><h:link outcome="/logado/indexlogado" value="Home" /></li>
+			
+			<li class='active'><h:link outcome="/logado/destinoturisticologado"
+					value="Destinos Turísticos" />
+				<ul>
+					<li><a href="destinoturisticologado.xhtml#cristoredentor">Cristo Redentor</a></li>
+					<li><a href="destinoturisticologado.xhtml#paodeacucar">Pão de Açúcar</a></li>
+					<li><a href="destinoturisticologado.xhtml#maracana">Maracanã</a></li>
+					<li><a href="destinoturisticologado.xhtml#santateresa">Santa Teresa</a></li>
+					<li><a href="destinoturisticologado.xhtml#cidadedosamba">Cidade do Samba</a></li>
+					<li><a href="destinoturisticologado.xhtml#vistachinesa">Vista Chinesa</a></li>
+				</ul>
+</li>
+				
+				<li class='active'>
+				<h:link outcome="/pacoteturistico"
+				value="Pacotes Turísticos" />
+			<ul>
+				<li><a href="destinoturisticologado.xhtml#cristoredentor">Cristo
+						Redentor</a></li>
+				<li><a href="destinoturisticologado.xhtml#paodeacucar">Pão
+						de Açúcar</a></li>
+			</ul>
+				</li>
+				
+				<!--  style="margin-left: 390px; margin-top: -10px;" -->
+			<li><a href="#"
+			class="dropdown-toggl" data-toggle="dropdown" role="button"
+			aria-expanded="false"> <h:graphicImage library="images"
+					name="iconuser.png" width="25" height="20" />
+		</a>
+			<ul class="dropdown-menu" role="menu">
+				<li><h:link outcome="/logado/perfilusuario" value="Perfil" /></li>
+				<li><h:form>
+						<h:commandLink value="Sair" />
+					</h:form></li>
+			</ul></li>
+
+		</ul>
+		<li>
+				<h:graphicImage library="images" name="logotipoNovo.png" width="80"
+					height="83" />
+			</li>
+	</div>
+
+
+</ui:composition>

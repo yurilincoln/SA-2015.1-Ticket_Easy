@@ -2,34 +2,34 @@ package br.senai.sc.dao;
 
 import java.util.List;
 
+import javax.persistence.Query;
+
 import br.senai.sc.entity.Usuario;
 
-public class UsuarioDao extends DaoImplements<Usuario> {
+public class UsuarioDao extends Dao {
 	
-	public UsuarioDao() {
-		super(Usuario.class);
+	public void cadastrar(Usuario usuario) {
+		getEntityManager().merge(usuario);
 	}
 
-	public void salvar(Usuario usuario) {
-		save(usuario);
-	}
-
+	@SuppressWarnings("unchecked")
 	public List<Usuario> listarTodos() {
-		return findAll();
+		Query query = getEntityManager().createQuery("From Usuario",Usuario.class);
+		return query.getResultList();
 	}
-
+	
 	public void excluir(Long id) {
-		Usuario usuario = findAllById(id);
-		delete(usuario);
+		Usuario usuario = getEntityManager().getReference(Usuario.class, id);
+		getEntityManager().remove(usuario);
 	}
 
 	public Usuario buscarPorId(Long id) {
-		return findAllById(id);
+		return getEntityManager().find(Usuario.class, id);
 	}
 	
-	public Usuario buscaPorEmail(String email) {
-//		Query query = getEntityManager().createQuery("From Usuario u Where u.email = :email", Usuario.class);
-//		query.setParameter("email", nome);
-		return findAllByEmail(email);
+	public Usuario buscaPorEmail(String nome) {
+		Query query = getEntityManager().createQuery("From Usuario u Where u.email = :email", Usuario.class);
+		query.setParameter("email", nome);
+		return (Usuario) query.getSingleResult();
 	}
 }
