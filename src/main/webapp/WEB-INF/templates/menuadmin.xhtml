@@ -2,19 +2,42 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
 	
-	<div class="menu_mluv_retratil">
-	
-	<ul id="menu">
-		<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
-			<h:graphicImage library="images" name="logotipoNovo.png" width="100"
-				height="83" />
-		</li>
-		
-		<li><h:link outcome="/admin/indexadmin" value="Home"/></li>
-		<li><h:link outcome="/admin/listadestinoturistico" value="Destinos Turísticos"/></li>
-		<li><h:link outcome="/admin/listapacoteturistico" value="Pacotes Turísticos"/></li>
-		<li><h:link outcome="/index.xhtml" styleClass="btn btn-xs btn-primary botaosair" value="Sair"></h:link></li>
-	</ul>
-	</div>
+	<nav class="navbar navbar-default navbar-fixed-top " id="cssmenu" >
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <h:graphicImage
+					library="images" name="logotipoNovo.png"
+					style="width:auto; height:100%;" />
+			</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    
+                    <li class="page-scroll">
+                       <h:link outcome="/admin/indexadmin" value="Home"/>
+                        </li>
+                        <li class="page-scroll">
+                        <h:link outcome="/admin/listadestinoturistico" value="Destinos Turísticos"/>
+                        </li>
+                        <li class="page-scroll">
+                        <h:link outcome="/admin/listapacoteturistico" value="Pacotes Turísticos"/>
+                        </li>
+                         <li class="page-scroll">
+                       <h:link outcome="/index.xhtml" styleClass="btn btn-xs btn-primary botaosair" value="Sair"/>
+                        </li>
+                	
+                </ul>
+            </div>
+        </div>
+        </nav>
 
 </ui:composition>

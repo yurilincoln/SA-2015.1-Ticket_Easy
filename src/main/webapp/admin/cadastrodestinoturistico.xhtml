@@ -8,7 +8,6 @@
 
 <ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
 	<ui:define name="content">
-	<h:messages globalOnly="true" styleClass="mensagemsalvar"/>
 	<div class="container">
 	    <div class="page-header">
 				<h1>
@@ -17,6 +16,7 @@
 				</h1>
 			</div>
 			<div class="row">
+			<h:messages globalOnly="true" styleClass="mensagemsalvar"/>
 			<h:form enctype="multipart/form-data">
 			<h:panelGroup rendered="#{not empty destinoMB.destino.id}">
 			<br></br>

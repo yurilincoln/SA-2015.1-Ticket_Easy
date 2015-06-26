@@ -1,38 +1,31 @@
 
-.btn-primary {
-  color: #fff;
-  background-color: #52C246;
-  border-color: #171717;
-  
+
+.drop{
+	  padding: 10px;
 }
 
+
 #cssmenu {
-  width: 100%;
-  font-family: Montserrat, sans-serif;
-  padding: 0 0 2px;
   background-image: linear-gradient(#70DD3A, #509322);
   border-radius: 0px;
   box-shadow: 0 2px 1px #030303;
         border-color: #509322;
 }
+.navbar-brand{
+  padding: 5px !important;
+}
+
 .divisor{
   height: 1px !important;
   margin: 0 !important;
   background-color: black !important;
 }
 
-.navbar-brand{
+/* .navbar-brand{
 	  padding: 0;
   margin-top: 5px;
   margin-left: 15px;
-}
-
-.botaoentrar{
-background-color: #52C246;
-  border-color: #ffffff;
-	float: right !important; 
-  margin-right: -210% !important;
-}
+} */
 
 .botaoentrar{
 	background-color: #52C246 !important;
@@ -43,14 +36,8 @@ background-color: #52C246;
 .botaosair{
 background-color: #ff0000;
   border-color: #171717;
-	float: right !important; 
-  margin-right: -540% !important;
 }
 
-.botaosair:hover{
-	background-color: #ff0000 !important;
-    background-image: linear-gradient(#ff0000, #ff0000) !important;
-} 
 
 body{
 	color: #333;
@@ -62,7 +49,7 @@ body{
 }
 
 .page-header{
-	color: #EFEFEF;
+  color: #EFEFEF;
 	}
 
 .row {

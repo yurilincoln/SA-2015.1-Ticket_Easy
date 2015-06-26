@@ -15,6 +15,7 @@ public class SessaoMB {
 
 	private Usuario usuarioLogar;
 	private Usuario usuarioLogado;
+	private Usuario usuario;
 	
 	@PostConstruct
 	public void init(){
@@ -25,27 +26,30 @@ public class SessaoMB {
 		return usuarioLogado != null;
 	}
 	
-//	public boolean tipoDeUsuario(){
-//		return false;
-//	}
-	
-	public String login(){
-		UsuarioDao dao = new UsuarioDao();
-		Usuario usuario = dao.buscaPorEmail(usuarioLogar.getEmail());
-		
-		if(checkLogin(usuario)){
-			usuarioLogado = usuario;
-			return "/logado/indexlogado.xhtml?face-redirect=true";
-		}
-		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
-		return "/login";
+	public boolean usuarioAdministrador(){
+		return usuario.getTipodeUsuario() != "usuarioComum";
 	}
 	
+//	public String login(){
+//		UsuarioDao dao = new UsuarioDao();
+//		Usuario usuarioValida = dao.buscaPorEmail(usuarioLogar.getEmail());
+//		if(usuarioValida.getTipodeUsuario().equals("usuarioAdmin"){
+//			if(checkLogin(usuarioValida)){
+//				usuarioLogado = usuarioValida;
+//				return "/admin/index.xhtml?face-redirect=true";
+//		}
+//		if(checkLogin(usuarioValida)){
+//			usuarioLogado = usuarioValida;
+//			return "/logado/index.xhtml?face-redirect=true";
+//		}
+//		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
+//		return "/login";
+//	}
+//	
 	private boolean checkLogin(Usuario usuarioEncontrado) {
 		return usuarioEncontrado != null 
 				&& usuarioLogar.getEmail().equals(usuarioEncontrado.getEmail()) 
-				&& usuarioLogar.getSenha().equals(usuarioEncontrado.getSenha()) 
-				&& usuarioLogar.getConfirmarsenha().equals(usuarioEncontrado.getConfirmarsenha());
+				&& usuarioLogar.getSenha().equals(usuarioEncontrado.getSenha());
 	}
 	
 	public String logout(){

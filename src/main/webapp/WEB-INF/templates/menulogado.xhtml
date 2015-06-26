@@ -2,28 +2,34 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-	<nav class="navbar navbar-default" id="cssmenu">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle collapsed"
-				data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-				aria-expanded="false">
-				<span class="sr-only">Toggle navigation</span> <span
-					class="icon-bar"></span> <span class="icon-bar"></span> <span
-					class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#"> <h:graphicImage
+	<nav class="navbar navbar-default navbar-fixed-top " id="cssmenu" >
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <h:graphicImage
 					library="images" name="logotipoNovo.png"
 					style="width:auto; height:100%;" />
 			</a>
-		</div>
-		<div class="collapse navbar-collapse"
-			id="bs-example-navbar-collapse-1">
-			<ul class="nav navbar-nav">
-				<li><h:link outcome="/logado/indexlogado" value="Home" /></li>
-				<li><a href="#">Link</a></li>
-				<li class="dropdown"><h:link outcome="/logado/destinoturisticologado"
-					value="Destinos Turísticos" />
-					<ul class="dropdown-menu" style="  padding: 0;">
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <h:link outcome="/logado/index" value="Home"/> </li>
+                    <li class="drop">
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Destinos Turísticos
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
 						<li><a href="destinoturisticologado.xhtml#cristoredentor">Cristo Redentor</a></li>
 						<li role="separator" class="divider divisor"></li>
 						<li><a href="destinoturisticologado.xhtml#paodeacucar">Pão de Açúcar</a></li>
@@ -35,11 +41,29 @@
 						<li><a href="destinoturisticologado.xhtml#cidadedosamba">Cidade do Samba</a></li>
 						<li role="separator" class="divider divisor"></li>
 						<li><a href="destinoturisticologado.xhtml#vistachinesa">Vista Chinesa</a></li>
-					</ul></li>
-			</ul>
-		</div>
-
-	</nav>
-
+					  </ul>
+					</div>
+					</li>
+					 <li class="drop">
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Pacotes Turísticos
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<li><a href="destinoturisticologado.xhtml#cristoredentor">Cristo Redentor</a></li>
+						<li role="separator" class="divider divisor"></li>
+					<li><a href="destinoturisticologado.xhtml#paodeacucar">Pão de Açúcar</a></li>
+					  </ul>
+					</div>
+					
+					</li>
+					<li class="page-scroll">
+                        <h:link outcome="/login.xhtml" styleClass="btn btn-xs btn-primary botaosair" value="Sair"/> </li>
+                	
+                </ul>
+            </div>
+        </div>
+    </nav>
 
 </ui:composition>

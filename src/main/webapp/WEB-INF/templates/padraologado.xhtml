@@ -7,8 +7,15 @@
 	<title>TicketEasy - Admin<ui:insert name="title"></ui:insert></title>
 
 	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css"  />
+
 	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.js" />
+
 	<h:outputScript library="bootstrap" name="js/bootstrap.min.js" />
+	
+	<h:outputStylesheet library="css" name="freelancer.css" />
+
+	<h:outputScript library="js" name="freelancer.js" />
+	
 	<h:outputStylesheet library="css" name="padrao.css" />
 
 </h:head>
@@ -58,11 +65,11 @@
 						<center>
 							<div class="panel panel-default">
 								<div class="panel-body">
-									<h:link outcome="/sobrelogado" value="QUEM SOMOS?" />
+									<h:link outcome="/logado/sobrelogado" value="QUEM SOMOS?" />
 									<br></br>
-									<h:link outcome="/localizacaologado" value="LOCALIZACÃO" />
+									<h:link outcome="/logado/localizacaologado" value="LOCALIZACÃO" />
 									<br></br>
-									<h:link outcome="/contatologado" value="CONTATO" />
+									<h:link outcome="/logado/contatologado" value="CONTATO" />
 								</div>
 							</div>
 						</center>

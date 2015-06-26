@@ -2,67 +2,66 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-	<div id='cssmenu'>
-		<ul>
-			<li style="margin: 20px; margin-top: -30px; margin-bottom: -30px;">
-				<h:graphicImage library="images" name="logotipoNovo.png" width="100"
-					height="83" />
-			</li>
-			<li><h:link outcome="/index" value="Home" /></li>
-			<li><h:link outcome="/sobre" value="Quem Somos?" /></li>
-			<li><h:link outcome="/localizacao" value="Localização" /></li>
-			<li><h:link outcome="/contato" value="Contato" /></li>
-			
-			<li class='active'><h:link outcome="/destinoturistico"
-					value="Turismo" />
-				<ul>
-				<li><h:link outcome="/destinoturistico"
-					value="Destinos Turístico" />
-            <ul>
-               <li><a href="pontos.xhtml#cristoredentor">Cristo Redentor</a></li>
-					<li><a href="pontos.xhtml#paodeacucar">Pão de Açúcar</a></li>
-					<li><a href="pontos.xhtml#maracana">Maracanã</a></li>
-					<li><a href="pontos.xhtml#santateresa">Santa Teresa</a></li>
-					<li><a href="pontos.xhtml#cidadedosamba">Cidade do Samba</a></li>
-					<li><a href="pontos.xhtml#vistachinesa">Vista Chinesa</a></li>
-            </ul>
-         </li>
-         <li><h:link outcome="/login"
-					value="Pacotes Turístico" />
-         	<ul>
-               <li><a href="pontos.xhtml#cristoredentor">Cristo Redentor</a></li>
-					<li><a href="login.xhtml">Pão de Açúcar</a></li>
-					<li><a href="login.xhtml">Maracanã</a></li>
-					<li><a href="login.xhtml">Santa Teresa</a></li>
-            </ul>
-         </li> </ul></li>
-         <li><a href="login.xhtml" class="btn btn-xs btn-primary botaoentrar">Entrar</a></li>
-		</ul>
-	</div>
-
-	<!-- 
-<div id='cssmenu'>
-<ul>	
-	<li><h:graphicImage library="images" name="logotipoNovo.png" width="100" height="83" /></li>
-   <li><h:link outcome="/index" value="Home"/></li>
-			<li><h:link outcome="/sobre" value="Quem Somos?"/></li>
-			<li><h:link outcome="/localizacao" value="Localização"/></li>
-			<li><h:link outcome="/contato" value="Contato"/></li>
-   <li class='active'><h:link outcome="/destinoturistico" value="Destinos Turísticos"/>
-				<ul>
-					<li><a href="pontos.xhtml#cristoredentor">Cristo Redentor</a></li>
-					<li><a href="pontos.xhtml#paodeacucar">Pão de Açúcar</a></li>
-					<li><a href="pontos.xhtml#maracana">Maracanã</a></li>
-					<li><a href="pontos.xhtml#santateresa">Santa Teresa</a></li>
-					<li><a href="pontos.xhtml#cidadedosamba">Cidade do Samba</a></li>
-					<li><a href="pontos.xhtml#vistachinesa">Vista Chinesa</a></li>
-				</ul></li>
-			<li style="margin: 50px; margin-top: -3px;  margin-left: 120px; margin-bottom: -500px;">
-				<a href="login.xhtml"/> <h:graphicImage library="images" name="carrinhocompra.png" width="40"
-					height="30" /> 
-			</li>	
-			<li><a href="login.xhtml" class="btn btn-xs btn-primary botaoentrar">Entrar</a></li>
-</ul>
-</div>
- -->
+	<nav class="navbar navbar-default navbar-fixed-top " id="cssmenu" >
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"> <h:graphicImage
+					library="images" name="logotipoNovo.png"
+					style="width:auto; height:100%;" />
+			</a>
+            </div>
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">	
+                        <a href="#page-top"></a>
+                    </li>
+                    
+                    <li class="page-scroll">
+                        <h:link outcome="/index" value="Home" /> 
+                        </li>
+                        <li class="page-scroll">
+                        <h:link outcome="/sobre" value="Quem Somos?" />
+                        </li>
+                        <li class="page-scroll">
+                        <h:link outcome="/localizacao" value="Localização" />
+                        </li>
+                         <li class="page-scroll">
+                       <h:link outcome="/contato" value="Contato" />
+                        </li>
+                        <li class="drop">
+					<div class="dropdown">
+					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+						Destinos Turísticos
+						<span class="caret"></span>
+					  </button>
+					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+						<li><a href="destinoturistico.xhtml#cristoredentor">Cristo Redentor</a></li>
+						<li role="separator" class="divider divisor"></li>
+						<li><a href="destinoturistico.xhtml#paodeacucar">Pão de Açúcar</a></li>
+						<li role="separator" class="divider divisor"></li>
+						<li><a href="destinoturistico.xhtml#maracana">Maracanã</a></li>
+						<li role="separator" class="divider divisor"></li>
+						<li><a href="destinoturistico.xhtml#santateresa">Santa Teresa</a></li>
+						<li role="separator" class="divider divisor"></li>
+						<li><a href="destinoturistico.xhtml#cidadedosamba">Cidade do Samba</a></li>
+						<li role="separator" class="divider divisor"></li>
+						<li><a href="destinoturistico.xhtml#vistachinesa">Vista Chinesa</a></li>
+					  </ul>
+					</div>
+					</li>
+                        
+                        <li class="page-scroll">
+                        
+                       <a href="login.xhtml" class="btn-lg">Entrar</a> </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+	
 </ui:composition>
