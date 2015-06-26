@@ -15,7 +15,7 @@
 					<br></br> Cadastro Usuário Administrador <small><u>admin</u></small>
 				</h1>
 			</div>
-			<div class="row">
+			<h:messages />
 				<h:form>
 					<h:panelGroup rendered="#{not empty administradorMB.administrador.id}">
 						<br></br>
@@ -25,6 +25,7 @@
 					</h:panelGroup>
 					<h:inputHidden value="#{administradorMB.administrador.id}" />
 					<div class="col-md-6">
+					<h:messages />
 						<fieldset>
 						<br></br>
 						<center>
@@ -101,7 +102,6 @@
 
 				</h:form>
 			</div>
-		</div>
 	</ui:define>
 
 </ui:composition>

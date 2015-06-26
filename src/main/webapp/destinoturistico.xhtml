@@ -11,12 +11,7 @@
 	<ui:define name="content">
 	
 		<div class="container">
-
-
-			<!--  <a class="botaotopo" href="#" title="Para o topo !"> 
-			<h:graphicImage library="images" name="cristo.jpg" width="50" height="50" />
-			</a>  -->
-			
+			<br></br>
 			<br></br>
 			<div class="page-header">
 			<br></br>
@@ -24,7 +19,46 @@
 					TicketEasy <small><u>Destinos</u></small>
 				</h1>
 			</div>
+				
+				<div class="row">
+				<div class="col-md-12">
+				<h:messages />
+				<h:form>
+			<h:dataTable styleClass="table" value="#{destinoMB.destinos}" var="item">
 
+					<h:graphicImage rendered="#{not empty item.fotoDestino}" url="#{destinoMB.caminhoUpload(item.fotoDestino)}" />
+				
+				<h:column>
+					<h:outputText value="#{item.nome}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Descricao:</f:facet>
+					<h:outputText value="#{item.descricao}" />
+				</h:column>
+				
+				<h:column>
+					<f:facet name="header">Valor(R$):</f:facet>
+					<h:outputText value="#{item.valor}" />
+				</h:column>
+
+				<h:column>
+					<h:commandLink styleClass="btn btn-info"
+						action="#{destinoMB.editar(item.id)}">
+						<span class="glyphicon glyphicon-edit"></span>
+					</h:commandLink>
+					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
+					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
+						action="#{destinoMB.excluir(item.id)}">
+						<span class="glyphicon glyphicon-remove"></span>
+					</h:commandLink>
+				</h:column>
+			</h:dataTable>
+			<br></br>
+		</h:form>
+				</div>
+				</div>
+				
 			<div class="row">
 				<div class="col-md-12">
 				<br></br>

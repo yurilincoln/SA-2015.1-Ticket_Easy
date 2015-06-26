@@ -2,66 +2,68 @@
 	xmlns:ui="http://java.sun.com/jsf/facelets"
 	xmlns:h="http://java.sun.com/jsf/html">
 
-	<nav class="navbar navbar-default navbar-fixed-top " id="cssmenu" >
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#"> <h:graphicImage
-					library="images" name="logotipoNovo.png"
-					style="width:auto; height:100%;" />
-			</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="hidden">	
-                        <a href="#page-top"></a>
-                    </li>
-                    
-                    <li class="page-scroll">
-                        <h:link outcome="/index" value="Home" /> 
-                        </li>
-                        <li class="page-scroll">
-                        <h:link outcome="/sobre" value="Quem Somos?" />
-                        </li>
-                        <li class="page-scroll">
-                        <h:link outcome="/localizacao" value="Localização" />
-                        </li>
-                         <li class="page-scroll">
-                       <h:link outcome="/contato" value="Contato" />
-                        </li>
-                        <li class="drop">
-					<div class="dropdown">
-					  <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-						Destinos Turísticos
-						<span class="caret"></span>
-					  </button>
-					  <ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
-						<li><a href="destinoturistico.xhtml#cristoredentor">Cristo Redentor</a></li>
-						<li role="separator" class="divider divisor"></li>
-						<li><a href="destinoturistico.xhtml#paodeacucar">Pão de Açúcar</a></li>
-						<li role="separator" class="divider divisor"></li>
-						<li><a href="destinoturistico.xhtml#maracana">Maracanã</a></li>
-						<li role="separator" class="divider divisor"></li>
-						<li><a href="destinoturistico.xhtml#santateresa">Santa Teresa</a></li>
-						<li role="separator" class="divider divisor"></li>
-						<li><a href="destinoturistico.xhtml#cidadedosamba">Cidade do Samba</a></li>
-						<li role="separator" class="divider divisor"></li>
-						<li><a href="destinoturistico.xhtml#vistachinesa">Vista Chinesa</a></li>
-					  </ul>
-					</div>
+	<nav class="navbar navbar-default navbar-fixed-top " id="cssmenu">
+		<div class="container">
+			<div class="navbar-header page-scroll">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"> <h:graphicImage
+						library="images" name="logotipoNovo.png"
+						style="width:auto; height:100%;" />
+				</a>
+			</div>
+			<div class="collapse navbar-collapse"
+				id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav navbar-right">
+					<li class="hidden"><a href="#page-top"></a></li>
+
+					<li class="page-scroll"><h:link outcome="/index" value="Home" />
 					</li>
-                        
-                        <li class="page-scroll">
-                        
-                       <a href="login.xhtml" class="btn-lg">Entrar</a> </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-	
+					<li class="page-scroll"><h:link outcome="/sobre"
+							value="Quem Somos?" /></li>
+					<li class="page-scroll"><h:link outcome="/localizacao"
+							value="Localização" /></li>
+					<li class="page-scroll"><h:link outcome="/contato"
+							value="Contato" /></li>
+					<li class="drop">
+						<div class="dropdown">
+							<button class="btn btn-default dropdown-toggle" type="button"
+								id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true"
+								aria-expanded="true" style="background-color: #509322;">
+								Destinos Turísticos <span class="caret"></span>
+							</button>
+							<ul class="dropdown-menu" aria-labelledby="dropdownMenu2">
+								<li><a href="destinoturistico.xhtml#cristoredentor">Cristo
+										Redentor</a></li>
+								<li role="separator" class="divider divisor"></li>
+								<li><a href="destinoturistico.xhtml#paodeacucar">Pão de
+										Açúcar</a></li>
+								<li role="separator" class="divider divisor"></li>
+								<li><a href="destinoturistico.xhtml#maracana">Maracanã</a></li>
+								<li role="separator" class="divider divisor"></li>
+								<li><a href="destinoturistico.xhtml#santateresa">Santa
+										Teresa</a></li>
+								<li role="separator" class="divider divisor"></li>
+								<li><a href="destinoturistico.xhtml#cidadedosamba">Cidade
+										do Samba</a></li>
+								<li role="separator" class="divider divisor"></li>
+								<li><a href="destinoturistico.xhtml#vistachinesa">Vista
+										Chinesa</a></li>
+							</ul>
+						</div>
+					</li>
+
+					<li class="page-scroll"><a href="login.xhtml"
+						class="btn btn-lg btn-outline"
+						style="padding-top: 11px; padding-bottom: 7px; line-height: 10px;">Entrar
+					</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+
 </ui:composition>
