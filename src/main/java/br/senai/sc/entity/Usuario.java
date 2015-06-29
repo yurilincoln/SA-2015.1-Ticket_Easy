@@ -21,7 +21,6 @@ public class Usuario {
 	private String email;
 	private String senha;
 	private String confirmarsenha;
-	private String tipodeUsuario;
 	
 	public Long getId() {
 		return id;
@@ -83,12 +82,4 @@ public class Usuario {
 	public void setConfirmarsenha(String confirmarsenha) {
 		this.confirmarsenha = confirmarsenha;
 	}
-	public String getTipodeUsuario() {
-		return tipodeUsuario;
-	}
-	public void setTipodeUsuario(String tipodeUsuario) {
-		this.tipodeUsuario = tipodeUsuario;
-	}
-	
-	
 }

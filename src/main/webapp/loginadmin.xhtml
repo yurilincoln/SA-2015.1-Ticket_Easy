@@ -11,8 +11,8 @@
 			<br></br>
 			<br></br>
 			<br></br>
-			
-				<h1>TicketEasy</h1>
+			<h1> <font face="verdana"> TicketEasy</font> <small><u>admin</u></small>
+				</h1>
 			</div>
 			<div class="row">
 			<h:messages globalOnly="true"/>
@@ -26,7 +26,7 @@
 							<br></br>
 							<h:message for="idEmail" style="color:darkred; font-weight:bold" />
 							<h:inputText id="idEmail" styleClass="form-control"
-								value="#{sessaoMB.usuarioLogar.email}" required="true"
+								value="#{sessaoAdminMB.administradorLogar.email}" required="true"
 									requiredMessage="Informar email."  />
 								
 						</div>
@@ -35,36 +35,16 @@
 							<br></br>
 							<h:message for="idSenha" style="color:darkred; font-weight:bold" />
 							<h:inputSecret id="idSenha" styleClass="form-control"
-								value="#{sessaoMB.usuarioLogar.senha}"  required="true"
+								value="#{sessaoAdminMB.administradorLogar.senha}"  required="true"
 									requiredMessage="Informar senha."/>
 						</div>
 						<h:commandButton styleClass="btn btn-lg btn-primary btn-block" value="Entrar" 
-						action="#{sessaoMB.login()}" />
+						action="#{sessaoAdminMB.login()}" />
 					<br></br>
 					</h:form>
 				</div>
-				<div class="col-md-2"></div>
-				<div class="col-md-2">
-					<br></br>
-					<div class="panel panel-default">
-						<div class="panel-heading">Novo Aqui?</div>
-						<div class="panel-body">
-						<h:link outcome="/cadastrousuario" value="Faça seu cadastro" class="btn btn-danger btn-large"/><i
-								class="icon-white icon-thumbs-down"></i>
-						</div>
-						</div>
-						</div>
-						<div class="col-md-2">
-						<br></br>
-						<div class="panel panel-default">
-						<div class="panel-heading">Administrador?</div>
-						<div class="panel-body">
-						<h:link outcome="/loginadmin" value="Logar" class="btn btn-danger btn-large"/>
-						</div>
-						</div>
-					</div>
-				</div>
 			</div>
+		</div>
 	</ui:define>
 </ui:composition>
 </html>

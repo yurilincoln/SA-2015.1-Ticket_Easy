@@ -59,7 +59,10 @@
 					
 					</li>
 					<li class="page-scroll">
-                        <h:link outcome="/login.xhtml" styleClass="btn btn-xs btn-primary botaosair" value="Sair"/> </li>
+					<h:form>
+                        <h:commandLink value="Sair" action="#{sessaoMB.logout()}" />
+                        </h:form>
+                        </li>
                 	
                 </ul>
             </div>

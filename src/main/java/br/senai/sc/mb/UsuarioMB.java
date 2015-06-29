@@ -29,8 +29,6 @@ public class UsuarioMB {
 			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("As senhas devem ser iguais!"));
 			return "";
 		}
-		String u = "usuarioComum";
-		usuario.setTipodeUsuario(u);
 		usuarioDao.cadastrar(usuario);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
 		return "/login"; 

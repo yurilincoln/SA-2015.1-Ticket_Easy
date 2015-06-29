@@ -32,9 +32,10 @@
                         <h:link outcome="/admin/listapacoteturistico" value="Pacotes Turísticos"/>
                         </li>
                          <li class="page-scroll">
-					<h:link outcome="/login" value="Sair" class="btn btn-lg btn-outline"
-						style="padding-top: 11px; padding-bottom: 7px; line-height: 10px;"/></li>
-                	
+                         <h:form>
+                        <h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" />
+                        </h:form>
+                        </li>
                 </ul>
             </div>
         </div>
