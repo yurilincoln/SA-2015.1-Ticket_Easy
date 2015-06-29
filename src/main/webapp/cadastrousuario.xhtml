@@ -13,14 +13,13 @@
 
 			<div class="page-header">
 				<h1>
-					<br></br> 
-					Ticketeasy
+					<br></br> Ticketeasy
 				</h1>
 			</div>
 			<div class="row">
-			<h:messages globalOnly="true"/>
+				<h:messages globalOnly="true" />
 				<h:form>
-				
+
 					<h:panelGroup rendered="#{not empty usuarioMB.usuario.id}">
 						<br></br>
 						<h:outputLabel value="- Número de ID: -" />
@@ -30,10 +29,12 @@
 					<h:inputHidden value="#{usuarioMB.usuario.id}" />
 					<div class="col-md-6">
 						<fieldset>
-						<br></br>
-						<center>
-						<h4 style="color:red" ><u> Informações de cadastro:</u></h4>
-						</center>
+							<br></br>
+							<center>
+								<h4 style="color: red">
+									<u> Informações de cadastro:</u>
+								</h4>
+							</center>
 							<div class="form-group">
 								<h:outputLabel value="Nome:" />
 								<br></br>
@@ -47,7 +48,7 @@
 								<br></br>
 								<h:message for="idTelefone"
 									style="color:darkred; font-weight:bold" />
-								<h:inputText id="idTelefone" styleClass="form-control"
+								<h:inputText id="idTelefone" styleClass="form-control phone_with_ddd"
 									value="#{usuarioMB.usuario.telefone}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -56,7 +57,7 @@
 								<br></br>
 								<h:message for="idNascimento"
 									style="color:darkred; font-weight:bold" />
-								<h:inputText id="idNascimento" styleClass="form-control"
+								<h:inputText id="idNascimento" styleClass="form-control date"
 									value="#{usuarioMB.usuario.dataNascimento}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -67,17 +68,15 @@
 								<h:selectOneRadio
 									requiredMessage="## Preenchimento obrigatório ##" id="idSexo"
 									value="#{usuarioMB.usuario.sexo}">
-									<f:selectItem itemLabel="Feminino"
-										itemValue=" Feminino    " />
-									<f:selectItem itemLabel="Masculino"
-										itemValue="Masculino" />
-								</h:selectOneRadio> 
-							</div>  
+									<f:selectItem itemLabel="Feminino" itemValue=" Feminino    " />
+									<f:selectItem itemLabel="Masculino" itemValue="Masculino" />
+								</h:selectOneRadio>
+							</div>
 							<div class="form-group">
 								<h:outputLabel value="CEP:" />
 								<br></br>
 								<h:message for="idCep" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idCep" styleClass="form-control"
+								<h:inputText id="idCep" styleClass="form-control cep"
 									value="#{usuarioMB.usuario.cep}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -86,52 +85,58 @@
 								<br></br>
 								<h:message for="idPais" style="color:darkred; font-weight:bold" />
 								<h:selectOneMenu id="idPais" styleClass="form-control"
-									value="#{usuarioMB.usuario.paisOrigem}"  required="true" requiredMessage=" ## Preenchimento obrigatório ##">
-									<f:selectItem itemValue="Brasil" itemLabel="Brasil"/>
-									<f:selectItem itemValue="-------------------------------"/>
-									<f:selectItem itemValue="África do Sul" itemLabel="África do Sul"/>
-									<f:selectItem itemValue="Alemanha" itemLabel="Alemanha"/>
-									<f:selectItem itemValue="Angola" itemLabel="Angola"/>
-									<f:selectItem itemValue="Argentina" itemLabel="Argentina"/>
-									<f:selectItem itemValue="Austrália" itemLabel="Austrália"/>
-									<f:selectItem itemValue="Áustria" itemLabel="Áustria"/>
-									<f:selectItem itemValue="Bélgica" itemLabel="Bélgica"/>
-									<f:selectItem itemValue="Bolívia" itemLabel="Bolívia"/>
-									<f:selectItem itemValue="Bulgária" itemLabel="Bulgária"/>
-									<f:selectItem itemValue="Canadá" itemLabel="Canadá"/>
-									<f:selectItem itemValue="Chile" itemLabel="Chile"/>
-									<f:selectItem itemValue="China" itemLabel="China"/>
-									<f:selectItem itemValue="Colômbia" itemLabel="Colômbia"/>
-									<f:selectItem itemValue="Cuba" itemLabel="Cuba"/>
-									<f:selectItem itemValue="Dinamarca" itemLabel="Dinamarca"/>
-									<f:selectItem itemValue="Emiratos Árabes Unidos" itemLabel="Emiratos Árabes Unidos"/>
-									<f:selectItem itemValue="Espanha" itemLabel="Espanha"/>
-									<f:selectItem itemValue="Estados Unidos" itemLabel="Estados Unidos"/>
-									<f:selectItem itemValue="França" itemLabel="França"/>
-									<f:selectItem itemValue="Grécia" itemLabel="Grécia"/>
-									<f:selectItem itemValue="Honduras" itemLabel="Honduras"/>
-									<f:selectItem itemValue="Hungria" itemLabel="Hungria"/>
-									<f:selectItem itemValue="Índia" itemLabel="Índia"/>
-									<f:selectItem itemValue="Jamaica" itemLabel="Jamaica"/>
-									<f:selectItem itemValue="Japão" itemLabel="Japão"/>
-									<f:selectItem itemValue="Nepal" itemLabel="Nepal"/>
-									<f:selectItem itemValue="Nigéria" itemLabel="Nigéria"/>
-									<f:selectItem itemValue="Noruega" itemLabel="Noruega"/>
-									<f:selectItem itemValue="Nova Zelândia" itemLabel="Nova Zelândia"/>
-									<f:selectItem itemValue="Paquistão" itemLabel="Paquistão"/>
-									<f:selectItem itemValue="Paraguai" itemLabel="Paraguai"/>
-									<f:selectItem itemValue="Peru" itemLabel="Peru"/>
-									<f:selectItem itemValue="Polônia" itemLabel="Polônia"/>
-									<f:selectItem itemValue="Portugal" itemLabel="Portugal"/>
-									<f:selectItem itemValue="Reino Unido" itemLabel="Reino Unido"/>
-									<f:selectItem itemValue="República Checa" itemLabel="República Checa"/>
-									<f:selectItem itemValue="Rússia" itemLabel="Rússia"/>
-									<f:selectItem itemValue="Suécia" itemLabel="Suécia"/>
-									<f:selectItem itemValue="Suíça" itemLabel="Suíça"/>
-									<f:selectItem itemValue="Turquia" itemLabel="Turquia"/>
-									<f:selectItem itemValue="Ucrânia" itemLabel="Ucrânia"/>
-									<f:selectItem itemValue="Venezuela" itemLabel="Venezuela"/>
-									<f:selectItem itemValue="Outro" itemLabel="Outro"/>
+									value="#{usuarioMB.usuario.paisOrigem}" required="true"
+									requiredMessage=" ## Preenchimento obrigatório ##">
+									<f:selectItem itemValue="Brasil" itemLabel="Brasil" />
+									<f:selectItem itemValue="-------------------------------" />
+									<f:selectItem itemValue="África do Sul"
+										itemLabel="África do Sul" />
+									<f:selectItem itemValue="Alemanha" itemLabel="Alemanha" />
+									<f:selectItem itemValue="Angola" itemLabel="Angola" />
+									<f:selectItem itemValue="Argentina" itemLabel="Argentina" />
+									<f:selectItem itemValue="Austrália" itemLabel="Austrália" />
+									<f:selectItem itemValue="Áustria" itemLabel="Áustria" />
+									<f:selectItem itemValue="Bélgica" itemLabel="Bélgica" />
+									<f:selectItem itemValue="Bolívia" itemLabel="Bolívia" />
+									<f:selectItem itemValue="Bulgária" itemLabel="Bulgária" />
+									<f:selectItem itemValue="Canadá" itemLabel="Canadá" />
+									<f:selectItem itemValue="Chile" itemLabel="Chile" />
+									<f:selectItem itemValue="China" itemLabel="China" />
+									<f:selectItem itemValue="Colômbia" itemLabel="Colômbia" />
+									<f:selectItem itemValue="Cuba" itemLabel="Cuba" />
+									<f:selectItem itemValue="Dinamarca" itemLabel="Dinamarca" />
+									<f:selectItem itemValue="Emiratos Árabes Unidos"
+										itemLabel="Emiratos Árabes Unidos" />
+									<f:selectItem itemValue="Espanha" itemLabel="Espanha" />
+									<f:selectItem itemValue="Estados Unidos"
+										itemLabel="Estados Unidos" />
+									<f:selectItem itemValue="França" itemLabel="França" />
+									<f:selectItem itemValue="Grécia" itemLabel="Grécia" />
+									<f:selectItem itemValue="Honduras" itemLabel="Honduras" />
+									<f:selectItem itemValue="Hungria" itemLabel="Hungria" />
+									<f:selectItem itemValue="Índia" itemLabel="Índia" />
+									<f:selectItem itemValue="Jamaica" itemLabel="Jamaica" />
+									<f:selectItem itemValue="Japão" itemLabel="Japão" />
+									<f:selectItem itemValue="Nepal" itemLabel="Nepal" />
+									<f:selectItem itemValue="Nigéria" itemLabel="Nigéria" />
+									<f:selectItem itemValue="Noruega" itemLabel="Noruega" />
+									<f:selectItem itemValue="Nova Zelândia"
+										itemLabel="Nova Zelândia" />
+									<f:selectItem itemValue="Paquistão" itemLabel="Paquistão" />
+									<f:selectItem itemValue="Paraguai" itemLabel="Paraguai" />
+									<f:selectItem itemValue="Peru" itemLabel="Peru" />
+									<f:selectItem itemValue="Polônia" itemLabel="Polônia" />
+									<f:selectItem itemValue="Portugal" itemLabel="Portugal" />
+									<f:selectItem itemValue="Reino Unido" itemLabel="Reino Unido" />
+									<f:selectItem itemValue="República Checa"
+										itemLabel="República Checa" />
+									<f:selectItem itemValue="Rússia" itemLabel="Rússia" />
+									<f:selectItem itemValue="Suécia" itemLabel="Suécia" />
+									<f:selectItem itemValue="Suíça" itemLabel="Suíça" />
+									<f:selectItem itemValue="Turquia" itemLabel="Turquia" />
+									<f:selectItem itemValue="Ucrânia" itemLabel="Ucrânia" />
+									<f:selectItem itemValue="Venezuela" itemLabel="Venezuela" />
+									<f:selectItem itemValue="Outro" itemLabel="Outro" />
 								</h:selectOneMenu>
 
 							</div>
@@ -139,42 +144,51 @@
 						<br></br>
 					</div>
 					<div class="col-md-6">
-					<fieldset>
-					<br></br>
-					<center>
-					<h4 style="color:red" ><u>Informações de acesso:</u></h4>
-					</center>
-						<div class="form-group">
-							<h:outputLabel value="Email:" />
+						<fieldset>
 							<br></br>
-							<h:message for="idEmail" style="color:darkred; font-weight:bold" />
-							<h:inputText id="idEmail" styleClass="form-control"
-								value="#{usuarioMB.usuario.email}" required="true"
-								requiredMessage=" ## Preenchimento obrigatório ##" />
-						</div>
-						<div class="form-group">
-							<h:outputLabel value="Senha:" />
-							<br></br>
-							<h:message for="idSenha" style="color:darkred; font-weight:bold" />
-							<h:inputSecret id="idSenha" styleClass="form-control"
-								value="#{usuarioMB.usuario.senha}" required="true"
-								requiredMessage=" ## Preenchimento obrigatório ##" />
-						</div>
-						<div class="form-group">
-							<h:outputLabel value="Confirmar Senha:" />
-							<br></br>
-							<h:message for="idConfirmarSenha"
-								style="color:darkred; font-weight:bold" />
-							<h:inputSecret id="idConfirmarSenha" styleClass="form-control"
-								value="#{usuarioMB.usuario.confirmarsenha}" required="true"
-								requiredMessage=" ## Preenchimento obrigatório ##" />
-						</div>
-						<h:commandButton action="#{usuarioMB.cadastrar()}"
-						styleClass="btn btn-success" value="Cadastrar" />
+							<center>
+								<h4 style="color: red">
+									<u>Informações de acesso:</u>
+								</h4>
+							</center>
+							<div class="form-group">
+								<h:outputLabel value="Email:" />
+								<br></br>
+								<h:message for="idEmail" style="color:darkred; font-weight:bold" />
+								<h:inputText id="idEmail" styleClass="form-control"
+									value="#{usuarioMB.usuario.email}" required="true"
+									requiredMessage=" ## Preenchimento obrigatório ##" />
+							</div>
+							<div class="form-group">
+								<h:outputLabel value="Senha:" />
+								<br></br>
+								<h:message for="idSenha" style="color:darkred; font-weight:bold" />
+								<h:inputSecret id="idSenha" styleClass="form-control"
+									value="#{usuarioMB.usuario.senha}" required="true"
+									requiredMessage=" ## Preenchimento obrigatório ##" />
+							</div>
+							<div class="form-group">
+								<h:outputLabel value="Confirmar Senha:" />
+								<br></br>
+								<h:message for="idConfirmarSenha"
+									style="color:darkred; font-weight:bold" />
+								<h:inputSecret id="idConfirmarSenha" styleClass="form-control"
+									value="#{usuarioMB.usuario.confirmarsenha}" required="true"
+									requiredMessage=" ## Preenchimento obrigatório ##" />
+							</div>
+							<h:commandButton action="#{usuarioMB.cadastrar()}"
+								styleClass="btn btn-success" value="Cadastrar" />
 						</fieldset>
 					</div>
-
 				</h:form>
+				<h:outputScript library="js" name="jquery.mask.min.js" />
+				<script>
+			$(function(){
+				 $('.phone_with_ddd').mask('(00) 0000-0000');
+				 $('.date').mask('00/00/0000');
+				 $('.cep').mask('00000-000');
+			})
+		</script>
 			</div>
 		</div>
 	</ui:define>

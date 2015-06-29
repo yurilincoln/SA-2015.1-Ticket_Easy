@@ -71,21 +71,21 @@
 						<h:outputLabel value="Hora de Abertura:" />
 						<br />
 						<h:message for="idHoraA" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="campohora" value="#{destinoMB.destino.horaAbertura}" 
+						<h:inputText styleClass="campohora time" value="#{destinoMB.destino.horaAbertura}" 
 						id="idHoraA" required="true" requiredMessage="## Preenchimento obrigatório ##"/>
 					</div>
 					<div class="form-group" style="margin-left: 140px; margin-top: -70px">
 						<h:outputLabel value="Hora de Fechamento:" />
 						<br />
 						<h:message for="idHoraF" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="campohora" value="#{destinoMB.destino.horaFechamento}"
+						<h:inputText styleClass="campohora time" value="#{destinoMB.destino.horaFechamento}"
 						id="idHoraF" required="true" requiredMessage="## Preenchimento obrigatório ##" />
 					</div>
 					<div class="form-group">
 						<h:outputLabel value="Valor de Cobrança (R$):" />
 						<br />
 						<h:message for="idValor" style="color:darkred; font-weight:bold" />
-						<h:inputText styleClass="campohora" value="#{destinoMB.destino.valor}"
+						<h:inputText styleClass="campohora money" value="#{destinoMB.destino.valor}"
 						id="idValor" required="true" requiredMessage="## Preenchimento obrigatório ##">
 							<f:convertNumber locale="pt_BR" />
 						</h:inputText>
@@ -108,6 +108,13 @@
 						</fieldset>
 						</div>
 				</h:form>
+				<h:outputScript library="js" name="jquery.mask.min.js" />
+				<script>
+			$(function(){
+				  $('.time').mask('00:00');
+				 $$('.money').mask('0000,00', {reverse: true});
+			})
+		</script>
 				</div>
 				</div>
 	</ui:define>
