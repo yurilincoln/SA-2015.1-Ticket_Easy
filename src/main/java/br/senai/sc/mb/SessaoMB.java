@@ -41,7 +41,7 @@ public class SessaoMB {
 //		}else{
 		if(checkLogin(usuarioValida)){
 			usuarioLogado = usuarioValida;
-			return "/logado/index?face-redirect=true";
+			return "/logado/index?faces-redirect=true";
 		}
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Usuário ou senha inválido."));
 		return "/login";
@@ -55,7 +55,7 @@ public class SessaoMB {
 	
 	public String logout(){
 		usuarioLogado = null;
-		return "/login?face-redirect=true";
+		return "/login?faces-redirect=true";
 	}
 	
 

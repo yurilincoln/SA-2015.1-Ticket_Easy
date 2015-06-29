@@ -27,9 +27,9 @@ public class AdministradorDao extends Dao {
 		return getEntityManager().find(Administrador.class, id);
 	}
 	
-	public Administrador buscaPorEmail(String nome) {
+	public Administrador buscaPorEmail(String email) {
 		Query query = getEntityManager().createQuery("From Administrador u Where u.email = :email", Administrador.class);
-		query.setParameter("email", nome);
+		query.setParameter("email", email);
 		return (Administrador) query.getSingleResult();
 	}
 }
