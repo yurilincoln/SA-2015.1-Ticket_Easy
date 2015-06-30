@@ -7,7 +7,7 @@
 //
 //import br.senai.sc.util.JPAUtil_Test;
 //
-//public class DaoImplements<T> implements Dao<T>{
+//public class DaoImplements<T> implements Dao_Test<T>{
 //	
 //	private static Logger logger;
 //	private Class<T> klass;

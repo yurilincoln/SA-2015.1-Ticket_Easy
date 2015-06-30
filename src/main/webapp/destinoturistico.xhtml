@@ -33,11 +33,69 @@
 						<div class="col-md-4">
 						<div class="thumbnail">
 								<div class="caption">
+								<center>
 							<h:graphicImage url="#{destinoMB.caminhoUpload(item.fotoDestino)}" />
+							</center>
+							</div>
+							</div>
+							</div>
+							<div class="col-md-8">
+							<div class="row">
+								<center>
+								<br></br>
+							<h:outputLabel value="Sobre:" />
+							</center>
+							<div class="col-md-4">
+							<div class="thumbnail">	
+								<div class="caption">
+							<h:outputLabel value="Estado:" />	
+							<br></br>
+							<h:outputText value="#{item.estado}" />
+							</div>
+							</div>
+							</div>
+							<div class="col-md-4">
+							<div class="thumbnail">
+								<div class="caption">
+							<h:outputLabel value="Cidade:" />
+							<br></br>
+							<h:outputText value="#{item.cidade}" />
+							</div>
+							</div>
+							</div>
+							<div class="col-md-4">
+							<div class="thumbnail">
+							<h:outputLabel value="Bairro:" />
+							<br></br>
+							<h:outputText value="#{item.bairro}" />
+							<br></br>
+							</div>
+							</div>
+							<div class="col-md-8">
+								<div class="col-md-4">
+							<h:outputLabel value="Hora de Abertura:" />
+							<br></br>
+							<h:outputText value="#{item.horaAbertura}" />
+							</div>
+							<div class="col-md-4">
+							<h:outputLabel value="Hora de Fechamento:" />
+							<br></br>
+							<h:outputText value="#{item.horaFechamento}" />
+							</div>
 							</div>
 							</div>
 							</div>
 							<div class="col-md-12">
+							<div class="col-md-4">
+							<div class="thumbnail">
+								<div class="caption">
+							<h:outputLabel value="Descrição:" />
+							<br></br>
+							<h:outputText value="#{item.descricao}" />
+							</div>
+							</div>
+							</div>
+							<div class="col-md-4">
 							<div class="thumbnail">
 								<div class="caption">
 							<h:outputLabel value="Observações:" />
@@ -46,8 +104,18 @@
 							</div>
 							</div>
 							</div>
+							<div class="col-md-4">
+							<div class="thumbnail">
+								<div class="caption">
+							<h:outputLabel style="color:red;" value="Valor:" />
+							<br></br>
+							<h:outputText value="#{item.valor}" />
+							</div>
+							</div>
 							<a href="carrinho.xhtml" class="btn btn-default btn-lg active">Adicionar ao Carrinho <span class="glyphicon glyphicon-ok-sign"></span>
 							</a>
+							</div>
+							</div>
 						</div>
 					<div>
 						</div>

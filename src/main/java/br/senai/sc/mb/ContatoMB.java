@@ -42,8 +42,9 @@ public class ContatoMB {
  	}
  	
  	public List<Contato> getContatos() {
+ 		ContatoDao dao = new ContatoDao();
 		if(contatos == null){
-			contatos = contatoDao.listarTodos();
+			contatos = dao.listarTodos();
 		}
 		return contatos;
 	}

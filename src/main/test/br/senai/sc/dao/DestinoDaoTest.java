@@ -23,21 +23,23 @@
 //		dao = null;
 //	}
 //	
-////	@Test
-////	public void testGravaNovaCliente() {
-////		Destino c = new Destino();
-////		c.setNome("João da Silva");
-////		c.setCpf("000.000.000-00");
-////		c.setDataNascimento(new Date());
-////		c.setEmail("joaosilva@sc.senai.br");
-////		c.setEndereco("rua do joão da silva, 6969");
-////		c.setSenha("123456");
-////		c.setTelefone("(00) 0000-0000");
-////		
-////		dao.save(c);
-////		
-////		assertTrue(c.getId() != null);
-////		
-////	}
+//	@Test
+//	public void SalvarNovoDestinoTest() {
+//		Destino d = new Destino();
+//		d.setNome("Maracanâ");
+//		d.setBairro("Maracana");
+//		d.setCidade("Rio de Janeiro");
+//		d.setEstado("RJ");
+//		d.setHoraAbertura("06:00");
+//		d.setHoraFechamento("12:00");
+//		d.setValor((double) 240);
+//		d.setDescricao("blaa");
+//		d.setObersevacoes("bluu");
+//			
+//		dao.save(d);
+//		
+//		assertTrue(d.getId() != null);
+//		
+//	}
 //	
 //}

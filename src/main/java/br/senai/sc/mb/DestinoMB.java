@@ -86,14 +86,6 @@ public class DestinoMB {
 		this.destino = destino;
 	}
 
-	public DestinoDao getDestinoDao() {
-		return destinoDao;
-	}
-
-	public void setDestinoDao(DestinoDao destinoDao) {
-		this.destinoDao = destinoDao;
-	}
-
 	
 	public Part getFotoDestino() {
 		return fotoDestino;
