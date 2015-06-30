@@ -12,6 +12,7 @@ import javax.servlet.annotation.WebFilter;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import br.senai.sc.mb.SessaoAdminMB;
 import br.senai.sc.mb.SessaoMB;
 
 @WebFilter(urlPatterns="/admin/*")
@@ -21,9 +22,9 @@ public class SessaoFilterAdmin implements Filter {
 	public void doFilter(ServletRequest request, ServletResponse response,
 			FilterChain filterChain) throws IOException, ServletException {
 		HttpServletRequest servletRequest = (HttpServletRequest) request;
-		SessaoMB sessaoMB = (SessaoMB) servletRequest.getSession().getAttribute("sessaoAdminMB");
+		SessaoAdminMB sessaoAdminMB = (SessaoAdminMB) servletRequest.getSession().getAttribute("sessaoAdminMB");
 		
-		if(sessaoMB == null || !sessaoMB.isLogado()){
+		if(sessaoAdminMB == null || !sessaoAdminMB.isLogadoAdmin()){
 			HttpServletResponse servletResponse = (HttpServletResponse) response;
 			servletResponse.sendRedirect(servletRequest.getContextPath()
 					.concat("/loginadmin.xhtml"));

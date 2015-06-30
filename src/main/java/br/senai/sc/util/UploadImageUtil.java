@@ -11,7 +11,7 @@ import javax.servlet.ServletContext;
 import javax.servlet.http.Part;
 
 public class UploadImageUtil {
-	private static final String DIRETORIO_IMAGENS = "webapp/resources/images/uploads/";
+	private static final String DIRETORIO_IMAGENS = "/resources/images/uploads/";
 	private static final Map<String, String> TIPOS_PERMITIDOS = new HashMap<String, String>();
 	
 	static{
