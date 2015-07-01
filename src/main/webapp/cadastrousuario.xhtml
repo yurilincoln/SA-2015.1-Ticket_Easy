@@ -10,10 +10,14 @@
 
 	<ui:define name="content">
 		<div class="container">
-
+			<br></br>
+			<br></br>
+			<br></br>
+			<br></br>
 			<div class="page-header">
+			
 				<h1>
-					<br></br> Ticketeasy
+				 Ticketeasy
 				</h1>
 			</div>
 			<div class="row">
@@ -27,19 +31,17 @@
 							value="#{usuarioMB.usuario.id}" readonly="true" />
 					</h:panelGroup>
 					<h:inputHidden value="#{usuarioMB.usuario.id}" />
-					<div class="col-md-6">
+					<div class="col-md-5">
 						<fieldset>
 							<br></br>
-							<center>
 								<h4 style="color: red">
 									<u> Informações de cadastro:</u>
 								</h4>
-							</center>
 							<div class="form-group">
 								<h:outputLabel value="Nome:" />
 								<br></br>
 								<h:message for="idNome" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idNome" styleClass="form-control"
+								<h:inputText id="idNome" styleClass="campotiponome" 
 									value="#{usuarioMB.usuario.nome}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -48,7 +50,7 @@
 								<br></br>
 								<h:message for="idTelefone"
 									style="color:darkred; font-weight:bold" />
-								<h:inputText id="idTelefone" styleClass="form-control phone_with_ddd"
+								<h:inputText id="idTelefone" styleClass="campotiponome phone_with_ddd"
 									value="#{usuarioMB.usuario.telefone}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -57,7 +59,7 @@
 								<br></br>
 								<h:message for="idNascimento"
 									style="color:darkred; font-weight:bold" />
-								<h:inputText id="idNascimento" styleClass="form-control date"
+								<h:inputText id="idNascimento" styleClass="campotiponome date"
 									value="#{usuarioMB.usuario.dataNascimento}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -68,7 +70,7 @@
 								<h:selectOneRadio
 									requiredMessage="## Preenchimento obrigatório ##" id="idSexo"
 									value="#{usuarioMB.usuario.sexo}">
-									<f:selectItem itemLabel="Feminino" itemValue=" Feminino    " />
+									<f:selectItem itemLabel="Feminino" itemValue="Feminino" />
 									<f:selectItem itemLabel="Masculino" itemValue="Masculino" />
 								</h:selectOneRadio>
 							</div>
@@ -76,7 +78,7 @@
 								<h:outputLabel value="CEP:" />
 								<br></br>
 								<h:message for="idCep" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idCep" styleClass="form-control cep"
+								<h:inputText id="idCep" styleClass="campotiponome cep"
 									value="#{usuarioMB.usuario.cep}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -84,7 +86,7 @@
 								<h:outputLabel value="Pais de Origem:" />
 								<br></br>
 								<h:message for="idPais" style="color:darkred; font-weight:bold" />
-								<h:selectOneMenu id="idPais" styleClass="form-control"
+								<h:selectOneMenu id="idPais" styleClass="campotiponome" 
 									value="#{usuarioMB.usuario.paisOrigem}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##">
 									<f:selectItem itemValue="Brasil" itemLabel="Brasil" />
@@ -143,19 +145,19 @@
 						</fieldset>
 						<br></br>
 					</div>
-					<div class="col-md-6">
+					<div class="col-md-2">
+					</div>
+					<div class="col-md-5">
 						<fieldset>
 							<br></br>
-							<center>
 								<h4 style="color: red">
 									<u>Informações de acesso:</u>
 								</h4>
-							</center>
 							<div class="form-group">
 								<h:outputLabel value="Email:" />
 								<br></br>
 								<h:message for="idEmail" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idEmail" styleClass="form-control"
+								<h:inputText id="idEmail" styleClass="campotiponome" 
 									value="#{usuarioMB.usuario.email}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -163,7 +165,7 @@
 								<h:outputLabel value="Senha:" />
 								<br></br>
 								<h:message for="idSenha" style="color:darkred; font-weight:bold" />
-								<h:inputSecret id="idSenha" styleClass="form-control"
+								<h:inputSecret id="idSenha" styleClass="campotiponome"
 									value="#{usuarioMB.usuario.senha}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>
@@ -172,7 +174,7 @@
 								<br></br>
 								<h:message for="idConfirmarSenha"
 									style="color:darkred; font-weight:bold" />
-								<h:inputSecret id="idConfirmarSenha" styleClass="form-control"
+								<h:inputSecret id="idConfirmarSenha" styleClass="campotiponome"
 									value="#{usuarioMB.usuario.confirmarsenha}" required="true"
 									requiredMessage=" ## Preenchimento obrigatório ##" />
 							</div>

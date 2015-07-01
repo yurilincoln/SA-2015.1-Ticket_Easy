@@ -17,6 +17,7 @@ public class Pacote {
 	private String nome;
 	private double valor;
 	private String descricao;
+	private String fotoPacote;
 	
 	@ManyToMany
 	private List<Destino> destinos;
@@ -62,5 +63,12 @@ public class Pacote {
 	}
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
-	}	
+	}
+	public String getFotoPacote() {
+		return fotoPacote;
+	}
+	public void setFotoPacote(String fotoPacote) {
+		this.fotoPacote = fotoPacote;
+	}
+		
 }

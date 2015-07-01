@@ -5,19 +5,19 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 <h:head>
 	<title>TicketEasy - <ui:insert name="title"></ui:insert></title>
-	
-	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css"  />
+
+	<h:outputStylesheet library="bootstrap" name="css/bootstrap.min.css" />
 
 	<h:outputScript library="webjars" name="jquery/2.1.4/jquery.js" />
 
 	<h:outputScript library="bootstrap" name="js/bootstrap.min.js" />
-	
+
 	<h:outputStylesheet library="css" name="freelancer.css" />
 
 	<h:outputScript library="js" name="freelancer.js" />
-	
+
 	<h:outputStylesheet library="css" name="padrao.css" />
-	
+
 </h:head>
 
 <h:body>
@@ -42,49 +42,49 @@
 			<br></br>
 			<div class="rodaperow">
 				<div class="container">
-				<br></br>
-					<br></br>
-					<div class="col-md-12">
-					<center>
-						<h3>
-							<font face="verdana" color="white"> Apoio: </font>
-						</h3>
-						</center>
-						</div>
-						<div class="panel panel-default">
+					<br></br> <br></br>
+					<div class="col-md-12"></div>
+					<div class="panel panel-default">
 						<div class="panel-body">
-						<div class="col-md-4">
-							
-						<center>
-								<h:graphicImage library="images" name="fiescsenai.jpg"
-									width="200px" height="80px" />
-									</center>
-									<br></br>
-									<br></br>
-									</div>
-									<center>
-									<div class="col-md-4">
-									
-								<h:graphicImage library="images" name="rio2016.jpg" 
-								width="100px" height="80px"  />
-									</div>
-									</center>
-										
-									<div class="col-md-4">
-									<center>
-									
-								<h:graphicImage library="images" name="prefeiturario.jpg"
-									width="100px" height="80px" />
-									</center>
-									<br></br>
-									<br></br>
-
+							<div class="col-md-7">
+								<center>
+									<h3>
+										<font face="verdana" color="white"> Apoio: </font>
+									</h3>
+								</center>
+								<div class="col-md-3">
+									<h:graphicImage library="images" name="fiescsenai.jpg"
+										width="200px" height="80px" />
+								</div>
+								<div class="col-md-2">
+									<h:graphicImage library="images" name="rio2016.jpg"
+										width="110px" height="80px" />
+								</div>
+								<div class="col-md-2">
+									<h:graphicImage library="images" name="prefeiturario.jpg"
+										width="100px" height="80px" />
+								</div>
 							</div>
+							<div class="col-md-3">
+							<center>
+									<h3>
+										<font face="verdana" color="white"> TICKETEASY: </font>
+									</h3>
+								</center>
+								<div class="thumbnail">
+									<div class="caption">
+										<h:link outcome="/logado/sobrelogado" value="Sobre" />
+										<br></br>
+										<h:link outcome="/logado/localizacaologado" value="Localização" />
+										<h:link outcome="/logado/contatologado" value="Contato" />
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			
+			</div>
+
 
 		</ui:insert>
 	</div>

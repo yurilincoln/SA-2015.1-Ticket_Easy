@@ -27,7 +27,7 @@
 				</h:column>
 
 				<h:column>
-					<f:facet name="header">Nome</f:facet>
+					<f:facet name="header">Nome:</f:facet>
 					<h:outputText value="#{item.nome}" />
 				</h:column>
 				
@@ -35,6 +35,11 @@
 					<f:facet name="header">Destinos:</f:facet>
 					<h:outputText value="#{item.listaDestino()}" />
 				</h:column> --> 
+				
+				<h:column>
+					<f:facet name="header">Foto do Pacote:</f:facet>
+					<h:graphicImage style="width: 100%; height: 250px;" rendered="#{not empty item.fotoPacote}" url="#{destinoMB.caminhoUpload(item.fotoPacote)}" />
+				</h:column>
 				
 				<h:column>
 					<f:facet name="header">Descrição do Pacote:</f:facet>
