@@ -6,7 +6,7 @@ import javax.persistence.Id;
 
 @Entity
 public class ItemPedido {
-
+	
 	@Id
 	@GeneratedValue
 	private Long id;

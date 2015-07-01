@@ -11,123 +11,127 @@
 	<ui:define name="content">
 		<div class="container">
 			<div class="page-header">
-			<br></br>
-			<br></br>
-			<br></br>
+				<br></br> <br></br> <br></br>
 				<h1>
 					TicketEasy <small><u>Destinos</u></small>
 				</h1>
 			</div>
-				<h:messages />
-				<ui:repeat var="item" value="#{destinoMB.destinos}">
+			<h:messages />
+			<ui:repeat var="item" value="#{destinoMB.destinos}">
 				<div class="row">
-				<div class="col-md-12">
-				<br></br>
-					<div class="panel panel-default">
-						<div class="panel-heading">
-						<center>
-						<h:outputText value="#{item.nome}" />
-						</center>
-						</div>
-						<div class="panel-body">
-						<div class="col-md-4">
-						<div class="thumbnail">
-								<div class="caption">
+					<div class="col-md-12">
+						<br></br>
+						<div class="panel panel-default">
+							<div class="panel-heading">
 								<center>
-							<h:graphicImage url="#{destinoMB.caminhoUpload(item.fotoDestino)}" />
-							</center>
+									<h:outputText value="#{item.nome}" />
+								</center>
 							</div>
-							</div>
-							</div>
-							<div class="col-md-8">
-							<div class="row">
-								<center>
-								<br></br>
-							<h:outputLabel value="Sobre:" />
-							</center>
-							<div class="col-md-4">
-							<div class="thumbnail">	
-								<div class="caption">
-							<h:outputLabel value="Estado:" />	
-							<br></br>
-							<h:outputText value="#{item.estado}" />
-							</div>
-							</div>
-							</div>
-							<div class="col-md-4">
-							<div class="thumbnail">
-								<div class="caption">
-							<h:outputLabel value="Cidade:" />
-							<br></br>
-							<h:outputText value="#{item.cidade}" />
-							</div>
-							</div>
-							</div>
-							<div class="col-md-4">
-							<div class="thumbnail">
-							<h:outputLabel value="Bairro:" />
-							<br></br>
-							<h:outputText value="#{item.bairro}" />
-							<br></br>
-							</div>
-							</div>
-							<div class="col-md-8">
+							<div class="panel-body">
 								<div class="col-md-4">
-							<h:outputLabel value="Hora de Abertura:" />
-							<br></br>
-							<h:outputText value="#{item.horaAbertura}" />
-							</div>
-							<div class="col-md-4">
-							<h:outputLabel value="Hora de Fechamento:" />
-							<br></br>
-							<h:outputText value="#{item.horaFechamento}" />
-							</div>
-							</div>
-							</div>
-							</div>
-							<div class="col-md-12">
-							<div class="col-md-4">
-							<div class="thumbnail">
-								<div class="caption">
-							<h:outputLabel value="Descrição:" />
+									<div class="thumbnail">
+										<div class="caption">
+											<center>
+												<h:graphicImage
+													url="#{destinoMB.caminhoUpload(item.fotoDestino)}" />
+											</center>
+										</div>
+									</div>
+								</div>
+								<div class="col-md-8">
+									<div class="row">
+										<br></br>
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<center>
+													<h:outputText value="Sobre" />
+												</center>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="thumbnail">
+												<div class="caption">
+													<h:outputLabel value="Estado: " />
+													<h:outputText value="#{item.estado}" />
+													<br></br>
+													<h:outputLabel value="Cidade:" />
+													<h:outputText value="#{item.cidade}" />
+													<br></br>
+													<h:outputLabel value="Bairro:" />
+													<h:outputText value="#{item.bairro}" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="thumbnail">
+												<div class="caption">
+													<h:outputLabel value="Hora de Abertura:" />
+													<br></br>
+													<h:outputText value="#{item.horaAbertura}" />
+												</div>
+											</div>
+										</div>
+										<div class="col-md-4">
+											<div class="thumbnail">
+												<h:outputLabel value="Hora de Fechamento:" />
+												<br></br>
+												<h:outputText value="#{item.horaFechamento}" />
+											</div>
+										</div>
+									</div>
+								</div>
+								<br></br>
+								<div class="col-md-12">
+								<br></br>
+								<div class="col-md-4">
+									<div class="thumbnail">
+										<div class="caption">
+											<h:outputLabel value="Descrição:" />
 							<br></br>
 							<h:outputText value="#{item.descricao}" />
-							</div>
-							</div>
-							</div>
-							<div class="col-md-4">
-							<div class="thumbnail">
-								<div class="caption">
-							<h:outputLabel value="Observações:" />
-							<br></br>
-							<h:outputText value="#{item.obersevacoes}" />
-							</div>
-							</div>
-							</div>
-							<div class="col-md-4">
-							<div class="thumbnail">
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+									<div class="thumbnail">
+										<div class="caption">
+											<h:outputLabel value="Observações:" />
+											<br></br>
+											<h:outputText value="#{item.obersevacoes}" />
+										</div>
+									</div>
+								</div>
+								<div class="col-md-4">
+								<div class="thumbnail">
 								<div class="caption">
 							<h:outputLabel style="color:red;" value="Valor:" />
 							<br></br>
 							<h:outputText value="#{item.valor}" />
 							</div>
 							</div>
-							<a href="carrinho.xhtml" class="btn btn-default btn-lg active">Adicionar ao Carrinho <span class="glyphicon glyphicon-ok-sign"></span>
+								</div>
+								</div>
+								<div class="col-md-12">
+								<div class="col-md-4">
+								</div>
+								<div class="col-md-5">
+								</div>
+								<div class="col-md-3">
+								<a href="carrinho.xhtml" class="btn btn-default btn-lg active">Adicionar ao Carrinho <span class="glyphicon glyphicon-ok-sign"></span>
 							</a>
+								</div>
+								
+								</div>
 							</div>
-							</div>
-						</div>
-					<div>
 						</div>
 					</div>
-				</div>
-				<br></br>
+					<br></br>
 				</div>
 				<br></br>
 			</ui:repeat>
-				</div>
-				
-	</ui:define> 
+		</div>
 
-	</ui:composition>
-	</html>
+	</ui:define>
+
+</ui:composition>
+</html>
