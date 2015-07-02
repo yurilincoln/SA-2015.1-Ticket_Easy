@@ -27,15 +27,15 @@ public class ItemPedidoMB {
 		itemPedidoDao = new ItemPedidoDao();
 	}
 	
-//	public String adicionaDestinoCarrinho(Long id){
-//		itemPedido.getDestinos().add(destinoDao.buscarPorId(id));
-//		return "carrinho?faces-redirect=true";
-//	}
-//	
-//	public String adicionaPacoteCarrinho(Long id){
-//		itemPedido.getPacotes().add(pacoteDao.buscarPorId(id));
-//		return "carrinho?faces-redirect=true";
-//	}
+	public String adicionaDestinoCarrinho(Long id){
+		itemPedido.getDestinos().add(destinoDao.buscarPorId(id));
+		return "carrinho?faces-redirect=true";
+	}
+	
+	public String adicionaPacoteCarrinho(Long id){
+		itemPedido.getPacotes().add(pacoteDao.buscarPorId(id));
+		return "carrinho?faces-redirect=true";
+	}
 //	
 //	public String excluir(String idParam){
 //	}

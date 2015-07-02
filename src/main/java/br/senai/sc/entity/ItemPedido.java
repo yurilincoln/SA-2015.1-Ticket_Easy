@@ -1,8 +1,11 @@
 package br.senai.sc.entity;
 
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
+import javax.persistence.ManyToMany;
 
 @Entity
 public class ItemPedido {
@@ -13,11 +16,11 @@ public class ItemPedido {
 	private double valor;
 //	private Usuario usuario;
 	
-//	@ManyToMany
-//	private List<Destino> destinos;
-//	@ManyToMany
-//	private List<Pacote> pacotes;
-//	
+	@ManyToMany
+	private List<Destino> destinos;
+	@ManyToMany
+	private List<Pacote> pacotes;
+	
 	public Long getId() {
 		return id;
 	}
@@ -30,18 +33,18 @@ public class ItemPedido {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-//	public List<Destino> getDestinos() {
-//		return destinos;
-//	}
-//	public void setDestinos(List<Destino> destinos) {
-//		this.destinos = destinos;
-//	}
-//	public List<Pacote> getPacotes() {
-//		return pacotes;
-//	}
-//	public void setPacotes(List<Pacote> pacotes) {
-//		this.pacotes = pacotes;
-//	}
+	public List<Destino> getDestinos() {
+		return destinos;
+	}
+	public void setDestinos(List<Destino> destinos) {
+		this.destinos = destinos;
+	}
+	public List<Pacote> getPacotes() {
+		return pacotes;
+	}
+	public void setPacotes(List<Pacote> pacotes) {
+		this.pacotes = pacotes;
+	}
 //	public Usuario getUsuario() {
 //		return usuario;
 //	}

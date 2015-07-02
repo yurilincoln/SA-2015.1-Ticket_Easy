@@ -10,11 +10,16 @@
 
 	<ui:define name="content">
 		<div class="container">
+		<br></br>
+		<br></br>
+		<br></br>
 			<div class="page-header">
 				<h1>
 					<br></br> Cadastro Usuário Administrador <small><u>admin</u></small>
 				</h1>
 			</div>
+			<div class="row">
+				<div class="col-md-12">
 			<h:messages />
 			<h:form>
 				<h:panelGroup
@@ -25,20 +30,18 @@
 						value="#{administradorMB.administrador.id}" readonly="true" />
 				</h:panelGroup>
 				<h:inputHidden value="#{administradorMB.administrador.id}" />
-				<div class="col-md-6">
+				<div class="col-md-5">
 					<h:messages />
 					<fieldset>
 						<br></br>
-						<center>
 							<h4 style="color: red">
 								<u> Informações de cadastro:</u>
 							</h4>
-						</center>
 						<div class="form-group">
 							<h:outputLabel value="Nome:" />
 							<br></br>
 							<h:message for="idNome" style="color:darkred; font-weight:bold" />
-							<h:inputText id="idNome" styleClass="form-control"
+							<h:inputText id="idNome" styleClass="campotiponome"
 								value="#{administradorMB.administrador.nome}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
@@ -47,7 +50,7 @@
 							<br></br>
 							<h:message for="idTelefone"
 								style="color:darkred; font-weight:bold" />
-							<h:inputText id="idTelefone" styleClass="form-control phone_with_ddd"
+							<h:inputText id="idTelefone" styleClass="campotiponome phone_with_ddd"
 								value="#{administradorMB.administrador.telefone}"
 								required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
@@ -66,19 +69,19 @@
 					</fieldset>
 					<br></br>
 				</div>
-				<div class="col-md-6">
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-5">
 					<fieldset>
 						<br></br>
-						<center>
 							<h4 style="color: red">
 								<u>Informações de acesso:</u>
 							</h4>
-						</center>
 						<div class="form-group">
 							<h:outputLabel value="Email:" />
 							<br></br>
 							<h:message for="idEmail" style="color:darkred; font-weight:bold" />
-							<h:inputText id="idEmail" styleClass="form-control"
+							<h:inputText id="idEmail" styleClass="campotiponome"
 								value="#{administradorMB.administrador.email}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
@@ -86,7 +89,7 @@
 							<h:outputLabel value="Senha:" />
 							<br></br>
 							<h:message for="idSenha" style="color:darkred; font-weight:bold" />
-							<h:inputSecret id="idSenha" styleClass="form-control"
+							<h:inputSecret id="idSenha" styleClass="campotiponome"
 								value="#{administradorMB.administrador.senha}" required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
 						</div>
@@ -95,7 +98,7 @@
 							<br></br>
 							<h:message for="idConfirmarSenha"
 								style="color:darkred; font-weight:bold" />
-							<h:inputSecret id="idConfirmarSenha" styleClass="form-control"
+							<h:inputSecret id="idConfirmarSenha" styleClass="campotiponome"
 								value="#{administradorMB.administrador.confirmarsenha}"
 								required="true"
 								requiredMessage=" ## Preenchimento obrigatório ##" />
@@ -103,6 +106,7 @@
 						<h:commandButton action="#{administradorMB.cadastrar()}"
 							styleClass="btn btn-success" value="Cadastrar" />
 					</fieldset>
+					<br></br>
 				</div>
 			</h:form>
 			<h:outputScript library="js" name="jquery.mask.min.js" />
@@ -111,6 +115,8 @@
 				 $('.phone_with_ddd').mask('(00) 0000-0000');
 			})
 		</script>
+		</div>
+		</div>
 		</div>
 	</ui:define>
 
