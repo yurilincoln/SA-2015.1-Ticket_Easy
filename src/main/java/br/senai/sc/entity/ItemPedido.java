@@ -10,19 +10,19 @@ public class ItemPedido {
 	@Id
 	@GeneratedValue
 	private Long id;
-	private int quantidade;
 	private double valor;
+//	private Usuario usuario;
+	
+//	@ManyToMany
+//	private List<Destino> destinos;
+//	@ManyToMany
+//	private List<Pacote> pacotes;
+//	
 	public Long getId() {
 		return id;
 	}
 	public void setId(Long id) {
 		this.id = id;
-	}
-	public int getQuantidade() {
-		return quantidade;
-	}
-	public void setQuantidade(int quantidade) {
-		this.quantidade = quantidade;
 	}
 	public double getValor() {
 		return valor;
@@ -30,5 +30,22 @@ public class ItemPedido {
 	public void setValor(double valor) {
 		this.valor = valor;
 	}
-	
+//	public List<Destino> getDestinos() {
+//		return destinos;
+//	}
+//	public void setDestinos(List<Destino> destinos) {
+//		this.destinos = destinos;
+//	}
+//	public List<Pacote> getPacotes() {
+//		return pacotes;
+//	}
+//	public void setPacotes(List<Pacote> pacotes) {
+//		this.pacotes = pacotes;
+//	}
+//	public Usuario getUsuario() {
+//		return usuario;
+//	}
+//	public void setUsuario(Usuario usuario) {
+//		this.usuario = usuario;
+//	}
 }

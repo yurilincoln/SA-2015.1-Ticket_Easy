@@ -16,9 +16,10 @@
 					TicketEasy <small><u>Destinos</u></small>
 				</h1>
 			</div>
-			<h:messages />
+			<h:form>
 			<ui:repeat var="item" value="#{destinoMB.destinos}">
 				<div class="row">
+				<h:messages />
 					<div class="col-md-12">
 						<br></br>
 						<div class="panel panel-default">
@@ -117,8 +118,9 @@
 								<div class="col-md-5">
 								</div>
 								<div class="col-md-3">
-								<h:link outcome="/carrinho" class="btn btn-default btn-lg active" 
-								value="Adicionar ao Carrinho" />
+								
+								<h:commandButton action="#{destinoMB.salvar()}" styleClass="btn btn-success" value="Salvar" />
+								
 								</div>
 								</div>
 							</div>
@@ -127,7 +129,9 @@
 					<br></br>
 				</div>
 				<br></br>
+				
 			</ui:repeat>
+			</h:form>
 		</div>
 
 	</ui:define>
