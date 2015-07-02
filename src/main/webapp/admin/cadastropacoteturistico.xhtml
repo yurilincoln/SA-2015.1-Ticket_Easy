@@ -51,7 +51,7 @@
 								<h:outputLabel value="Valor Final (R$):" />
 								<br />
 								<h:message for="idValor" style="color:darkred; font-weight:bold" />
-								<h:inputText id="idValor" styleClass="campohora money"
+								<h:inputText id="idValor" styleClass="campohora"
 									value="#{pacoteMB.pacote.valor}" required="true"
 									requiredMessage="## Preenchimento obrigatório ##" />
 							</div>
@@ -82,15 +82,8 @@
 						<br></br>
 					</div>
 				</h:form>
-				<h:outputScript library="js" name="jquery.mask.min.js" />
-				<script>
-			$(function(){
-				 $$('.money').mask('0000,00', {reverse: true});
-			})
-		</script>
 			</div>
 		</div>
 	</ui:define>
-
 </ui:composition>
 </html>
