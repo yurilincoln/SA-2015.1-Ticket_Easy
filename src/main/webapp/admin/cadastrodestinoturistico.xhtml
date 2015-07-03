@@ -133,7 +133,7 @@
 								<h:outputLabel value="Valor de Cobrança (R$):" />
 								<br />
 								<h:message for="idValor" style="color:darkred; font-weight:bold" />
-								<h:inputText styleClass="campohora money"
+								<h:inputText styleClass="campohora"
 									value="#{destinoMB.destino.valor}" id="idValor" required="true"
 									requiredMessage="## Preenchimento obrigatório ##">
 									<f:convertNumber locale="pt_BR" />
@@ -167,7 +167,6 @@
 				<script>
 			$(function(){
 				  $('.time').mask('00:00');
-				 $$('.money').mask('0000,00', {reverse: true});
 			})
 		</script>
 			</div>

@@ -7,6 +7,7 @@ import javax.faces.bean.SessionScoped;
 import javax.faces.context.FacesContext;
 
 import br.senai.sc.dao.UsuarioDao;
+import br.senai.sc.entity.Pedido;
 import br.senai.sc.entity.Usuario;
 
 @ManagedBean
@@ -15,6 +16,7 @@ public class SessaoMB {
 
 	private Usuario usuarioLogar;
 	private Usuario usuarioLogado;
+	private Pedido pedido;
 	
 	@PostConstruct
 	public void init(){
@@ -73,6 +75,14 @@ public class SessaoMB {
 
 	public void setUsuarioLogado(Usuario usuarioLogado) {
 		this.usuarioLogado = usuarioLogado;
+	}
+
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
 	}
 	
 }

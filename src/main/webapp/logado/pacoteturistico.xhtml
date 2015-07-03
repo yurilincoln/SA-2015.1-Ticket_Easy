@@ -78,8 +78,10 @@
 									</div>
 								</div>
 								<div class="col-md-3">
-								<h:link outcome="/carrinho" class="btn btn-default btn-lg active" 
-								value="Adicionar ao Carrinho" />
+								<h:form>
+								<h:commandButton action="#{pedidoMB.adicionarPacote(item.id)}" 
+								styleClass="btn btn-success" value="Adicionar ao Carrinho"/>
+								</h:form>
 								</div>
 								</div>
 							</div>
