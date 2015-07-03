@@ -87,7 +87,5 @@ public class UsuarioMB {
 	public void setUsuarioDao(UsuarioDao usuarioDao) {
 		this.usuarioDao = usuarioDao;
 	}
-
-	
 	
 }

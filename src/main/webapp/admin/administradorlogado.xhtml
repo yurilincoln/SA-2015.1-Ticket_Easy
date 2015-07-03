@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core">
+
+<ui:composition template="/WEB-INF/templates/padraoadmin.xhtml">
+
+	<ui:define name="content">
+		<div class="container">
+		<br></br>
+		<br></br>
+		<br></br>
+			<div class="page-header">
+				<h1>
+					<br></br> Cadastro Usuário Administrador <small><u>admin</u></small>
+				</h1>
+			</div>
+			<div class="row">
+				<div class="col-md-12">
+			<h:messages />
+			<h:form>
+				<h:panelGroup
+					rendered="#{not empty administradorMB.administrador.id}">
+					<br></br>
+					<h:outputLabel value="- Número de ID: -" />
+					<h:inputText styleClass="form-control"
+						value="#{administradorMB.administrador.id}" readonly="true" />
+				</h:panelGroup>
+				<h:inputHidden value="#{administradorMB.administrador.id}" />
+				<div class="col-md-5">
+					<h:messages />
+					<fieldset>
+						<br></br>
+							<h4 style="color: red">
+								<u> Informações de cadastro:</u>
+							</h4>
+						<div class="form-group">
+							<h:outputLabel value="Nome:" />
+							<br></br>
+							<h:message for="idNome" style="color:darkred; font-weight:bold" />
+							<h:inputText id="idNome" styleClass="campotiponome"
+								value="#{administradorMB.administrador.nome}" required="true"
+								requiredMessage=" ## Preenchimento obrigatório ##" />
+						</div>
+						<div class="form-group">
+							<h:outputLabel value="Telefone:" />
+							<br></br>
+							<h:message for="idTelefone"
+								style="color:darkred; font-weight:bold" />
+							<h:inputText id="idTelefone" styleClass="campotiponome phone_with_ddd"
+								value="#{administradorMB.administrador.telefone}"
+								required="true"
+								requiredMessage=" ## Preenchimento obrigatório ##" />
+						</div>
+						<div class="form-group">
+							<h:outputLabel value="Sexo:" />
+							<br />
+							<h:message for="idSexo" style="color:darkred; font-weight:bold" />
+							<h:selectOneRadio
+								requiredMessage="## Preenchimento obrigatório ##" id="idSexo"
+								value="#{administradorMB.administrador.sexo}">
+								<f:selectItem itemLabel="Feminino" itemValue="Feminino" />
+								<f:selectItem itemLabel="Masculino" itemValue="Masculino" />
+							</h:selectOneRadio>
+						</div>
+					</fieldset>
+					<br></br>
+				</div>
+				<div class="col-md-2">
+				</div>
+				<div class="col-md-5">
+					<fieldset>
+						<br></br>
+							<h4 style="color: red">
+								<u>Informações de acesso:</u>
+							</h4>
+						<div class="form-group">
+							<h:outputLabel value="Email:" />
+							<br></br>
+							<h:message for="idEmail" style="color:darkred; font-weight:bold" />
+							<h:inputText id="idEmail" styleClass="campotiponome"
+								value="#{administradorMB.administrador.email}" required="true"
+								requiredMessage=" ## Preenchimento obrigatório ##" />
+						</div>
+						<div class="form-group">
+							<h:outputLabel value="Senha:" />
+							<br></br>
+							<h:message for="idSenha" style="color:darkred; font-weight:bold" />
+							<h:inputSecret id="idSenha" styleClass="campotiponome"
+								value="#{administradorMB.administrador.senha}" required="true"
+								requiredMessage=" ## Preenchimento obrigatório ##" />
+						</div>
+						<div class="form-group">
+							<h:outputLabel value="Confirmar Senha:" />
+							<br></br>
+							<h:message for="idConfirmarSenha"
+								style="color:darkred; font-weight:bold" />
+							<h:inputSecret id="idConfirmarSenha" styleClass="campotiponome"
+								value="#{administradorMB.administrador.confirmarsenha}"
+								required="true"
+								requiredMessage=" ## Preenchimento obrigatório ##" />
+						</div>
+						<h:commandButton action="#{administradorMB.cadastrar()}"
+							styleClass="btn btn-success" value="Cadastrar" />
+					</fieldset>
+					<br></br>
+				</div>
+			</h:form>
+			<h:outputScript library="js" name="jquery.mask.min.js" />
+			<script>
+			$(function(){
+				 $('.phone_with_ddd').mask('(00) 0000-0000');
+			})
+		</script>
+		</div>
+		</div>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

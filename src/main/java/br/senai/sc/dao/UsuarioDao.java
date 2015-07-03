@@ -29,6 +29,7 @@ public class UsuarioDao extends Dao {
 	
 	public Usuario buscaPorEmail(String email) {
 		Query query = getEntityManager().createQuery("From Usuario u Where u.email = :email", Usuario.class);
+		
 		query.setParameter("email", email);
 		return (Usuario) query.getSingleResult();
 	}

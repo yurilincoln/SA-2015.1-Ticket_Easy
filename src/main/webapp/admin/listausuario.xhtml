@@ -10,8 +10,11 @@
 
 	<ui:define name="content">
 		<div class="container">
+		<br></br>
+		<br></br>
+		<br></br>
+		<br></br>
 			<div class="page-header">
-				<br></br>
 				<h1>
 					TicketEasy <small><u>admin</u></small>
 				</h1>
@@ -42,10 +45,6 @@
 				</h:column>
 				
 				<h:column>
-					<h:commandLink styleClass="btn btn-info"
-						action="#{usuarioMB.editar(item.id)}">
-						<span class="glyphicon glyphicon-edit"></span>
-					</h:commandLink>
 					<h:outputText value="&nbsp;&nbsp;&nbsp;" />
 					<h:commandLink styleClass="btn btn-warning" onclick="return confirm('Tem certeza?');"
 						action="#{usuarioMB.excluir(item.id)}">

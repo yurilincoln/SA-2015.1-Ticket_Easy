@@ -29,9 +29,20 @@ public class AdministradorMB {
 			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("As senhas devem ser iguais!"));
 			return "";
 		}
+		if(administrador.getId() >= 0){
+			administradorDao.cadastrar(administrador);
+			FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Alteracoes efetuadas com sucesso!"));
+			return "/admin/index?faces-redirect=true"; 
+		}
 		administradorDao.cadastrar(administrador);
 		FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("Cadastro efetuado com sucesso!"));
 		return "listaadmin";
+	}
+	
+	public String perfil(String idParam){
+		Long id = Long.valueOf(idParam);
+		administrador = administradorDao.buscarPorId(id);
+		return "/admin/administradorlogado";
 	}
 	
 	public String excluir(String idParam){

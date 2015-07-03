@@ -31,12 +31,29 @@
                         <li class="page-scroll">
                         <h:link outcome="/admin/listapacoteturistico" value="Pacotes Turísticos"/>
                         </li>
-                        <li class="page-scroll">
-                        <h:form>
-                        <h:commandLink value="Sair" class="btn btn-lg btn-outline"
-							style="padding-top: 11px; padding-bottom: 7px; line-height: 10px;" action="#{sessaoAdminMB.logout()}" />
-                       </h:form>
-                       </li>
+                        
+                        <h:panelGroup rendered="#{sessaoAdminMB.logadoAdmin}">	
+					<li class="dropdown"><a href="#" class="dropdown-toggle"
+						data-toggle="dropdown" role="button" aria-expanded="false" style="margin-top: -15px;"> 
+						<h:graphicImage
+								library="images" name="iconeusuario.png" style="width: 50px;" />
+							<span class="caret"></span>
+					</a>
+
+						<ul class="dropdown-menu" role="menu">
+							<li><h:form>
+							<center>
+									<h:commandLink value="Perfil" action="#{administradorMB.perfil(sessaoAdminMB.administradorLogado.id)}" />
+									</center>
+								</h:form></li>
+							<li class="divider"></li>
+							<li><h:form>
+							<center>
+									<h:commandLink value="Sair" action="#{sessaoAdminMB.logout()}" />
+									</center>
+								</h:form></li>
+						</ul></li>
+						</h:panelGroup>
                 </ul>
             </div>
         </div>
