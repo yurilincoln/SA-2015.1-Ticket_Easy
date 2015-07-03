@@ -1,6 +1,8 @@
 package br.senai.sc.mb;
 
 
+import java.util.List;
+
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ManagedProperty;
@@ -21,18 +23,26 @@ public class PedidoMB {
 	private SessaoMB sessao;
 	private DestinoDao destinoDao;
 	private PacoteDao pacoteDao;
+	private Pedido pedido;
+	private List<Destino> destinos;
 	
 	@PostConstruct
 	public void initMB(){
 //		sessao = new SessaoMB();
+		this.pedido = new Pedido();
 		pedidoDao = new PedidoDao();
 		destinoDao = new DestinoDao();
 		pacoteDao = new PacoteDao();
 	}
 	
+	
+	
 	public String adicionarDestino(String idDestino){
 		Long id = Long.valueOf(idDestino);
 		Destino destino = destinoDao.buscarPorId(id);
+		if(pedido.getDestinos() == null){
+			pedido.setDestinos(destinos);
+		}
 		if(sessao.getPedido() == null){
 			sessao.setPedido(new Pedido());
 		}
@@ -81,10 +91,21 @@ public class PedidoMB {
 	public void setPacoteDao(PacoteDao pacoteDao) {
 		this.pacoteDao = pacoteDao;
 	}
-	
-	
-	
 
-	
+	public Pedido getPedido() {
+		return pedido;
+	}
+
+	public void setPedido(Pedido pedido) {
+		this.pedido = pedido;
+	}
+
+	public List<Destino> getDestinos() {
+		return destinos;
+	}
+
+	public void setDestinos(List<Destino> destinos) {
+		this.destinos = destinos;
+	}
 	
 }
